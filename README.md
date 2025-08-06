@@ -30,6 +30,7 @@ glyphs. Status *Complete* means all glyphs are present, *Partial* means
 at least one glyph is present, *TODO* means none are present.
 
 |Block          |Name                                   |Status   |
+|---------------|---------------------------------------|---------|
 |U+0000 - U+007F|Basic Latin                            |Complete |
 |U+0080 - U+00FF|Latin-1 Supplement                     |Complete |
 |U+0100 - U+017F|Latin Extended-A                       |Complete |
