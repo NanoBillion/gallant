@@ -6,7 +6,7 @@ font with a 22x12 pixel character cell, descent 5 and ascent 17.
 
 The starting point was the `gallant.hex` file as found on FreeBSD 14,
 which contained 502 glyphs at the time. This project currently provides
-more than 3000 glyphs. Major additions:
+more than 3500 glyphs. Major additions:
 
 * Greek
 * Cyrillic
@@ -17,6 +17,7 @@ more than 3000 glyphs. Major additions:
 * Pixel-perfect box drawing
 * Currency symbols
 * More punctuation
+* Powerline glyphs in the *Private Use Area* at U+e0a0
 
 I have tried hard to keep the look of the font for Greek and Cyrillic
 glyphs, but not for symbols like arrows and mathematical operators where
@@ -27,9 +28,8 @@ See [Unicode.org](https://home.unicode.org/) for more on Unicode.
 
 ## Unicode Support
 
-Gallant currently contains only glyphs for blocks in the Basic
-Multilingual Plane (Plane 0), which in its entirety could comprise 65535
-glyphs from U+0000 through U+FFFF.
+Gallant currently contains only glyphs for blocks in the *Basic
+Multilingual Plane* (Plane 0).
 
 In the following table's Status column, *Complete* means all glyphs are
 present, *Partial* means at least one glyph is present, *TODO* means
@@ -43,7 +43,7 @@ none are present.
 |U+0180 - U+024F|[Latin Extended-B](https://www.unicode.org/charts/PDF/U0180.pdf)                       |Complete |
 |U+0250 - U+02AF|[IPA Extensions](https://www.unicode.org/charts/PDF/U0250.pdf)                         |Complete |
 |U+02B0 - U+02FF|[Spacing Modifier Letters](https://www.unicode.org/charts/PDF/U02B0.pdf)               |Complete |
-|U+0300 - U+036F|[Combining Diacritical Marks](https://www.unicode.org/charts/PDF/U0300.pdf)            |TODO     |
+|U+0300 - U+036F|[Combining Diacritical Marks](https://www.unicode.org/charts/PDF/U0300.pdf)            |Partial  |
 |U+0370 - U+03FF|[Greek and Coptic](https://www.unicode.org/charts/PDF/U0370.pdf)                       |Partial  |
 |U+0400 - U+04FF|[Cyrillic](https://www.unicode.org/charts/PDF/U0400.pdf)                               |Complete |
 |U+0500 - U+052F|[Cyrillic Supplement](https://www.unicode.org/charts/PDF/U0500.pdf)                    |TODO     |
@@ -56,14 +56,14 @@ none are present.
 |U+2000 - U+206F|[General Punctuation](https://www.unicode.org/charts/PDF/U2000.pdf)                    |Complete |
 |U+2070 - U+209F|[Superscripts and Subscripts](https://www.unicode.org/charts/PDF/U2070.pdf)            |Complete |
 |U+20A0 - U+20CF|[Currency Symbols](https://www.unicode.org/charts/PDF/U20A0.pdf)                       |Complete |
-|U+20D0 - U+20FF|[Combining Diacritical Marks for Symbols](https://www.unicode.org/charts/PDF/U20D0.pdf)|TODO     |
+|U+20D0 - U+20FF|[Combining Diacritical Marks for Symbols](https://www.unicode.org/charts/PDF/U20D0.pdf)|Partial  |
 |U+2100 - U+214F|[Letterlike Symbols](https://www.unicode.org/charts/PDF/U2100.pdf)                     |Partial  |
 |U+2150 - U+218F|[Number Forms](https://www.unicode.org/charts/PDF/U2150.pdf)                           |TODO     |
 |U+2190 - U+21FF|[Arrows](https://www.unicode.org/charts/PDF/U2190.pdf)                                 |Complete |
 |U+2200 - U+22FF|[Mathematical Operators](https://www.unicode.org/charts/PDF/U2200.pdf)                 |Complete |
 |U+2300 - U+23FF|[Miscellaneous Technical](https://www.unicode.org/charts/PDF/U2300.pdf)                |Complete |
 |U+2400 - U+243F|[Control Pictures](https://www.unicode.org/charts/PDF/U2400.pdf)                       |TODO     |
-|U+2440 - U+245F|[Optical Character Recognition](https://www.unicode.org/charts/PDF/U2440.pdf)          |Partial  |
+|U+2440 - U+245F|[Optical Character Recognition](https://www.unicode.org/charts/PDF/U2440.pdf)          |Cmplete  |
 |U+2460 - U+24FF|[Enclosed Alphanumerics](https://www.unicode.org/charts/PDF/U2460.pdf)                 |TODO     |
 |U+2500 - U+257F|[Box Drawing](https://www.unicode.org/charts/PDF/U2500.pdf)                            |Complete |
 |U+2580 - U+259F|[Block Elements](https://www.unicode.org/charts/PDF/U2580.pdf)                         |Complete |
@@ -76,7 +76,7 @@ none are present.
 |U+2900 - U+297F|[Supplemental Arrows-B](https://www.unicode.org/charts/PDF/U2900.pdf)                  |Complete |
 |U+2980 - U+29FF|[Miscellaneous Mathematical Symbols-A](https://www.unicode.org/charts/PDF/U2980.pdf)   |Complete |
 |U+2A00 - U+2AFF|[Supplemental Mathematical Operators](https://www.unicode.org/charts/PDF/U2A00.pdf)    |TODO     |
-|U+2B00 - U+2BFF|[Miscellaneous Symbols and Arrows](https://www.unicode.org/charts/PDF/U2B00.pdf)       |TODO     |
+|U+2B00 - U+2BFF|[Miscellaneous Symbols and Arrows](https://www.unicode.org/charts/PDF/U2B00.pdf)       |Partial  |
 |U+2C00 - U+2C5F|[Glagolitic](https://www.unicode.org/charts/PDF/U2C00.pdf)                             |TODO     |
 |U+2C60 - U+2C7F|[Latin Extended-C](https://www.unicode.org/charts/PDF/U2C60.pdf)                       |TODO     |
 |U+2C80 - U+A6FF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/U2C80.pdf)           |TODO     |
