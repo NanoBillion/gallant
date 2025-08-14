@@ -43,8 +43,8 @@ none are present.
 |U+0180 - U+024F|[Latin Extended-B](https://www.unicode.org/charts/PDF/U0180.pdf)                       |Complete |
 |U+0250 - U+02AF|[IPA Extensions](https://www.unicode.org/charts/PDF/U0250.pdf)                         |Complete |
 |U+02B0 - U+02FF|[Spacing Modifier Letters](https://www.unicode.org/charts/PDF/U02B0.pdf)               |Complete |
-|U+0300 - U+036F|[Combining Diacritical Marks](https://www.unicode.org/charts/PDF/U0300.pdf)            |Partial  |
-|U+0370 - U+03FF|[Greek and Coptic](https://www.unicode.org/charts/PDF/U0370.pdf)                       |Partial  |
+|U+0300 - U+036F|[Combining Diacritical Marks](https://www.unicode.org/charts/PDF/U0300.pdf)            |Complete |
+|U+0370 - U+03FF|[Greek and Coptic](https://www.unicode.org/charts/PDF/U0370.pdf)                       |Complete |
 |U+0400 - U+04FF|[Cyrillic](https://www.unicode.org/charts/PDF/U0400.pdf)                               |Complete |
 |U+0500 - U+052F|[Cyrillic Supplement](https://www.unicode.org/charts/PDF/U0500.pdf)                    |TODO     |
 |U+0530 - U+1cff|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/U0530.pdf)           |TODO     |
@@ -63,7 +63,7 @@ none are present.
 |U+2200 - U+22FF|[Mathematical Operators](https://www.unicode.org/charts/PDF/U2200.pdf)                 |Complete |
 |U+2300 - U+23FF|[Miscellaneous Technical](https://www.unicode.org/charts/PDF/U2300.pdf)                |Complete |
 |U+2400 - U+243F|[Control Pictures](https://www.unicode.org/charts/PDF/U2400.pdf)                       |TODO     |
-|U+2440 - U+245F|[Optical Character Recognition](https://www.unicode.org/charts/PDF/U2440.pdf)          |Cmplete  |
+|U+2440 - U+245F|[Optical Character Recognition](https://www.unicode.org/charts/PDF/U2440.pdf)          |Complete |
 |U+2460 - U+24FF|[Enclosed Alphanumerics](https://www.unicode.org/charts/PDF/U2460.pdf)                 |TODO     |
 |U+2500 - U+257F|[Box Drawing](https://www.unicode.org/charts/PDF/U2500.pdf)                            |Complete |
 |U+2580 - U+259F|[Block Elements](https://www.unicode.org/charts/PDF/U2580.pdf)                         |Complete |
