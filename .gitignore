@@ -1,6 +1,8 @@
 *.o
 
-lscp
-txttopng
 input.txt
+lint.lnt
+lscp
 output.png
+predef-c.h
+txttopng

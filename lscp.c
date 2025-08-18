@@ -39,10 +39,9 @@ int main(int aArgc, char **aArgv) {
         fprintf(stderr, "usage: %s start end\n", aArgv[0]);
         exit(EXIT_FAILURE);
     }
-    unsigned long start, end;
     errno = 0;
-    start = strtoul(aArgv[1], NULL, 0);
-    end = strtoul(aArgv[2], NULL, 0);
+    const unsigned long start = strtoul(aArgv[1], NULL, 0);
+    const unsigned long end = strtoul(aArgv[2], NULL, 0);
     if (errno != 0) {
         fprintf(stderr, "could not convert arguments to integers\n");
         exit(EXIT_FAILURE);
@@ -50,7 +49,7 @@ int main(int aArgc, char **aArgv) {
     for (unsigned long i = start; i < end; ++i) {
         char    name[UNINAME_MAX + 1];
         const char *const p = unicode_character_name((ucs4_t) i, name);
-        printf("U+%04x %2d a %lc b %s\n", (unsigned int) i, wcwidth(i), (wint_t) i, p ? p : "<no name>");
+        printf("U+%04lx %2d a %lc b %s\n", i, wcwidth((wchar_t) i), (wint_t) i, p ? p : "<no name>");
     }
     return EXIT_SUCCESS;
 }
