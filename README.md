@@ -6,30 +6,30 @@ font with a 22x12 pixel character cell, descent 5 and ascent 17.
 
 The starting point was the `gallant.hex` file as found on FreeBSD 14,
 which contained 502 glyphs at the time. This project currently provides
-more than 3500 glyphs. Major additions:
+more than 4000 glyphs. Major additions:
 
 * Greek
 * Cyrillic
 * International Phonetic Association Extensions
+* Extended Latin characters
 * Zapf Dingbats
 * Tons of arrows
 * Tons of mathematical symbols
 * Pixel-perfect box drawing
 * Currency symbols
 * More punctuation
+* Just enough Katakana to say コンニチハ
 * Powerline glyphs in the *Private Use Area* at U+e0a0
 
 I have tried hard to keep the look of the font for Greek and Cyrillic
 glyphs, but not for symbols like arrows and mathematical operators where
 it makes no sense. Please let me know where I messed up (I can only
-barely read and write Greek, and hardly any Cyrillic). I used the
+barely read and write Greek, and hardly any Cyrillic and no Japanese
+at all). I used the
 documents of *The Unicode Standard, Version 16.0* as guidance.
 See [Unicode.org](https://home.unicode.org/) for more on Unicode.
 
 ## Unicode Support
-
-Gallant currently contains only glyphs for blocks in the *Basic
-Multilingual Plane* (Plane 0).
 
 In the following table's Status column, *Complete* means all glyphs are
 present, *Partial* means at least one glyph is present, *TODO* means
@@ -51,7 +51,7 @@ none are present.
 |U+1D00 - U+1D7F|[Phonetic Extensions](https://www.unicode.org/charts/PDF/U1D00.pdf)                    |TODO     |
 |U+1D80 - U+1DBF|[Phonetic Extensions Supplement](https://www.unicode.org/charts/PDF/U1D80.pdf)         |TODO     |
 |U+1DC0 - U+1DFF|[Combining Diacritical Marks Supplement](https://www.unicode.org/charts/PDF/U1DC0.pdf) |TODO     |
-|U+1E00 - U+1EFF|[Latin Extended Additional](https://www.unicode.org/charts/PDF/U1E00.pdf)              |TODO     |
+|U+1E00 - U+1EFF|[Latin Extended Additional](https://www.unicode.org/charts/PDF/U1E00.pdf)              |Complete |
 |U+1F00 - U+1FFF|[Greek Extended](https://www.unicode.org/charts/PDF/U1F00.pdf)                         |Partial  |
 |U+2000 - U+206F|[General Punctuation](https://www.unicode.org/charts/PDF/U2000.pdf)                    |Complete |
 |U+2070 - U+209F|[Superscripts and Subscripts](https://www.unicode.org/charts/PDF/U2070.pdf)            |Complete |
@@ -62,7 +62,7 @@ none are present.
 |U+2190 - U+21FF|[Arrows](https://www.unicode.org/charts/PDF/U2190.pdf)                                 |Complete |
 |U+2200 - U+22FF|[Mathematical Operators](https://www.unicode.org/charts/PDF/U2200.pdf)                 |Complete |
 |U+2300 - U+23FF|[Miscellaneous Technical](https://www.unicode.org/charts/PDF/U2300.pdf)                |Complete |
-|U+2400 - U+243F|[Control Pictures](https://www.unicode.org/charts/PDF/U2400.pdf)                       |TODO     |
+|U+2400 - U+243F|[Control Pictures](https://www.unicode.org/charts/PDF/U2400.pdf)                       |Complete |
 |U+2440 - U+245F|[Optical Character Recognition](https://www.unicode.org/charts/PDF/U2440.pdf)          |Complete |
 |U+2460 - U+24FF|[Enclosed Alphanumerics](https://www.unicode.org/charts/PDF/U2460.pdf)                 |TODO     |
 |U+2500 - U+257F|[Box Drawing](https://www.unicode.org/charts/PDF/U2500.pdf)                            |Complete |
@@ -80,6 +80,8 @@ none are present.
 |U+2C00 - U+2C5F|[Glagolitic](https://www.unicode.org/charts/PDF/U2C00.pdf)                             |TODO     |
 |U+2C60 - U+2C7F|[Latin Extended-C](https://www.unicode.org/charts/PDF/U2C60.pdf)                       |TODO     |
 |U+2C80 - U+A6FF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/U2C80.pdf)           |TODO     |
+|U+30A0 - U+30FF|[Katakana](https://www.unicode.org/charts/PDF/U30A0.pdf)                               |Partial  |
+|U+3100 - U+A6FF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/U2C80.pdf)           |TODO     |
 |U+A700 - U+A71F|[Modifier Tone Letters](https://www.unicode.org/charts/PDF/UA700.pdf)                  |TODO     |
 |U+A720 - U+A7FF|[Latin Extended-D](https://www.unicode.org/charts/PDF/UA720.pdf)                       |TODO     |
 |U+A800 - U+AB2F|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/UA800.pdf)           |TODO     |
@@ -89,9 +91,32 @@ none are present.
 |U+FB50 - U+FFEF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/UFB50.pdf)           |TODO     |
 |U+FFF0 - U+FFFF|[Specials](https://www.unicode.org/charts/PDF/UFFF0.pdf)                               |Partial  |
 
+Codepoints >= U+10000 can be part of a BDF file, but cannot be used by
+core X11 since it internally restricts glyph encoding numbers to 16 bit.
+(This does not apply to **Xft** rendered fonts).
+
+The FreeBSD
+[vt(4)](https://man.freebsd.org/cgi/man.cgi?query=vt&apropos=0&sektion=4)
+driver would work with fine with the full codepoint range.
+
 ## How do I load/use this font?
 
-### FreeBSD
+### As an X11 Raster Font, e.g. for Xterm(1)
+
+Install the BDF file where X11 looks for fonts. The following example
+uses `$HOME/.fonts` as the font directory.
+
+```
+$ mkdir -p $HOME/.fonts
+$ cp gallant.bfd $HOME/.fonts
+$ cd $HOME/.fonts
+$ mkfontdir
+$ xset fp+ $HOME/.fonts
+$ xset fp rehash
+$ xterm -fa '' -fn "-sun-gallant-medium-r-normal-*-22-*-*-*-*-80-*-*"
+```
+
+### FreeBSD Console
 
 ```
 vidcontrol -f /path/to/gallant.fnt
@@ -109,4 +134,4 @@ console terminals use the font after boot.
 ## TODO
 
 * Describe how to contribute
-* Describe the helper scripts
+* Describe the helper programs
