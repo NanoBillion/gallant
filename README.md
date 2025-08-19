@@ -56,7 +56,7 @@ none are present.
 |U+2000 - U+206F|[General Punctuation](https://www.unicode.org/charts/PDF/U2000.pdf)                    |Complete |
 |U+2070 - U+209F|[Superscripts and Subscripts](https://www.unicode.org/charts/PDF/U2070.pdf)            |Complete |
 |U+20A0 - U+20CF|[Currency Symbols](https://www.unicode.org/charts/PDF/U20A0.pdf)                       |Complete |
-|U+20D0 - U+20FF|[Combining Diacritical Marks for Symbols](https://www.unicode.org/charts/PDF/U20D0.pdf)|Partial  |
+|U+20D0 - U+20FF|[Combining Diacritical Marks for Symbols](https://www.unicode.org/charts/PDF/U20D0.pdf)|Complete |
 |U+2100 - U+214F|[Letterlike Symbols](https://www.unicode.org/charts/PDF/U2100.pdf)                     |Partial  |
 |U+2150 - U+218F|[Number Forms](https://www.unicode.org/charts/PDF/U2150.pdf)                           |TODO     |
 |U+2190 - U+21FF|[Arrows](https://www.unicode.org/charts/PDF/U2190.pdf)                                 |Complete |
@@ -107,13 +107,13 @@ Install the BDF file where X11 looks for fonts. The following example
 uses `$HOME/.fonts` as the font directory.
 
 ```
-$ mkdir -p $HOME/.fonts
-$ cp gallant.bfd $HOME/.fonts
-$ cd $HOME/.fonts
-$ mkfontdir
-$ xset fp+ $HOME/.fonts
-$ xset fp rehash
-$ xterm -fa '' -fn "-sun-gallant-medium-r-normal-*-22-*-*-*-*-80-*-*"
+mkdir -p $HOME/.fonts
+cp gallant.bfd $HOME/.fonts
+cd $HOME/.fonts
+mkfontdir
+xset fp+ $HOME/.fonts
+xset fp rehash
+xterm -fa '' -fn "-sun-gallant-medium-r-normal-*-22-*-*-*-*-80-*-*"
 ```
 
 ### FreeBSD Console

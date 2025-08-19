@@ -1,5 +1,9 @@
+*.i
 *.o
+*.pdf
+*.vim
 
+.indent.pro
 input.txt
 lint.lnt
 lscp

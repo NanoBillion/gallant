@@ -84,7 +84,7 @@ sub convert_glyph () {
 
 sub write_preamble () {
   print "STARTFONT 2.1\n";
-  print "FONT -sun-jsgallant-medium-r-normal--22-220-75-75-c-80-iso10646-1\n";
+  print "FONT -sun-gallant-medium-r-normal--22-220-75-75-c-80-iso10646-1\n";
   print "SIZE 22 75 75\n";
   print "FONTBOUNDINGBOX 22 12 0 -5\n";
   print "STARTPROPERTIES 2\n";

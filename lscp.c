@@ -19,7 +19,7 @@
  *     U+2a0c  1 a ⨌ b QUADRUPLE INTEGRAL OPERATOR
  *     U+2a0d  1 a ⨍ b FINITE PART INTEGRAL
  *     U+2a0e  1 a ⨎ b INTEGRAL WITH DOUBLE STROKE
- *     U+2a0f  1 a ⨏ b INTEGRAL AVERAGE WITH SLAS
+ *     U+2a0f  1 a ⨏ b INTEGRAL AVERAGE WITH SLASH
  */
 #include <stdio.h>
 #include <stdlib.h>
