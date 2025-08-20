@@ -89,7 +89,7 @@ none are present.
 |U+AB70 - U+FAFF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/UAB70.pdf)           |TODO     |
 |U+FB00 - U+FB4F|[Alphabetic Presentation Forms](https://www.unicode.org/charts/PDF/UFB00.pdf)          |Partial  |
 |U+FB50 - U+FFEF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/UFB50.pdf)           |TODO     |
-|U+FFF0 - U+FFFF|[Specials](https://www.unicode.org/charts/PDF/UFFF0.pdf)                               |Partial  |
+|U+FFF0 - U+FFFF|[Specials](https://www.unicode.org/charts/PDF/UFFF0.pdf)                               |Complete |
 
 Codepoints >= U+10000 can be part of a BDF file, but cannot be used by
 core X11 since it internally restricts glyph encoding numbers to 16 bit.

@@ -9,4 +9,5 @@ lint.lnt
 lscp
 output.png
 predef-c.h
+srctohex
 txttopng

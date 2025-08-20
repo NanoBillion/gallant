@@ -9,12 +9,14 @@ unexport C_INCLUDE_PATH   # Remove from shell environment; confuses gcc.
 export LANG   = C
 export LC_ALL = C
 
-TOP_LEVEL_TARGETS = lscp tsttopng gallant.bdf gallant.fnt
+TOP_LEVEL_TARGETS = lscp tsttopng gallant.bdf gallant.fnt srctohex
 
 .PHONY: all
 all: $(TOP_LEVEL_TARGETS)
 
 lscp: lscp.o
+
+srctohex: srctohex.o
 
 tsttopng: tsttopng.o
 
@@ -22,7 +24,7 @@ gallant.bdf: gallant.hex
 	./hex2bdf.pl $^ > $@
 
 gallant.hex: gallant.src
-	./src2hex.pl < $^ > $@
+	./srctohex < $^ > $@
 
 gallant.fnt: gallant.hex
 	  vtfontcvt -v -o $@ $^
@@ -44,10 +46,11 @@ APP_WARNS  += -Wcast-align
 APP_WARNS  += -Wcast-qual
 APP_WARNS  += -Wfloat-equal
 APP_WARNS  += -Wformat=2
+APP_WARNS  += -Wno-format-nonliteral
 APP_WARNS  += -Winline
 APP_WARNS  += -Wstrict-prototypes
 APP_WARNS  += -Wmissing-prototypes
-APP_WARNS  += -Wunused
+APP_WARNS  += -Wno-unused
 APP_WARNS  += -Wold-style-definition
 APP_WARNS  += -Wpedantic
 APP_WARNS  += -Wpointer-arith
@@ -66,6 +69,9 @@ APP_LIBDIRS = -L /usr/local/lib
 
 lscp: lscp.o
 	$(CC) -o $@ $(APP_LIBDIRS) -luninameslist -lunistring $^
+
+srctohex: srctohex.o
+	$(CC) -o $@ $^
 
 txttopng: txttopng.o
 	$(CC) -o $@ $(APP_LIBDIRS) -lpng $^
