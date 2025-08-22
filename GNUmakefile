@@ -1,15 +1,21 @@
-.POSIX:
-
 #    Never export any environment variables, unless exported explicitly.
 #    This keeps the environment small and surprises low.
 #    Make sure that utilities have no hidden dependency on locales.
 #    For example, date(1) output depends on LANG.
 unexport                  # Never export to sub-makes.
 unexport C_INCLUDE_PATH   # Remove from shell environment; confuses gcc.
-export LANG   = C
-export LC_ALL = C
+export LANG   = C.UTF-8
+export LC_ALL = C.UTF-8
 
-TOP_LEVEL_TARGETS = lscp tsttopng gallant.bdf gallant.fnt srctohex
+.DEFAULT_GOAL = install
+
+TOP_LEVEL_TARGETS = lscp
+TOP_LEVEL_TARGETS += txttopng
+TOP_LEVEL_TARGETS += srctohex
+TOP_LEVEL_TARGETS += hextobdf
+TOP_LEVEL_TARGETS += gallant.bdf
+TOP_LEVEL_TARGETS += gallant.fnt
+
 
 .PHONY: all
 all: $(TOP_LEVEL_TARGETS)
@@ -18,10 +24,12 @@ lscp: lscp.o
 
 srctohex: srctohex.o
 
+hextobdf: hextobdf.o
+
 tsttopng: tsttopng.o
 
 gallant.bdf: gallant.hex
-	./hex2bdf.pl $^ > $@
+	./hextobdf < $^ > $@
 
 gallant.hex: gallant.src
 	./srctohex < $^ > $@
@@ -34,8 +42,16 @@ install: gallant.bdf gallant.fnt
 	cp gallant.bdf ~/.fonts
 	cd ~/.fonts && mkfontdir && xset fp rehash
 	if test $$(uname -s) = FreeBSD; then \
-	  vidcontrol -f gallant.fnt < /dev/ttyv7; \
+	  if test -w /dev/ttyv7; then \
+	    vidcontrol -f gallant.fnt < /dev/ttyv7; \
+	  fi; \
 	fi
+
+# Find un-sorted codepoints in gallant.src.
+#
+.PHONY: check
+check:
+	@grep ^STARTCHAR gallant.src | sort -c
 
 # FreeBSD: Libs and <uniname.h> are in devel/libunistring
 CC = cc -std=c99
@@ -70,13 +86,16 @@ APP_LIBDIRS = -L /usr/local/lib
 lscp: lscp.o
 	$(CC) -o $@ $(APP_LIBDIRS) -luninameslist -lunistring $^
 
+hextobdf: hextobdf.o
+	$(CC) -o $@ $^
+
 srctohex: srctohex.o
 	$(CC) -o $@ $^
 
 txttopng: txttopng.o
 	$(CC) -o $@ $(APP_LIBDIRS) -lpng $^
 
-lint: txttopng.c lscp.c
+lint: txttopng.c lscp.c hextobdf.c srctohex.c
 	@for c in $^; do flexelint lint.lnt $$c; done
 
 # X11 in x.out:
@@ -169,7 +188,7 @@ clean:
 # headers. Examine the preprocessor output's '# LINE "FILE"' directives.
 
 #PREPROCESSED = $(APP_C_SOURCE:.c=.i)
-PREPROCESSED = lscp.i txttopng.i
+PREPROCESSED = lscp.i txttopng.i hextobdf.i srctohex.i
 
 # make tags: create vi tags file.
 #

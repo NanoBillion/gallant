@@ -43,8 +43,8 @@
 // Glyph properties.
 struct glyph {
     wint_t  codepoint;
-    char   *bitmap;
-    int     cells;
+    uint8_t *bitmap;
+    unsigned int cells;
 };
 
 void    parse_options(int aArgc, char **aArgv);
@@ -53,12 +53,12 @@ void    parse_font_dimensions(FILE *aFile);
 void    parse_font_hexdata(FILE *aFile);
 void    parse_font_line(const char *aLine, int aLineNr, struct glyph *aGlyph);
 void    set_replacement_character(void);
-int     count_glyphs(FILE *aFile);
+unsigned int count_glyphs(FILE *aFile);
 void    load_text(void);
 void    slurp_text(FILE *aFile);
-void    fb_alloc(int aHeight, int aWidth, int aRows, int aColumns, bool aInverted);
-void    fb_draw_pixel(int aXpos, int aYpos);
-void    fb_draw_glyph(wint_t aCodepoint, int aRow, int aColumn);
+void    fb_alloc(unsigned int aHeight, unsigned int aWidth, unsigned int aRows, unsigned int aColumns, bool aInverted);
+void    fb_draw_pixel(unsigned int aXpos, unsigned int aYpos);
+void    fb_draw_glyph(wint_t aCodepoint, unsigned int aRow, unsigned int aColumn);
 void    fb_draw_text(void);
 void    fb_save_png(void);
 struct glyph *lookup_glyph(wint_t aCodepoint);
@@ -66,7 +66,7 @@ int     compare_glyphs(const void *aFirst, const void *aSecond);
 FILE   *xfopen(const char *aFilename, const char *aMode);
 void   *xmalloc(size_t aSize);
 void    errx(const char *aFormat, ...);
-uint8_t hex_value(uint8_t aXdigit);
+uint8_t hex_value(char aXdigit);
 void    usage(int aStatus);
 
 // Array of frame buffer scan lines ("rows" in PNG parlance).
@@ -74,24 +74,24 @@ static png_bytep *gFramebuffer = NULL;
 
 // Rasterfont storage and properties.
 static struct glyph *gGlyphset;
-static int gGlyphs = 0;
-static int gWidth = 0;
-static int gHeight = 0;
-static int gBytes = 0;         // per one row of pixels in a regular glyph
-static int gDblBytes = 0;      // per one row of pixels in a dbl width glyph
+static unsigned int gGlyphs = 0;
+static unsigned int gWidth = 0;
+static unsigned int gHeight = 0;
+static unsigned int gBytes = 0; // per one row of pixels in a regular glyph
+static unsigned int gDblBytes = 0;  // per one row of pixels in a dbl width glyph
 static struct glyph *gReplacement = NULL;
 
 // Input text storage and properties.
 static wchar_t *gText = NULL;
 static size_t gTextChars = 0;
-static int gRows = 0;
-static int gColumns = 0;
-static int gTabstop = Tabstop;
+static unsigned int gRows = 0;
+static unsigned int gColumns = 0;
+static unsigned int gTabstop = Tabstop;
 
 // Default options.
-static char *gTextFilename = TextFilename;
-static char *gFontFilename = FontFilename;
-static char *gPngFilename = PngFilename;
+static const char *gTextFilename = TextFilename;
+static const char *gFontFilename = FontFilename;
+static const char *gPngFilename = PngFilename;
 static bool gInverted = InvertedImage;
 
 // Start the ball rolling.
@@ -127,7 +127,7 @@ void parse_options(int aArgc, char **aArgv) {
             gPngFilename = optarg;
             break;
         case 'T':
-            if (sscanf(optarg, "%d", &gTabstop) != 1)
+            if (sscanf(optarg, "%u", &gTabstop) != 1)
                 errx("can't convert '%s' to tabstop integer\n", optarg);
             break;
         case 't':
@@ -156,8 +156,8 @@ void usage(int aStatus) {
 // Print the gText[] array glyph by glyph to the frame buffer.
 //
 void fb_draw_text(void) {
-    int     row = 0;
-    int     col = 0;
+    unsigned int row = 0;
+    unsigned int col = 0;
     for (size_t i = 0; i < gTextChars; ++i) {
         switch (wcwidth(gText[i])) {
         case -1:
@@ -204,7 +204,7 @@ void fb_draw_text(void) {
 void load_text(void) {
     FILE   *const fp = xfopen(gTextFilename, "rb");
     size_t  wchars = 0;
-    int     column = 0;
+    unsigned int column = 0;
 
     gRows = 0;
     gColumns = 0;
@@ -298,13 +298,13 @@ void fb_save_png(void) {
 
 // Allocate frame buffer to hold the pixels. White on black, unless inverted.
 //
-void fb_alloc(int aHeight, int aWidth, int aRows, int aColumns, bool aInverted) {
-    const int fb_lines = aHeight * aRows;
+void fb_alloc(unsigned int aHeight, unsigned int aWidth, unsigned int aRows, unsigned int aColumns, bool aInverted) {
+    const unsigned int fb_lines = aHeight * aRows;
     gFramebuffer = xmalloc(fb_lines * sizeof *gFramebuffer);
 
-    const int fb_pixels_per_line = aWidth * aColumns;
-    const int fb_bytes_per_line = (fb_pixels_per_line + 7) / 8;
-    for (int line = 0; line < fb_lines; ++line) {
+    const unsigned int fb_pixels_per_line = aWidth * aColumns;
+    const unsigned int fb_bytes_per_line = (fb_pixels_per_line + 7) / 8;
+    for (unsigned int line = 0; line < fb_lines; ++line) {
         gFramebuffer[line] = xmalloc(fb_bytes_per_line);
         memset(gFramebuffer[line], aInverted ? 0xFF : 0, fb_bytes_per_line);
     }
@@ -347,8 +347,8 @@ void parse_font_dimensions(FILE *aFile) {
 
 // First pass: count glyphs.
 //
-int count_glyphs(FILE *aFile) {
-    int     glyphs = 0;
+unsigned int count_glyphs(FILE *aFile) {
+    unsigned int glyphs = 0;
     char    line[MAX_LINE] = { 0 };
     int     line_no = 2;
     while (fgets(line, sizeof line, aFile) != NULL) {
@@ -369,7 +369,7 @@ int count_glyphs(FILE *aFile) {
 // Load and convert hex data to binary bitmap representation.
 //
 void parse_font_hexdata(FILE *aFile) {
-    int     glyphs = 0;
+    unsigned int glyphs = 0;
     int     line_no = 0;
     char    line[MAX_LINE] = { 0 };
 
@@ -407,8 +407,8 @@ void parse_font_line(const char *aLine, int aLineNr, struct glyph *aGlyph) {
     uint32_t codepoint;
     if (sscanf(aLine, "%" SCNx32 "%c", &codepoint, &c) == 2 && c == ':') {
         const char *colon = strchr(aLine, ':');
-        const int len = (int) strlen(colon + 1);
-        int     bytes = gHeight;
+        const unsigned int len = strlen(colon + 1);
+        unsigned int bytes = gHeight;
         if (len == gHeight * gDblBytes * 2 + 1)
             bytes *= gDblBytes;
         else if (len == gHeight * gBytes * 2 + 1)
@@ -421,7 +421,7 @@ void parse_font_line(const char *aLine, int aLineNr, struct glyph *aGlyph) {
         aGlyph->cells = (bytes == gHeight * gBytes ? 1 : 2);
         // Convert nybbles to bytes.
         const char *hex = colon + 1;
-        for (int i = 0; i < 2 * bytes; i += 2) {
+        for (unsigned int i = 0; i < 2 * bytes; i += 2) {
             if (!isxdigit(hex[i]) || !isxdigit(hex[i + 1]))
                 errx("invalid byte '%c%c' in file %s, line %d\n", hex[i], hex[i + 1], gFontFilename, aLineNr);
             aGlyph->bitmap[i / 2] = (hex_value(hex[i]) << 4) + hex_value(hex[i + 1]);
@@ -433,13 +433,14 @@ void parse_font_line(const char *aLine, int aLineNr, struct glyph *aGlyph) {
 
 // Compute value of aXdigit.
 //
-uint8_t hex_value(uint8_t aXdigit) {
-    if ((aXdigit >= '0') && (aXdigit <= '9'))
-        return aXdigit - '0';
-    if ((aXdigit >= 'A') && (aXdigit <= 'F'))
-        return (aXdigit - 'A') + 10;
-    if ((aXdigit >= 'a') && (aXdigit <= 'f'))
-        return (aXdigit - 'a') + 10;
+uint8_t hex_value(char aXdigit) {
+    uint8_t h = (uint8_t) aXdigit;
+    if ((h >= '0') && (h <= '9'))
+        return h - '0';
+    if ((h >= 'A') && (h <= 'F'))
+        return (h - 'A') + 10;
+    if ((h >= 'a') && (h <= 'f'))
+        return (h - 'a') + 10;
     return 0xFFu;
 }
 
@@ -452,14 +453,14 @@ int compare_glyphs(const void *aFirst, const void *aSecond) {
 
 // Draw a codepoint's glyph into the frame buffer at the given position.
 //
-void fb_draw_glyph(wint_t aCodepoint, int aRow, int aColumn) {
+void fb_draw_glyph(wint_t aCodepoint, unsigned int aRow, unsigned int aColumn) {
     const struct glyph *g = lookup_glyph(aCodepoint);
-    const char *bitmap = g->bitmap;
-    int     ypos = gHeight * aRow;
-    for (int i = 0; i < gHeight; ++i) {
-        int     xpos = gWidth * aColumn;
+    const uint8_t *bitmap = g->bitmap;
+    unsigned int ypos = gHeight * aRow;
+    for (unsigned int i = 0; i < gHeight; ++i) {
+        unsigned int xpos = gWidth * aColumn;
         uint8_t mask = 128;
-        for (int p = 0; p < gWidth * g->cells; ++p) {
+        for (unsigned int p = 0; p < gWidth * g->cells; ++p) {
             // get pixel p from bitmap
             // byte = p/8; bit = 7 - p%8
             if (bitmap[p / 8] & mask)
@@ -475,7 +476,7 @@ void fb_draw_glyph(wint_t aCodepoint, int aRow, int aColumn) {
 
 // Set pixel (aXpos,aYpos) in the frame buffer.
 //
-void fb_draw_pixel(int aXpos, int aYpos) {
+void fb_draw_pixel(unsigned int aXpos, unsigned int aYpos) {
     const uint8_t mask = 1u << (7 - (aXpos % 8));
     if (gInverted)
         gFramebuffer[aYpos][aXpos / 8] &= ~mask;

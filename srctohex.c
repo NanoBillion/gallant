@@ -11,12 +11,9 @@
 #include <locale.h>
 #include <unistd.h>
 #include <wchar.h>
-#include <errno.h>
 
 #define PixelWidth 12
 #define PixelHeight 22
-#define PixelSet   L'Y'
-#define PixelClear L' '
 #define LINE_MAX_WCHAR 1024
 #define FULL_BLOCK 0x2588
 
@@ -84,7 +81,7 @@ int main(int aArgc, char **aArgv) {
 int parse_startchar(const wchar_t *aLine) {
     if (swscanf(aLine, L"STARTCHAR U+%x", &gCodepoint) == 1) {
         printf("%04x:", gCodepoint);
-        return wcwidth(gCodepoint);
+        return wcwidth((wchar_t) gCodepoint);
     }
     errx("line %d: expected 'STARTCHAR U+xxxx', got %ls", gLineNr, aLine);
     return 0;

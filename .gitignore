@@ -4,6 +4,7 @@
 *.vim
 
 .indent.pro
+hextobdf
 input.txt
 lint.lnt
 lscp
