@@ -36243,8 +36243,8 @@ STARTCHAR U+1f0f GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI
 21 | ███   █    |
 20 |█   ███     |
 19 |      ██    |
-18 |███   ██    |
-17 |   █ █ ██   |
+18 | ███  ██    |
+17 |█    █ ██   |
 16 | ██  █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
@@ -36887,9 +36887,9 @@ STARTCHAR U+1f2d GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f2e GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI
-22 |            |
-21 |            |
-20 |            |
+22 |███  ███   █|
+21 |  █ █   ███ |
+20 |██          |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -36911,9 +36911,9 @@ STARTCHAR U+1f2e GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f2f GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI
-22 |            |
-21 |            |
-20 |            |
+22 |███  ███   █|
+21 |█   █   ███ |
+20 | ██         |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -37271,9 +37271,9 @@ STARTCHAR U+1f3d GREEK CAPITAL LETTER IOTA WITH DASIA AND OXIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f3e GREEK CAPITAL LETTER IOTA WITH PSILI AND PERISPOMENI
-22 |            |
-21 |            |
-20 |            |
+22 |███  ███   █|
+21 |  █ █   ███ |
+20 |██          |
 19 |   ██████   |
 18 |     ██     |
 17 |     ██     |
@@ -37295,9 +37295,9 @@ STARTCHAR U+1f3e GREEK CAPITAL LETTER IOTA WITH PSILI AND PERISPOMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f3f GREEK CAPITAL LETTER IOTA WITH DASIA AND PERISPOMENI
-22 |            |
-21 |            |
-20 |            |
+22 |███  ███   █|
+21 |█   █   ███ |
+20 | ██         |
 19 |   ██████   |
 18 |     ██     |
 17 |     ██     |
@@ -37871,9 +37871,9 @@ STARTCHAR U+1f5d GREEK CAPITAL LETTER UPSILON WITH DASIA AND OXIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f5f GREEK CAPITAL LETTER UPSILON WITH DASIA AND PERISPOMENI
-22 |            |
-21 |            |
-20 |            |
+22 |███  ███   █|
+21 |█   █   ███ |
+20 | ██         |
 19 |████     ███|
 18 | ██       █ |
 17 |  ██     █  |
@@ -38231,9 +38231,9 @@ STARTCHAR U+1f6d GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f6e GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI
-22 |            |
-21 |            |
-20 |            |
+22 |███  ███   █|
+21 |  █ █   ███ |
+20 |██          |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -38255,9 +38255,9 @@ STARTCHAR U+1f6e GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f6f GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI
-22 |            |
-21 |            |
-20 |            |
+22 |███  ███   █|
+21 |█   █   ███ |
+20 | ██         |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -38859,8 +38859,8 @@ STARTCHAR U+1f8a GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMM
 21 |   ██       |
 20 |   ██       |
 19 |    █ ██    |
-18 | ███  ██    |
-17 |█    █ ██   |
+18 |███   ██    |
+17 |   █ █ ██   |
 16 | ██  █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
@@ -38883,8 +38883,8 @@ STARTCHAR U+1f8b GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMM
 21 |   ██       |
 20 |   ██       |
 19 |    █ ██    |
-18 |███   ██    |
-17 |   █ █ ██   |
+18 | ███  ██    |
+17 |█    █ ██   |
 16 | ██  █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
@@ -38907,8 +38907,8 @@ STARTCHAR U+1f8c GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMME
 21 |   ██       |
 20 |   ██       |
 19 |   █  ██    |
-18 | ███  ██    |
-17 |█    █ ██   |
+18 |███   ██    |
+17 |   █ █ ██   |
 16 | ██  █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
@@ -38931,8 +38931,8 @@ STARTCHAR U+1f8d GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMME
 21 |   ██       |
 20 |   ██       |
 19 |   █  ██    |
-18 |███   ██    |
-17 |   █ █ ██   |
+18 | ███  ██    |
+17 |█    █ ██   |
 16 | ██  █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
@@ -38955,8 +38955,8 @@ STARTCHAR U+1f8e GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSG
 21 | ███   █    |
 20 |█   ███     |
 19 |      ██    |
-18 | ███  ██    |
-17 |█    █ ██   |
+18 |███   ██    |
+17 |   █ █ ██   |
 16 | ██  █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
@@ -38979,8 +38979,8 @@ STARTCHAR U+1f8f GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSG
 21 | ███   █    |
 20 |█   ███     |
 19 |      ██    |
-18 |███   ██    |
-17 |   █ █ ██   |
+18 | ███  ██    |
+17 |█    █ ██   |
 16 | ██  █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
@@ -39001,8 +39001,8 @@ ENDCHAR
 STARTCHAR U+1f90 GREEK SMALL LETTER ETA WITH PSILI AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 |            |
 19 |    ███     |
+18 |       █    |
 18 |       █    |
 17 |     ██     |
 16 |            |
@@ -39025,8 +39025,8 @@ ENDCHAR
 STARTCHAR U+1f91 GREEK SMALL LETTER ETA WITH DASIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 |            |
 19 |     ███    |
+18 |    █       |
 18 |    █       |
 17 |     ██     |
 16 |            |
@@ -39050,9 +39050,9 @@ STARTCHAR U+1f92 GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
 20 |            |
-19 | ███    ██  |
+19 | ███  ██    |
 18 |    █  ██   |
-17 |  ██  ██    |
+17 |  ██    ██  |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -39098,9 +39098,9 @@ STARTCHAR U+1f94 GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
 20 |            |
-19 |            |
-18 |            |
-17 |            |
+19 | ███    ██  |
+18 |    █  ██   |
+17 |  ██  ██    |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -39121,10 +39121,10 @@ ENDCHAR
 STARTCHAR U+1f95 GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 |            |
-19 |            |
-18 |            |
 17 |            |
+19 |  ███   ██  |
+18 | █     ██   |
+17 |  ██  ██    |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -39191,9 +39191,9 @@ STARTCHAR U+1f97 GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAM
 01 |       ████ |
 ENDCHAR
 STARTCHAR U+1f98 GREEK CAPITAL LETTER ETA WITH PSILI AND PROSGEGRAMMENI
-22 |            |
-21 |            |
-20 |            |
+22 |███         |
+21 |   █        |
+20 | ██         |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39209,15 +39209,15 @@ STARTCHAR U+1f98 GREEK CAPITAL LETTER ETA WITH PSILI AND PROSGEGRAMMENI
 07 | ██      ██ |
 06 |████    ████|
 05 |            |
-04 |            |
-03 |            |
-02 |            |
+04 |         ██ |
+03 |         ██ |
+02 |         ███|
 01 |            |
 ENDCHAR
 STARTCHAR U+1f99 GREEK CAPITAL LETTER ETA WITH DASIA AND PROSGEGRAMMENI
-22 |            |
-21 |            |
-20 |            |
+22 | ███        |
+21 |█           |
+20 | ██         |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39233,15 +39233,15 @@ STARTCHAR U+1f99 GREEK CAPITAL LETTER ETA WITH DASIA AND PROSGEGRAMMENI
 07 | ██      ██ |
 06 |████    ████|
 05 |            |
-04 |            |
-03 |            |
-02 |            |
+04 |         ██ |
+03 |         ██ |
+02 |         ███|
 01 |            |
 ENDCHAR
 STARTCHAR U+1f9a GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
-22 |███   █     |
+22 |███  ██     |
 21 |   █  ██    |
-20 | ██    █    |
+20 | ██    ██   |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39257,15 +39257,15 @@ STARTCHAR U+1f9a GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMEN
 07 | ██      ██ |
 06 |████    ████|
 05 |            |
-04 |            |
-03 |            |
-02 |            |
+04 |         ██ |
+03 |         ██ |
+02 |         ███|
 01 |            |
 ENDCHAR
 STARTCHAR U+1f9b GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
-22 |            |
-21 |            |
-20 |            |
+22 | ███ ██     |
+21 |█     ██    |
+20 | ██    ██   |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39281,15 +39281,15 @@ STARTCHAR U+1f9b GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMEN
 07 | ██      ██ |
 06 |████    ████|
 05 |            |
-04 |            |
-03 |            |
-02 |            |
+04 |         ██ |
+03 |         ██ |
+02 |         ███|
 01 |            |
 ENDCHAR
 STARTCHAR U+1f9c GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-22 |            |
-21 |            |
-20 |            |
+22 |███    ██   |
+21 |   █  ██    |
+20 | ██  ██     |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39305,15 +39305,15 @@ STARTCHAR U+1f9c GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
 07 | ██      ██ |
 06 |████    ████|
 05 |            |
-04 |            |
-03 |            |
-02 |            |
+04 |         ██ |
+03 |         ██ |
+02 |         ███|
 01 |            |
 ENDCHAR
 STARTCHAR U+1f9d GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-22 |            |
-21 |            |
-20 |            |
+22 | ███   ██   |
+21 |█     ██    |
+20 | ██  ██     |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39329,15 +39329,15 @@ STARTCHAR U+1f9d GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
 07 | ██      ██ |
 06 |████    ████|
 05 |            |
-04 |            |
-03 |            |
-02 |            |
+04 |         ██ |
+03 |         ██ |
+02 |         ███|
 01 |            |
 ENDCHAR
 STARTCHAR U+1f9e GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
-22 |            |
-21 |            |
-20 |            |
+22 |███  ███   █|
+21 |  █ █   ███ |
+20 | ██         |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39353,15 +39353,15 @@ STARTCHAR U+1f9e GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEG
 07 | ██      ██ |
 06 |████    ████|
 05 |            |
-04 |            |
-03 |            |
-02 |            |
+04 |         ██ |
+03 |         ██ |
+02 |         ███|
 01 |            |
 ENDCHAR
 STARTCHAR U+1f9f GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
-22 |            |
-21 |            |
-20 |            |
+22 |███  ███   █|
+21 |█   █   ███ |
+20 | ██         |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39377,16 +39377,16 @@ STARTCHAR U+1f9f GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEG
 07 | ██      ██ |
 06 |████    ████|
 05 |            |
-04 |            |
-03 |            |
-02 |            |
+04 |         ██ |
+03 |         ██ |
+02 |         ███|
 01 |            |
 ENDCHAR
 STARTCHAR U+1fa0 GREEK SMALL LETTER OMEGA WITH PSILI AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 |            |
 19 |    ███     |
+18 |       █    |
 18 |       █    |
 17 |     ██     |
 16 |            |
@@ -39409,8 +39409,8 @@ ENDCHAR
 STARTCHAR U+1fa1 GREEK SMALL LETTER OMEGA WITH DASIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 |            |
 19 |     ███    |
+18 |    █       |
 18 |    █       |
 17 |     ██     |
 16 |            |
@@ -39432,9 +39432,9 @@ STARTCHAR U+1fa1 GREEK SMALL LETTER OMEGA WITH DASIA AND YPOGEGRAMMENI
 ENDCHAR
 STARTCHAR U+1fa2 GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
 22 |            |
-21 |            |
-20 |        █   |
-19 |  ███   ██  |
+20 |            |
+19 |  ███   █   |
+18 |     █  ██  |
 18 |     █  ██  |
 17 |   ██    █  |
 16 |            |
@@ -39456,9 +39456,9 @@ STARTCHAR U+1fa2 GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
 ENDCHAR
 STARTCHAR U+1fa3 GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
 22 |            |
-21 |            |
-20 |        █   |
-19 |   ███  ██  |
+20 |            |
+19 |   ███  █   |
+18 |  █     ██  |
 18 |  █     ██  |
 17 |   ██    █  |
 16 |            |
@@ -39480,9 +39480,9 @@ STARTCHAR U+1fa3 GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
 ENDCHAR
 STARTCHAR U+1fa4 GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
 22 |            |
-21 |            |
-20 |         █  |
-19 |  ███   ██  |
+20 |            |
+19 |  ███    █  |
+18 |     █  ██  |
 18 |     █  ██  |
 17 |   ██   █   |
 16 |            |
@@ -39504,9 +39504,9 @@ STARTCHAR U+1fa4 GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
 ENDCHAR
 STARTCHAR U+1fa5 GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
 22 |            |
-21 |            |
-20 |         █  |
-19 |   ███  ██  |
+20 |            |
+19 |   ███   █  |
+18 |  █     ██  |
 18 |  █     ██  |
 17 |   ██   █   |
 16 |            |
@@ -39575,10 +39575,10 @@ STARTCHAR U+1fa7 GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGR
 01 |            |
 ENDCHAR
 STARTCHAR U+1fa8 GREEK CAPITAL LETTER OMEGA WITH PSILI AND PROSGEGRAMMENI
-22 |            |
-21 |            |
-20 |            |
-19 |    ████    |
+22 |     ███   █|
+21 |███ █   ███ |
+20 |   █        |
+19 | ██ ████    |
 18 |   █   ███  |
 17 |  █     ██  |
 16 |  █      ██ |
@@ -39600,9 +39600,9 @@ STARTCHAR U+1fa8 GREEK CAPITAL LETTER OMEGA WITH PSILI AND PROSGEGRAMMENI
 ENDCHAR
 STARTCHAR U+1fa9 GREEK CAPITAL LETTER OMEGA WITH DASIA AND PROSGEGRAMMENI
 22 |            |
-21 |            |
-20 |            |
-19 |    ████    |
+21 |███         |
+20 |█           |
+19 | ██ ████    |
 18 |   █   ███  |
 17 |  █     ██  |
 16 |  █      ██ |
@@ -39617,9 +39617,9 @@ STARTCHAR U+1fa9 GREEK CAPITAL LETTER OMEGA WITH DASIA AND PROSGEGRAMMENI
 07 | █  █  █  █ |
 06 | ████  ████ |
 05 |            |
-04 |            |
-03 |            |
-02 |            |
+04 |         ██ |
+03 |         ██ |
+02 |         ███|
 01 |            |
 ENDCHAR
 STARTCHAR U+1faa GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
@@ -39641,15 +39641,15 @@ STARTCHAR U+1faa GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMM
 07 | █  █  █  █ |
 06 | ████  ████ |
 05 |            |
-04 |            |
-03 |            |
-02 |            |
+04 |         ██ |
+03 |         ██ |
+02 |         ███|
 01 |            |
 ENDCHAR
 STARTCHAR U+1fab GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
-22 |            |
-21 |            |
-20 |            |
+19 | ███ ██     |
+18 |█     ██    |
+17 | ██    ██   |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -39665,15 +39665,15 @@ STARTCHAR U+1fab GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMM
 07 | █  █  █  █ |
 06 | ████  ████ |
 05 |            |
-04 |            |
-03 |            |
-02 |            |
+04 |         ██ |
+03 |         ██ |
+02 |         ███|
 01 |            |
 ENDCHAR
 STARTCHAR U+1fac GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-22 |            |
-21 |            |
-20 |            |
+19 |███    ██   |
+18 |   █  ██    |
+17 | ██  ██     |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -39689,15 +39689,15 @@ STARTCHAR U+1fac GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMME
 07 | █  █  █  █ |
 06 | ████  ████ |
 05 |            |
-04 |            |
-03 |            |
-02 |            |
+04 |         ██ |
+03 |         ██ |
+02 |         ███|
 01 |            |
 ENDCHAR
 STARTCHAR U+1fad GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-22 |            |
-21 |            |
-20 |            |
+19 | ███   ██   |
+18 |█     ██    |
+17 | ██  ██     |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -39713,15 +39713,15 @@ STARTCHAR U+1fad GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMME
 07 | █  █  █  █ |
 06 | ████  ████ |
 05 |            |
-04 |            |
-03 |            |
-02 |            |
+04 |         ██ |
+03 |         ██ |
+02 |         ███|
 01 |            |
 ENDCHAR
 STARTCHAR U+1fae GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
-22 |            |
-21 |            |
-20 |            |
+22 |███  ███   █|
+21 |  █ █   ███ |
+20 |██          |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -39737,15 +39737,15 @@ STARTCHAR U+1fae GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSG
 07 | █  █  █  █ |
 06 | ████  ████ |
 05 |            |
-04 |            |
-03 |            |
-02 |            |
+04 |         ██ |
+03 |         ██ |
+02 |         ███|
 01 |            |
 ENDCHAR
 STARTCHAR U+1faf GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
-22 |            |
-21 |            |
-20 |            |
+22 |███  ███   █|
+21 |█   █   ███ |
+20 | ██         |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -39761,9 +39761,9 @@ STARTCHAR U+1faf GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSG
 07 | █  █  █  █ |
 06 | ████  ████ |
 05 |            |
-04 |            |
-03 |            |
-02 |            |
+04 |         ██ |
+03 |         ██ |
+02 |         ███|
 01 |            |
 ENDCHAR
 STARTCHAR U+1fb0 GREEK SMALL LETTER ALPHA WITH VRACHY
@@ -46942,54 +46942,6 @@ STARTCHAR U+2108 SCRUPLE
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U+210e PLANCK CONSTANT
-22 |            |
-21 |            |
-20 |    ██      |
-19 |    ██      |
-18 |    ██      |
-17 |   ██       |
-16 |   ██       |
-15 |   ██ ███   |
-14 |  ██ █████  |
-13 |  ███   ██  |
-12 |  ██    ██  |
-11 | ██    ██   |
-10 | ██    ██   |
-09 | ██    ██   |
-08 |██    ██    |
-07 |██    ██    |
-06 |██    ███   |
-05 |            |
-04 |            |
-03 |            |
-02 |            |
-01 |            |
-ENDCHAR
-STARTCHAR U+210f PLANCK CONSTANT OVER TWO PI
-22 |            |
-21 |            |
-20 |    ██      |
-19 |    ██      |
-18 |    █████   |
-17 |█████       |
-16 |   ██       |
-15 |   ██ ███   |
-14 |  ██ █████  |
-13 |  ███   ██  |
-12 |  ██    ██  |
-11 | ██    ██   |
-10 | ██    ██   |
-09 | ██    ██   |
-08 |██    ██    |
-07 |██    ██    |
-06 |██    ███   |
-05 |            |
-04 |            |
-03 |            |
-02 |            |
-01 |            |
-ENDCHAR
 STARTCHAR U+2109 DEGREE FAHRENHEIT
 22 | ██         |
 21 |█  █        |
@@ -47104,6 +47056,102 @@ STARTCHAR U+210d DOUBLE-STRUCK CAPITAL H
 08 | █  █  █  █ |
 07 | █  █  █  █ |
 06 | ████  ████ |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+210e PLANCK CONSTANT
+22 |            |
+21 |            |
+20 |    ██      |
+19 |    ██      |
+18 |    ██      |
+17 |   ██       |
+16 |   ██       |
+15 |   ██ ███   |
+14 |  ██ █████  |
+13 |  ███   ██  |
+12 |  ██    ██  |
+11 | ██    ██   |
+10 | ██    ██   |
+09 | ██    ██   |
+08 |██    ██    |
+07 |██    ██    |
+06 |██    ███   |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+210f PLANCK CONSTANT OVER TWO PI
+22 |            |
+21 |            |
+20 |    ██      |
+19 |    ██      |
+18 |    █████   |
+17 |█████       |
+16 |   ██       |
+15 |   ██ ███   |
+14 |  ██ █████  |
+13 |  ███   ██  |
+12 |  ██    ██  |
+11 | ██    ██   |
+10 | ██    ██   |
+09 | ██    ██   |
+08 |██    ██    |
+07 |██    ██    |
+06 |██    ███   |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2110 SCRIPT CAPITAL I
+22 |            |
+21 |            |
+20 |            |
+19 |     ██████ |
+18 |  ████  ██  |
+17 | ███    ██  |
+16 |        ██  |
+15 |        ██  |
+14 |        ██  |
+13 |        ██  |
+12 |        ██  |
+11 |        ██  |
+10 |        ██  |
+09 |        ██  |
+08 |        ██  |
+07 |        ██  |
+06 |        ██  |
+05 |        █   |
+04 |   ██  ██   |
+03 |   █████    |
+02 |    ██      |
+01 |            |
+ENDCHAR
+STARTCHAR U+2114 L B BAR SYMBOL
+22 |            |
+21 |            |
+20 |██  ██      |
+19 |██  ██      |
+18 |███████████ |
+17 |██  ██      |
+16 |██  ██      |
+15 |██  ██      |
+14 |██  ██ ████ |
+13 |██  ███  ███|
+12 |██  ██    ██|
+11 |██  ██    ██|
+10 |██  ██    ██|
+09 |██  ██    ██|
+08 |██  ██    ██|
+07 |██  ███  ███|
+06 |██  ██ ████ |
 05 |            |
 04 |            |
 03 |            |
@@ -47422,6 +47470,30 @@ STARTCHAR U+2124 DOUBLE-STRUCK CAPITAL Z
 02 |            |
 01 |            |
 ENDCHAR
+STARTCHAR U+2125 OUNCE SIGN
+22 |            |
+21 |            |
+20 |            |
+19 |            |
+18 |            |
+17 | █████████  |
+16 | █     ██   |
+15 |      ██    |
+14 |     ██     |
+13 |    ██      |
+12 |   ██████   |
+11 |      ██    |
+10 |     ██     |
+09 |    ██      |
+08 |   ██████   |
+07 |       ███  |
+06 |        ██  |
+05 | █      ██  |
+04 | ██     █   |
+03 |  ██████    |
+02 |   ████     |
+01 |            |
+ENDCHAR
 STARTCHAR U+2126 OHM SIGN
 22 |            |
 21 |            |
@@ -47467,6 +47539,30 @@ STARTCHAR U+2127 INVERTED OHM SIGN
 05 |            |
 04 |            |
 03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2128 BLACK-LETTER CAPITAL Z
+22 |            |
+21 |            |
+20 |    █████   |
+19 |   █   ███  |
+18 |  █     ███ |
+17 | █       ██ |
+16 |         ██ |
+15 |         ██ |
+14 |        ███ |
+13 |   █   ███  |
+12 |    ██████  |
+11 |   █    ███ |
+10 |         ██ |
+09 |         ██ |
+08 |         ██ |
+07 | ██      ██ |
+06 |█ ██     ██ |
+05 |  ██     █  |
+04 |   ██████   |
+03 |    ████    |
 02 |            |
 01 |            |
 ENDCHAR
@@ -47542,6 +47638,30 @@ STARTCHAR U+212b ANGSTROM SIGN
 02 |            |
 01 |            |
 ENDCHAR
+STARTCHAR U+212d BLACK-LETTER CAPITAL C
+22 |            |
+21 |            |
+20 |            |
+19 |    ████   █|
+18 |  ███  ████ |
+17 | ███  ██    |
+16 | ██   ██    |
+15 |███  ██     |
+14 |███  ██     |
+13 |███  ██     |
+12 |███   ███   |
+11 |███    ███  |
+10 |███     ██  |
+09 |███    █    |
+08 | ███        |
+07 | █████    █ |
+06 |  ████████  |
+05 |    ████    |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
 STARTCHAR U+212e ESTIMATED SYMBOL
 22 |            |
 21 |            |
@@ -47590,7 +47710,31 @@ STARTCHAR U+2132 TURNED CAPITAL F
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U+2135 ALEF SYMBOL
+STARTCHAR U+2133 SCRIPT CAPITAL M
+22 |            |
+21 |            |
+20 |            |
+19 |    ██    ██|
+18 |   █ █   █ █|
+17 |  █ ██  █ █ |
+16 |  █ ██  █ █ |
+15 |  █ ██  █ █ |
+14 | █ ██  █ ██ |
+13 | █ ██  █ ██ |
+12 | █ ██  █ ██ |
+11 | █ ██  █ ██ |
+10 |█ ██  █ ██  |
+09 |█ ██  █ ██  |
+08 |█ ██  █ ██ █|
+07 |█ ██  █ ██ █|
+06 |█  ██   ███ |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2134 SCRIPT SMALL O
 22 |            |
 21 |            |
 20 |            |
@@ -47598,16 +47742,112 @@ STARTCHAR U+2135 ALEF SYMBOL
 18 |            |
 17 |            |
 16 |            |
-15 |███    ████ |
-14 | ██      ██ |
-13 |  ██     ██ |
-12 |   ██   ██  |
-11 |  ████  ██  |
-10 | ██  ████   |
-09 | ██   ██    |
-08 |██     ██   |
-07 |██      ██  |
-06 |████    ███ |
+15 |     ████   |
+14 |    ██   █  |
+13 |   ██   █ █ |
+12 |  ██    █ █ |
+11 | ██      ███|
+10 |███       █ |
+09 | ██      █  |
+08 | ██     █   |
+07 |  ██   █    |
+06 |   ████     |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2135 ALEF SYMBOL
+22 |            |
+21 |            |
+20 |            |
+19 |██     ██   |
+18 |██     ███  |
+17 |███     ███ |
+16 | ███     ██ |
+15 |  ███     █ |
+14 |  ████   █  |
+13 | █  ███ █   |
+12 |██   ███    |
+11 |███   ███   |
+10 |███    ███  |
+09 | ███    ███ |
+08 |  ███    ███|
+07 |  ███     ██|
+06 |███       ██|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2136 BET SYMBOL
+22 |            |
+21 |            |
+20 |            |
+19 |██          |
+18 |█████████   |
+17 | █████████  |
+16 |        ██  |
+15 |         █  |
+14 |         █  |
+13 |         █  |
+12 |         █  |
+11 |         █  |
+10 |         █  |
+09 |         █  |
+08 |         █  |
+07 | ██████████ |
+06 |██████████  |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2137 GIMEL SYMBOL
+22 |            |
+21 |            |
+20 |            |
+19 | ██         |
+18 | ████       |
+17 |  █████     |
+16 |     ███    |
+15 |       █    |
+14 |       █    |
+13 |       █    |
+12 |       █    |
+11 |       █    |
+10 |       ██   |
+09 |      █ ██  |
+08 |     █  ███ |
+07 |  ████   ██ |
+06 | ████     █ |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2138 DALET SYMBOL
+22 |            |
+21 |            |
+20 |            |
+19 |██          |
+18 |█████████   |
+17 | █████████  |
+16 |        █   |
+15 |       ██   |
+14 |       ██   |
+13 |       ██   |
+12 |       ██   |
+11 |       ██   |
+10 |       ██   |
+09 |       ██   |
+08 |       ██   |
+07 |      ██    |
+06 |      ██    |
 05 |            |
 04 |            |
 03 |            |
@@ -47644,18 +47884,18 @@ STARTCHAR U+213a ROTATED CAPITAL Q
 20 |            |
 19 |            |
 18 |            |
-17 |            |
-16 |    █████  █|
-15 |  ████████ █|
-14 | ███     ██ |
-13 |██      ██ █|
-12 |█      ██  █|
+17 |    █████  █|
+16 |  ████████ █|
+15 | ███     ██ |
+14 |██      ██ █|
+13 |█      ██  █|
+12 |█          █|
 11 |█          █|
-10 |█         ██|
-09 | █       ██ |
-08 |  ████████  |
-07 |    █████   |
-06 |            |
+10 |█          █|
+09 |█         ██|
+08 | █       ██ |
+07 |  ████████  |
+06 |    █████   |
 05 |            |
 04 |            |
 03 |            |
@@ -47806,12 +48046,36 @@ STARTCHAR U+2140 DOUBLE-STRUCK N-ARY SUMMATION
 02 |            |
 01 |            |
 ENDCHAR
+STARTCHAR U+2141 TURNED SANS-SERIF CAPITAL G
+22 |            |
+21 |            |
+20 |            |
+19 |   █████    |
+18 |  ██   ██   |
+17 | ██     ██  |
+16 | ██     ██  |
+15 | ██      ██ |
+14 | █████   ██ |
+13 |         ██ |
+12 |         ██ |
+11 |         ██ |
+10 |         ██ |
+09 | ██     ██  |
+08 | ██     ██  |
+07 |  ██   ██   |
+06 |   █████    |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
 STARTCHAR U+2142 TURNED SANS-SERIF CAPITAL L
 22 |            |
 21 |            |
 20 |            |
 19 | █████████  |
-18 |        ██  |
+18 | █████████  |
 17 |        ██  |
 16 |        ██  |
 15 |        ██  |
@@ -47846,7 +48110,7 @@ STARTCHAR U+2143 REVERSED SANS-SERIF CAPITAL L
 10 |        ██  |
 09 |        ██  |
 08 |        ██  |
-07 |        ██  |
+07 | █████████  |
 06 | █████████  |
 05 |            |
 04 |            |
@@ -47899,6 +48163,102 @@ STARTCHAR U+2145 DOUBLE-STRUCK ITALIC CAPITAL D
 05 |            |
 04 |            |
 03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2146 DOUBLE-STRUCK ITALIC SMALL D
+22 |            |
+21 |            |
+20 |       ████ |
+19 |       █  █ |
+18 |       █  █ |
+17 |       █  █ |
+16 |       █  █ |
+15 |    ███  █  |
+14 |  ██  █  █  |
+13 | █    █  █  |
+12 | █    █  █  |
+11 | █    █  █  |
+10 |█    █  █   |
+09 |█    █  █   |
+08 |█    █  █   |
+07 |█    █  █   |
+06 | ████████   |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2147 DOUBLE-STRUCK ITALIC SMALL E
+22 |            |
+21 |            |
+20 |            |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 |    █████   |
+14 |   █  █  ██ |
+13 |  █  █     █|
+12 | █  █     █ |
+11 | █  ███████ |
+10 | █  █       |
+09 |█  █        |
+08 |█  █        |
+07 | █ █   ██   |
+06 |  █████     |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2148 DOUBLE-STRUCK ITALIC SMALL I
+22 |            |
+21 |            |
+20 |            |
+19 |            |
+18 |     ████   |
+17 |     █  █   |
+16 |     ████   |
+15 |            |
+14 |            |
+13 |    ████    |
+12 |    █  █    |
+11 |    █  █    |
+10 |    █  █    |
+09 |   █  █     |
+08 |   █  █     |
+07 |   █  █     |
+06 |   ████     |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2149 DOUBLE-STRUCK ITALIC SMALL J
+22 |            |
+21 |            |
+20 |            |
+19 |            |
+18 |      ████  |
+17 |      █  █  |
+16 |      ████  |
+15 |            |
+14 |            |
+13 |     ████   |
+12 |     █  █   |
+11 |     █  █   |
+10 |     █  █   |
+09 |    █  █    |
+08 |    █  █    |
+07 |    █  █    |
+06 |    █  █    |
+05 |   █  █     |
+04 |  █  █      |
+03 | ████       |
 02 |            |
 01 |            |
 ENDCHAR
@@ -48016,6 +48376,1470 @@ STARTCHAR U+214e TURNED SMALL F
 08 |       ██   |
 07 |  █    ██   |
 06 |  ████████  |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+214f SYMBOL FOR SAMARITAN SOURCE
+22 |            |
+21 |            |
+20 |            |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 |            |
+14 | █   █   █  |
+13 |█ █ █ █ █ █ |
+12 |█ █ █ █ █ █ |
+11 |█ █ █ █ █ █ |
+10 |█ █ █ █ █ █ |
+09 |█ █ █ █ █ █ |
+08 | █   █   █  |
+07 | ██  ██  ██ |
+06 |█  ██  ██  █|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2150 VULGAR FRACTION ONE SEVENTH
+22 |            |
+21 |   ██       |
+20 |  ███       |
+19 |  ███       |
+18 |   ██       |
+17 |   ██     █ |
+16 |   ██    ██ |
+15 |   ██   ██  |
+14 |   ██  ██   |
+13 |  ██████    |
+12 |     ██     |
+11 |    ██      |
+10 |   ██ ██████|
+09 |  ██      ██|
+08 | ██      ██ |
+07 | █       ██ |
+06 |        ██  |
+05 |        ██  |
+04 |       ██   |
+03 |       ██   |
+02 |      ██    |
+01 |            |
+ENDCHAR
+STARTCHAR U+2151 VULGAR FRACTION ONE NINTH
+22 |            |
+21 |   ██       |
+20 |  ███       |
+19 |  ███       |
+18 |   ██       |
+17 |   ██     █ |
+16 |   ██    ██ |
+15 |   ██   ██  |
+14 |   ██  ██   |
+13 |  ██████    |
+12 |     ██     |
+11 |    ██      |
+10 |   ██  ████ |
+09 |  ██  ██  ██|
+08 | ██   ██  ██|
+07 | █    ██  ██|
+06 |       █████|
+05 |          ██|
+04 |         ██ |
+03 |        ██  |
+02 |      ██    |
+01 |            |
+ENDCHAR
+STARTCHAR U+2152 VULGAR FRACTION ONE TENTH
+22 |   ██       |
+21 |  ███       |
+20 |  ███       |
+19 |   ██       |
+18 |   ██     █ |
+17 |   ██    ██ |
+16 |   ██   ██  |
+15 |   ██  ██   |
+14 |  ██████    |
+13 |     ██     |
+12 |    ██      |
+11 |   ██       |
+10 |  ██        |
+09 | ████  ████ |
+08 |  ███ ██  ██|
+07 |  ███ ██  ██|
+06 |   ██ ██  ██|
+05 |   ██ ██  ██|
+04 |   ██ ██  ██|
+03 |   ██ ██  ██|
+02 |   ██ ██  ██|
+01 |  ████ ████ |
+ENDCHAR
+STARTCHAR U+2153 VULGAR FRACTION ONE THIRD
+22 |            |
+21 |   ██       |
+20 |  ███       |
+19 |  ███       |
+18 |   ██       |
+17 |   ██     █ |
+16 |   ██    ██ |
+15 |   ██   ██  |
+14 |   ██  ██   |
+13 |  ██████    |
+12 |     ██████ |
+11 |    ████  ██|
+10 |   ██     ██|
+09 |  ██      ██|
+08 | ██    ████ |
+07 | █        ██|
+06 |          ██|
+05 |      ██  ██|
+04 |       ████ |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2154 VULGAR FRACTION TWO THIRDS
+22 |            |
+21 |  ███       |
+20 | █████      |
+19 | ██ ██      |
+18 | █  ██      |
+17 |   ██     █ |
+16 |  ██     ██ |
+15 | ██     ██  |
+14 | █████ ██   |
+13 | ███████    |
+12 |     ██████ |
+11 |    ████  ██|
+10 |   ██     ██|
+09 |  ██      ██|
+08 | ██    ████ |
+07 | █        ██|
+06 |          ██|
+05 |      ██  ██|
+04 |       ████ |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2155 VULGAR FRACTION ONE FIFTH
+22 |            |
+21 |   ██       |
+20 |  ███       |
+19 |  ███       |
+18 |   ██       |
+17 |   ██     █ |
+16 |   ██    ██ |
+15 |   ██   ██  |
+14 |   ██  ██   |
+13 |  ██████    |
+12 |     ███████|
+11 |    ████████|
+10 |   ██ ██    |
+09 |  ██  ██    |
+08 | ██   █████ |
+07 | █        ██|
+06 |          ██|
+05 |      ██  ██|
+04 |       ████ |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2156 VULGAR FRACTION TWO FIFTHS
+22 |            |
+21 |  ███       |
+20 | █████      |
+19 | ██ ██      |
+18 | █  ██      |
+17 |   ██     █ |
+16 |  ██     ██ |
+15 | ██     ██  |
+14 | █████ ██   |
+13 | ███████    |
+12 |     ███████|
+11 |    ████████|
+10 |   ██ ██    |
+09 |  ██  ██    |
+08 | ██   █████ |
+07 | █        ██|
+06 |          ██|
+05 |      ██  ██|
+04 |       ████ |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2157 VULGAR FRACTION THREE FIFTHS
+22 |            |
+21 |  ████      |
+20 | ██  ██     |
+19 |     ██     |
+18 |     ██     |
+17 |  ████    █ |
+16 |     ██  ██ |
+15 |     ██ ██  |
+14 | ██  ████   |
+13 |  ██████    |
+12 |     ███████|
+11 |    ████████|
+10 |   ██ ██    |
+09 |  ██  ██    |
+08 | ██   █████ |
+07 | █        ██|
+06 |          ██|
+05 |      ██  ██|
+04 |       ████ |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2158 VULGAR FRACTION FOUR FIFTHS
+22 |            |
+21 |     █      |
+20 |    ██      |
+19 |   ███      |
+18 |   ███      |
+17 |  █ ██    █ |
+16 | █  ██   ██ |
+15 | ██████ ██  |
+14 |    ██ ██   |
+13 |    ████    |
+12 |     ███████|
+11 |    ████████|
+10 |   ██ ██    |
+09 |  ██  ██    |
+08 | ██   █████ |
+07 | █        ██|
+06 |          ██|
+05 |      ██  ██|
+04 |       ████ |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2159 VULGAR FRACTION ONE SIXTH
+22 |            |
+21 |   ██       |
+20 |  ███       |
+19 |  ███       |
+18 |   ██       |
+17 |   ██     █ |
+16 |   ██    ██ |
+15 |   ██   ██  |
+14 |   ██  ██   |
+13 |  ██████    |
+12 |     ██  ██ |
+11 |    ██ ██   |
+10 |   ██ ██    |
+09 |  ██ ██     |
+08 | ██  █████  |
+07 | █   ██  ██ |
+06 |     ██  ██ |
+05 |     ██  ██ |
+04 |      ████  |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+215a VULGAR FRACTION FIVE SIXTHS
+22 |            |
+21 |██████      |
+20 |██████      |
+19 |██          |
+18 |██          |
+17 |█████     █ |
+16 |    ██   ██ |
+15 |    ██  ██  |
+14 |██  ██ ██   |
+13 | ████ ██    |
+12 |     ██  ██ |
+11 |    ██ ██   |
+10 |   ██ ██    |
+09 |  ██ ██     |
+08 | ██  █████  |
+07 | █   ██  ██ |
+06 |     ██  ██ |
+05 |     ██  ██ |
+04 |      ████  |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+215b VULGAR FRACTION ONE EIGHTH
+22 |            |
+21 |   ██       |
+20 |  ███       |
+19 |  ███       |
+18 |   ██       |
+17 |   ██     █ |
+16 |   ██    ██ |
+15 |   ██   ██  |
+14 |   ██  ██   |
+13 |  ██████    |
+12 |     █████  |
+11 |    ███  ██ |
+10 |   ████  ██ |
+09 |  ██ ██  ██ |
+08 | ██   ████  |
+07 | █   ██  ██ |
+06 |     ██  ██ |
+05 |     ██  ██ |
+04 |      ████  |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+215c VULGAR FRACTION THREE EIGHTHS
+22 |            |
+21 |  ████      |
+20 | ██  ██     |
+19 |     ██     |
+18 |     ██     |
+17 |  ████    █ |
+16 |     ██  ██ |
+15 |     ██ ██  |
+14 | ██  ████   |
+13 |  ████ █    |
+12 |     █████  |
+11 |    ███  ██ |
+10 |   ████  ██ |
+09 |  ██ ██  ██ |
+08 | ██   ████  |
+07 | █   ██  ██ |
+06 |     ██  ██ |
+05 |     ██  ██ |
+04 |      ████  |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+215d VULGAR FRACTION FIVE EIGHTHS
+22 |            |
+21 | ██████     |
+20 | ██████     |
+19 | ██         |
+18 | ██         |
+17 | █████    █ |
+16 |     ██  ██ |
+15 |     ██ ██  |
+14 | ██  ████   |
+13 |  ██████    |
+12 |     █████  |
+11 |    ███  ██ |
+10 |   ████  ██ |
+09 |  ██ ██  ██ |
+08 | ██   ████  |
+07 | █   ██  ██ |
+06 |     ██  ██ |
+05 |     ██  ██ |
+04 |      ████  |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+215e VULGAR FRACTION SEVEN EIGHTHS
+22 |            |
+21 | ██████     |
+20 |     ██     |
+19 |    ██    █ |
+18 |    ██   ██ |
+17 |   ██   ██  |
+16 |   ██  ██   |
+15 |  ██  ██    |
+14 |  ██ ██     |
+13 | ██ ██      |
+12 |   ██ ████  |
+11 |  ██ ██  ██ |
+10 | ██  ██  ██ |
+09 | █   ██  ██ |
+08 |      ████  |
+07 |     ██  ██ |
+06 |     ██  ██ |
+05 |     ██  ██ |
+04 |      ████  |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+215f FRACTION NUMERATOR ONE
+22 |            |
+21 |   ██       |
+20 |  ███       |
+19 |  ███       |
+18 |   ██       |
+17 |   ██     █ |
+16 |   ██    ██ |
+15 |   ██   ██  |
+14 |   ██  ██   |
+13 |  ██████    |
+12 |     ██     |
+11 |    ██      |
+10 |   ██       |
+09 |  ██        |
+08 | ██         |
+07 | █          |
+06 |            |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2160 ROMAN NUMERAL ONE
+22 |            |
+21 |            |
+20 |            |
+19 |   █████    |
+18 |     █      |
+17 |     █      |
+16 |     █      |
+15 |     █      |
+14 |     █      |
+13 |     █      |
+12 |     █      |
+11 |     █      |
+10 |     █      |
+09 |     █      |
+08 |     █      |
+07 |     █      |
+06 |   █████    |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2161 ROMAN NUMERAL TWO
+22 |            |
+21 |            |
+20 |            |
+19 |  ████████  |
+18 |    █  █    |
+17 |    █  █    |
+16 |    █  █    |
+15 |    █  █    |
+14 |    █  █    |
+13 |    █  █    |
+12 |    █  █    |
+11 |    █  █    |
+10 |    █  █    |
+09 |    █  █    |
+08 |    █  █    |
+07 |    █  █    |
+06 |  ████████  |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2162 ROMAN NUMERAL THREE
+22 |            |
+21 |            |
+20 |            |
+19 |███████████ |
+18 |  █  █  █   |
+17 |  █  █  █   |
+16 |  █  █  █   |
+15 |  █  █  █   |
+14 |  █  █  █   |
+13 |  █  █  █   |
+12 |  █  █  █   |
+11 |  █  █  █   |
+10 |  █  █  █   |
+09 |  █  █  █   |
+08 |  █  █  █   |
+07 |  █  █  █   |
+06 |███████████ |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2163 ROMAN NUMERAL FOUR
+22 |            |
+21 |            |
+20 |            |
+19 |███████ ████|
+18 |  █ █     █ |
+17 |  █ █     █ |
+16 |  █ █     █ |
+15 |  █  █   █  |
+14 |  █  █   █  |
+13 |  █  █   █  |
+12 |  █   █ █   |
+11 |  █   █ █   |
+10 |  █   █ █   |
+09 |  █    █    |
+08 |  █    █    |
+07 |  █    █    |
+06 |██████████  |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2164 ROMAN NUMERAL FIVE
+22 |            |
+21 |            |
+20 |            |
+19 |█████  █████|
+18 |  █      █  |
+17 |  █      █  |
+16 |  █      █  |
+15 |   █    █   |
+14 |   █    █   |
+13 |   █    █   |
+12 |    █  █    |
+11 |    █  █    |
+10 |    █  █    |
+09 |     ██     |
+08 |     ██     |
+07 |     ██     |
+06 |   ██████   |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2165 ROMAN NUMERAL SIX
+22 |            |
+21 |            |
+20 |            |
+19 |███   ██████|
+18 | █     █ █  |
+17 | █     █ █  |
+16 | █     █ █  |
+15 |  █   █  █  |
+14 |  █   █  █  |
+13 |  █   █  █  |
+12 |   █ █   █  |
+11 |   █ █   █  |
+10 |   █ █   █  |
+09 |    █    █  |
+08 |    █    █  |
+07 |    █    █  |
+06 |  ██████████|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2166 ROMAN NUMERAL SEVEN
+22 |            |
+21 |            |
+20 |            |
+19 |███  ███████|
+18 | █    █ █ █ |
+17 | █    █ █ █ |
+16 | █    █ █ █ |
+15 | █    █ █ █ |
+14 |  █  █  █ █ |
+13 |  █  █  █ █ |
+12 |  █  █  █ █ |
+11 |  █  █  █ █ |
+10 |   ██   █ █ |
+09 |   ██   █ █ |
+08 |   ██   █ █ |
+07 |   ██   █ █ |
+06 |  ████ █████|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2167 ROMAN NUMERAL EIGHT
+22 |            |
+21 |            |
+20 |            |
+19 |██ █████████|
+18 |█   █ █ █ █ |
+17 |█   █ █ █ █ |
+16 |█   █ █ █ █ |
+15 |█   █ █ █ █ |
+14 | █ █  █ █ █ |
+13 | █ █  █ █ █ |
+12 | █ █  █ █ █ |
+11 | █ █  █ █ █ |
+10 |  █   █ █ █ |
+09 |  █   █ █ █ |
+08 |  █   █ █ █ |
+07 |  █   █ █ █ |
+06 | ███ ███████|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2168 ROMAN NUMERAL NINE
+22 |            |
+21 |            |
+20 |            |
+19 |███████ ████|
+18 |  █  █   █  |
+17 |  █  █   █  |
+16 |  █   █ █   |
+15 |  █   █ █   |
+14 |  █   █ █   |
+13 |  █    █    |
+12 |  █    █    |
+11 |  █   █ █   |
+10 |  █   █ █   |
+09 |  █   █ █   |
+08 |  █  █   █  |
+07 |  █  █   █  |
+06 |███████ ████|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2169 ROMAN NUMERAL TEN
+22 |            |
+21 |            |
+20 |            |
+19 | ████ ████  |
+18 |   █   █    |
+17 |   █   █    |
+16 |    █ █     |
+15 |    █ █     |
+14 |    █ █     |
+13 |     █      |
+12 |     █      |
+11 |    █ █     |
+10 |    █ █     |
+09 |    █ █     |
+08 |   █   █    |
+07 |   █   █    |
+06 | ████ ████  |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+216a ROMAN NUMERAL ELEVEN
+22 |            |
+21 |            |
+20 |            |
+19 |████ ███████|
+18 |  █   █  █  |
+17 |  █   █  █  |
+16 |   █ █   █  |
+15 |   █ █   █  |
+14 |   █ █   █  |
+13 |    █    █  |
+12 |    █    █  |
+11 |   █ █   █  |
+10 |   █ █   █  |
+09 |   █ █   █  |
+08 |  █   █  █  |
+07 |  █   █  █  |
+06 |████ ███████|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+216b ROMAN NUMERAL TWELVE
+22 |            |
+21 |            |
+20 |            |
+19 |███ ████████|
+18 | █   █ █  █ |
+17 | █   █ █  █ |
+16 |  █ █  █  █ |
+15 |  █ █  █  █ |
+14 |  █ █  █  █ |
+13 |   █   █  █ |
+12 |   █   █  █ |
+11 |  █ █  █  █ |
+10 |  █ █  █  █ |
+09 |  █ █  █  █ |
+08 | █   █ █  █ |
+07 | █   █ █  █ |
+06 |███ ████████|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+216c ROMAN NUMERAL FIFTY
+22 |            |
+21 |            |
+20 |            |
+19 | ████       |
+18 |  ██        |
+17 |  ██        |
+16 |  ██        |
+15 |  ██        |
+14 |  ██        |
+13 |  ██        |
+12 |  ██        |
+11 |  ██        |
+10 |  ██        |
+09 |  ██        |
+08 |  ██      █ |
+07 |  ██      █ |
+06 | ██████████ |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+216d ROMAN NUMERAL ONE HUNDRED
+22 |            |
+21 |            |
+20 |            |
+19 |    ██████  |
+18 |   █     ██ |
+17 |  █       █ |
+16 |  █         |
+15 | ██         |
+14 | ██         |
+13 | ██         |
+12 | ██         |
+11 | ██         |
+10 | ██         |
+09 |  █         |
+08 |  ██      █ |
+07 |   ██    █  |
+06 |    █████   |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+216e ROMAN NUMERAL FIVE HUNDRED
+22 |            |
+21 |            |
+20 |            |
+19 |████████    |
+18 | ██    ███  |
+17 | ██     ██  |
+16 | ██      ██ |
+15 | ██      ██ |
+14 | ██      ██ |
+13 | ██      ██ |
+12 | ██      ██ |
+11 | ██      ██ |
+10 | ██      ██ |
+09 | ██      ██ |
+08 | ██      █  |
+07 | ██    ██   |
+06 |███████     |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+216f ROMAN NUMERAL ONE THOUSAND
+22 |            |
+21 |            |
+20 |            |
+19 |███      ███|
+18 | ██     ███ |
+17 | ███    ███ |
+16 | ███    ███ |
+15 | ███    ███ |
+14 | █ ██  █ ██ |
+13 | █ ██  █ ██ |
+12 | █ ██  █ ██ |
+11 | █  ██ █ ██ |
+10 | █  ███  ██ |
+09 | █  ███  ██ |
+08 | █   █   ██ |
+07 | █   █   ██ |
+06 |███  █  ████|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2170 SMALL ROMAN NUMERAL ONE
+22 |            |
+21 |            |
+20 |            |
+19 |     █      |
+18 |     █      |
+17 |            |
+16 |            |
+15 |    ██      |
+14 |     █      |
+13 |     █      |
+12 |     █      |
+11 |     █      |
+10 |     █      |
+09 |     █      |
+08 |     █      |
+07 |     █      |
+06 |    ███     |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2171 SMALL ROMAN NUMERAL TWO
+22 |            |
+21 |            |
+20 |            |
+19 |   █    █   |
+18 |   █    █   |
+17 |            |
+16 |            |
+15 |  ██   ██   |
+14 |   █    █   |
+13 |   █    █   |
+12 |   █    █   |
+11 |   █    █   |
+10 |   █    █   |
+09 |   █    █   |
+08 |   █    █   |
+07 |   █    █   |
+06 |  ███  ███  |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2172 SMALL ROMAN NUMERAL THREE
+22 |            |
+21 |            |
+20 |            |
+19 | █   █   █  |
+18 | █   █   █  |
+17 |            |
+16 |            |
+15 |██  ██  ██  |
+14 | █   █   █  |
+13 | █   █   █  |
+12 | █   █   █  |
+11 | █   █   █  |
+10 | █   █   █  |
+09 | █   █   █  |
+08 | █   █   █  |
+07 | █   █   █  |
+06 |███ ███ ███ |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2173 SMALL ROMAN NUMERAL FOUR
+22 |            |
+21 |            |
+20 |            |
+19 | █          |
+18 | █          |
+17 |            |
+16 |            |
+15 |██ ███   ███|
+14 | █  █     █ |
+13 | █  █     █ |
+12 | █   █   █  |
+11 | █   █   █  |
+10 | █   █   █  |
+09 | █    █ █   |
+08 | █    █ █   |
+07 | █    █ █   |
+06 |███  █████  |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2174 SMALL ROMAN NUMERAL FIVE
+22 |            |
+21 |            |
+20 |            |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 | ███    ███ |
+14 |  █      █  |
+13 |  █      █  |
+12 |   █    █   |
+11 |   █    █   |
+10 |    █  █    |
+09 |    █  █    |
+08 |     ██     |
+07 |     ██     |
+06 |    ████    |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2175 SMALL ROMAN NUMERAL SIX
+22 |            |
+21 |            |
+20 |            |
+19 |          █ |
+18 |          █ |
+17 |            |
+16 |            |
+15 |███   █████ |
+14 | █     █  █ |
+13 | █     █  █ |
+12 |  █   █   █ |
+11 |  █   █   █ |
+10 |  █   █   █ |
+09 |   █ █    █ |
+08 |   █ █    █ |
+07 |   █ █    █ |
+06 |  █████  ███|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2176 SMALL ROMAN NUMERAL SEVEN
+22 |            |
+21 |            |
+20 |            |
+19 |        █ █ |
+18 |        █ █ |
+17 |            |
+16 |            |
+15 |██   ██████ |
+14 |█     █ █ █ |
+13 |█     █ █ █ |
+12 | █   █  █ █ |
+11 | █   █  █ █ |
+10 | █   █  █ █ |
+09 |  █ █   █ █ |
+08 |  █ █   █ █ |
+07 |  █ █   █ █ |
+06 | █████ █████|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2177 SMALL ROMAN NUMERAL EIGHT
+22 |            |
+21 |            |
+20 |            |
+19 |      █ █ █ |
+18 |      █ █ █ |
+17 |            |
+16 |            |
+15 |██ ████████ |
+14 |█   █ █ █ █ |
+13 |█   █ █ █ █ |
+12 |█   █ █ █ █ |
+11 | █ █  █ █ █ |
+10 | █ █  █ █ █ |
+09 | █ █  █ █ █ |
+08 |  █   █ █ █ |
+07 |  █   █ █ █ |
+06 | ███ ███████|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2178 SMALL ROMAN NUMERAL NINE
+22 |            |
+21 |            |
+20 |            |
+19 |  █         |
+18 |  █         |
+17 |            |
+16 |            |
+15 | ██ ███ ███ |
+14 |  █  █   █  |
+13 |  █   █ █   |
+12 |  █   █ █   |
+11 |  █    █    |
+10 |  █    █    |
+09 |  █   █ █   |
+08 |  █   █ █   |
+07 |  █  █   █  |
+06 | ██████ ███ |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2179 SMALL ROMAN NUMERAL TEN
+22 |            |
+21 |            |
+20 |            |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 | ███   ███  |
+14 |  █     █   |
+13 |   █   █    |
+12 |    █ █     |
+11 |     █      |
+10 |     █      |
+09 |    █ █     |
+08 |   █   █    |
+07 |  █     █   |
+06 | ███   ███  |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+217a SMALL ROMAN NUMERAL ELEVEN
+22 |            |
+21 |            |
+20 |            |
+19 |         █  |
+18 |         █  |
+17 |            |
+16 |            |
+15 | ███ █████  |
+14 |  █   █  █  |
+13 |   █ █   █  |
+12 |   █ █   █  |
+11 |    █    █  |
+10 |    █    █  |
+09 |   █ █   █  |
+08 |   █ █   █  |
+07 |  █   █  █  |
+06 | ███ ██████ |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+217b SMALL ROMAN NUMERAL TWELVE
+22 |            |
+21 |            |
+20 |            |
+19 |        █ █ |
+18 |        █ █ |
+17 |            |
+16 |            |
+15 |███ ███████ |
+14 | █   █  █ █ |
+13 |  █ █   █ █ |
+12 |  █ █   █ █ |
+11 |   █    █ █ |
+10 |   █    █ █ |
+09 |  █ █   █ █ |
+08 |  █ █   █ █ |
+07 | █   █  █ █ |
+06 |███ ████████|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+217c SMALL ROMAN NUMERAL FIFTY
+22 |            |
+21 |            |
+20 |   ████     |
+19 |     ██     |
+18 |     ██     |
+17 |     ██     |
+16 |     ██     |
+15 |     ██     |
+14 |     ██     |
+13 |     ██     |
+12 |     ██     |
+11 |     ██     |
+10 |     ██     |
+09 |     ██     |
+08 |     ██     |
+07 |     ██     |
+06 |   ██████   |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+217d SMALL ROMAN NUMERAL ONE HUNDRED
+22 |            |
+21 |            |
+20 |            |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 |   ██████   |
+14 |  ██   ███  |
+13 |  █     ██  |
+12 | ██         |
+11 | ██         |
+10 | ██         |
+09 | ██         |
+08 | ███     █  |
+07 |  ██    ██  |
+06 |   ██████   |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+217e SMALL ROMAN NUMERAL FIVE HUNDRED
+22 |            |
+21 |            |
+20 |         ██ |
+19 |        ███ |
+18 |         ██ |
+17 |         ██ |
+16 |         ██ |
+15 |    ████ ██ |
+14 |  ██   ████ |
+13 |  █     ███ |
+12 | ██      ██ |
+11 | ██      ██ |
+10 | ██      ██ |
+09 | ██      ██ |
+08 | ███    ███ |
+07 |  ███  █ ██ |
+06 |   ████  ███|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+217f SMALL ROMAN NUMERAL ONE THOUSAND
+22 |            |
+21 |            |
+20 |            |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 |██ ███ ███  |
+14 | ██ ███ ███ |
+13 | ██  ██  ██ |
+12 | ██  ██  ██ |
+11 | ██  ██  ██ |
+10 | ██  ██  ██ |
+09 | ██  ██  ██ |
+08 | ██  ██  ██ |
+07 | ██  ██  ██ |
+06 |███ ████ ███|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2180 ROMAN NUMERAL ONE THOUSAND C D
+22 |            |
+21 |            |
+20 |            |
+19 |    █████   |
+18 |  ██ ██ ███ |
+17 | █   ██  ██ |
+16 |██   ██   ██|
+15 |██   ██   ██|
+14 |██   ██   ██|
+13 |██   ██   ██|
+12 |██   ██   ██|
+11 |██   ██   ██|
+10 |██   ██   ██|
+09 |██   ██   ██|
+08 | ██  ██   █ |
+07 | ███ ██ ██  |
+06 |   █████    |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2181 ROMAN NUMERAL FIVE THOUSAND
+22 |            |
+21 |            |
+20 |            |
+19 |████████    |
+18 | ██    ███  |
+17 | ██     ██  |
+16 | ████    ██ |
+15 | ██  ██  ██ |
+14 | ██   ██ ██ |
+13 | ██   ██ ██ |
+12 | ██   ██ ██ |
+11 | ██   ██ ██ |
+10 | ██  ██  ██ |
+09 | ████    ██ |
+08 | ██      █  |
+07 | ██    ██   |
+06 |███████     |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2182 ROMAN NUMERAL TEN THOUSAND
+22 |            |
+21 |            |
+20 |            |
+19 |    █████   |
+18 |  ██ ██ ███ |
+17 | █   ██  ██ |
+16 |██   ██   ██|
+15 |██  ████  ██|
+14 |██ █ ██ █ ██|
+13 |██ █ ██ █ ██|
+12 |██ █ ██ █ ██|
+11 |██ █ ██ █ ██|
+10 |██  ████  ██|
+09 |██   ██   ██|
+08 | ██  ██   █ |
+07 | ███ ██ ██  |
+06 |   █████    |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2183 ROMAN NUMERAL REVERSED ONE HUNDRED
+22 |            |
+21 |            |
+20 |            |
+19 |  ██████    |
+18 | ██     █   |
+17 | █       █  |
+16 |         █  |
+15 |         ██ |
+14 |         ██ |
+13 |         ██ |
+12 |         ██ |
+11 |         ██ |
+10 |         ██ |
+09 |         █  |
+08 | █      ██  |
+07 |  █    ██   |
+06 |   █████    |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2184 LATIN SMALL LETTER REVERSED C
+22 |            |
+21 |            |
+20 |            |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 |   ██████   |
+14 |  ███   ██  |
+13 |  ██     █  |
+12 |         ██ |
+11 |         ██ |
+10 |         ██ |
+09 |         ██ |
+08 |  █     ███ |
+07 |  ██    ██  |
+06 |   ██████   |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2185 ROMAN NUMERAL SIX LATE FORM
+22 |            |
+21 |            |
+20 |            |
+19 |    ██████  |
+18 |   █     ██ |
+17 |  █       █ |
+16 |  █         |
+15 | ██         |
+14 | ██         |
+13 | ██         |
+12 | ██         |
+11 | ██         |
+10 | ██         |
+09 |  █         |
+08 |  ██      █ |
+07 |   ██    ██ |
+06 |    ███████ |
+05 |         ██ |
+04 |         ██ |
+03 |         ██ |
+02 |         ██ |
+01 |            |
+ENDCHAR
+STARTCHAR U+2186 ROMAN NUMERAL FIFTY EARLY FORM
+22 |            |
+21 |            |
+20 |            |
+19 |     ██     |
+18 |     ██     |
+17 |     ██     |
+16 |     ██     |
+15 |     ██     |
+14 |     ██     |
+13 |     ██     |
+12 |     ██     |
+11 | █   ██   █ |
+10 | ██  ██  ██ |
+09 |  ██ ██ ██  |
+08 |   ██████   |
+07 |    ████    |
+06 |     ██     |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2187
+22 |            |
+21 |            |
+20 |            |
+19 |████████    |
+18 | ██    ███  |
+17 | ████   ██  |
+16 | ██  █   ██ |
+15 | ██   █  ██ |
+14 | ███  █  ██ |
+13 | ██ █ █  ██ |
+12 | ██ █ █  ██ |
+11 | ███  █  ██ |
+10 | ██   █  ██ |
+09 | ██  █   ██ |
+08 | ████    █  |
+07 | ██    ██   |
+06 |███████     |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2188
+22 |            |
+21 |            |
+20 |            |
+19 |    █████   |
+18 |  ██ ██ ███ |
+17 | █   ██  ██ |
+16 |█  ██████ ██|
+15 |█ █  ██  █ █|
+14 |█ █ ████ █ █|
+13 |█ █ █  █ █ █|
+12 |█ █ █  █ █ █|
+11 |█ █ ████ █ █|
+10 |█ █  ██  █ █|
+09 |█  ██████  █|
+08 | ██  ██   █ |
+07 | ███ ██ ██  |
+06 |   █████    |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+2189
+22 |            |
+21 |  ████      |
+20 | ██  ██     |
+19 | ██  ██     |
+18 | ██  ██     |
+17 | ██  ██   █ |
+16 | ██  ██  ██ |
+15 | ██  ██ ██  |
+14 | ██  ████   |
+13 |  ██████    |
+12 |     ██████ |
+11 |    ████  ██|
+10 |   ██     ██|
+09 |  ██      ██|
+08 | ██    ████ |
+07 | █        ██|
+06 |          ██|
+05 |      ██  ██|
+04 |       ████ |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+218a TURNED DIGIT TWO
+22 |            |
+21 |            |
+20 | ██████████ |
+19 | ██████████ |
+18 | █      ██  |
+17 |       ██   |
+16 |      ██    |
+15 |     ██     |
+14 |    ██      |
+13 |   ██       |
+12 |  ██        |
+11 |  ██        |
+10 |  ██        |
+09 |  ██      █ |
+08 |  ███    ██ |
+07 |   ███████  |
+06 |    █████   |
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+STARTCHAR U+218b TURNED DIGIT THREE
+22 |            |
+21 |            |
+20 |    █████   |
+19 |   ███████  |
+18 |  █      ██ |
+17 | ██       █ |
+16 | ██         |
+15 | ██         |
+14 | ███        |
+13 |  ██████    |
+12 |  █████     |
+11 | ███        |
+10 | ██         |
+09 | ██       █ |
+08 | ███     █  |
+07 |  ███████   |
+06 |   █████    |
 05 |            |
 04 |            |
 03 |            |

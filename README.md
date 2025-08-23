@@ -2,11 +2,12 @@
 
 This is the Gallant font, as used by the Sun Microsystems SPARCstation
 console, extended with glyphs for many Unicode blocks. It is a raster
-font with a 22x12 pixel character cell, descent 5 and ascent 17.
+font with a 22x12 pixel character cell, descent 5 and ascent 17,
+originally part of BSD.
 
 The starting point was the `gallant.hex` file as found on FreeBSD 14,
 which contained 502 glyphs at the time. This project currently provides
-more than 4000 glyphs. Major additions:
+more than 4300 glyphs. Major additions:
 
 * Greek
 * Cyrillic
@@ -16,7 +17,7 @@ more than 4000 glyphs. Major additions:
 * Tons of arrows
 * Tons of mathematical symbols
 * Pixel-perfect box drawing
-* Currency symbols
+* Currency and letterlike symbols
 * More punctuation
 * Just enough Katakana to say コンニチハ
 * Powerline glyphs in the *Private Use Area* at U+e0a0
@@ -58,7 +59,7 @@ none are present.
 |U+20A0 - U+20CF|[Currency Symbols](https://www.unicode.org/charts/PDF/U20A0.pdf)                       |Complete |
 |U+20D0 - U+20FF|[Combining Diacritical Marks for Symbols](https://www.unicode.org/charts/PDF/U20D0.pdf)|Complete |
 |U+2100 - U+214F|[Letterlike Symbols](https://www.unicode.org/charts/PDF/U2100.pdf)                     |Partial  |
-|U+2150 - U+218F|[Number Forms](https://www.unicode.org/charts/PDF/U2150.pdf)                           |TODO     |
+|U+2150 - U+218F|[Number Forms](https://www.unicode.org/charts/PDF/U2150.pdf)                           |Complete |
 |U+2190 - U+21FF|[Arrows](https://www.unicode.org/charts/PDF/U2190.pdf)                                 |Complete |
 |U+2200 - U+22FF|[Mathematical Operators](https://www.unicode.org/charts/PDF/U2200.pdf)                 |Complete |
 |U+2300 - U+23FF|[Miscellaneous Technical](https://www.unicode.org/charts/PDF/U2300.pdf)                |Complete |
@@ -126,9 +127,28 @@ You may also drop the font files into directory `/usr/share/vt/fonts` and
 add `allscreens_flags="-f gallant"` to your `/etc/rc.conf`. This way all
 console terminals use the font after boot.
 
+## History
+
+The oldest reference to the Gallant font I could find was in a Copyright
+notice in [NetBSD's
+gallant12x22.h](https://ftp.netbsd.org/pub/NetBSD/NetBSD-current/src/sys/dev/wsfont/gallant12x22.h)
+which reads:
+
+```
+/*
+ * [...]
+ * This code is derived from software contributed to the Computer Systems
+ * Engineering Group at Lawrence Berkeley Laboratory and to the University
+ * of California at Berkeley by Jef Poskanzer.
+ * [...]
+ * Derived from: @(#)gallant19.h	8.1 (Berkeley) 6/11/93
+ */
+```
+
+
 ## Remarks
 
-* Codepoints 0 through 31 slightly differ from the Unicode standard.
+* Codepoints 0 through 31 differ from the Unicode standard.
   They were left unmodified to not change their intended use on SPARC hardware.
 
 ## TODO

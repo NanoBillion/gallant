@@ -232,7 +232,7 @@ void load_text(void) {
                 column = 0;
             }
             else
-                fprintf(stderr, "ignoring width=-1 character U+%04x in row %d\n", wc, gRows + 1);
+                fprintf(stderr, "ignoring width=-1 character U+%04x in row %u\n", wc, gRows + 1);
             break;
         case 0:
             /* Combining character, zero width space, ... */
@@ -251,7 +251,7 @@ void load_text(void) {
         }
     }
     gTextChars = wchars;
-    printf("found %zu codepoints in %s, %d rows, max %d colums\n", gTextChars, gTextFilename, gRows, gColumns);
+    printf("found %zu codepoints in %s, %u rows, max %u colums\n", gTextChars, gTextFilename, gRows, gColumns);
     slurp_text(fp);
     fclose(fp);
 }
@@ -293,7 +293,7 @@ void fb_save_png(void) {
     png_write_end(png_ptr, NULL);
     png_destroy_write_struct(&png_ptr, &info_ptr);
     fclose(fp);
-    printf("wrote WxH = %dx%d image to %s\n", gWidth * gColumns, gHeight * gRows, gPngFilename);
+    printf("wrote WxH = %ux%u image to %s\n", gWidth * gColumns, gHeight * gRows, gPngFilename);
 }
 
 // Allocate frame buffer to hold the pixels. White on black, unless inverted.
@@ -317,7 +317,7 @@ void load_font(void) {
 
     parse_font_dimensions(fp);
     gGlyphs = count_glyphs(fp);
-    fprintf(stderr, "found %d glyphs, width %d, height %d in %s\n", gGlyphs, gWidth, gHeight, gFontFilename);
+    fprintf(stderr, "found %u glyphs, width %u, height %u in %s\n", gGlyphs, gWidth, gHeight, gFontFilename);
     if (gGlyphs < 2)
         errx("that's not a font, it would seem\n");
     gGlyphset = xmalloc(gGlyphs * sizeof *gGlyphset);
@@ -332,14 +332,14 @@ void parse_font_dimensions(FILE *aFile) {
     char    line[MAX_LINE] = { 0 };
     for (int i = 1; i <= 2; ++i) {
         if (fgets(line, sizeof line, aFile) != NULL) {
-            if (sscanf(line, " # Width: %d", &gWidth) != 1)
-                if (sscanf(line, " # Height: %d", &gHeight) != 1)
+            if (sscanf(line, " # Width: %u", &gWidth) != 1)
+                if (sscanf(line, " # Height: %u", &gHeight) != 1)
                     errx("line %d in %s must be '# Width or Height: number'\n", i, gFontFilename);
         }
         else
             errx("could not read line %d in %s\n", i, gFontFilename);
     }
-    if (gWidth <= 0 || gHeight <= 0)
+    if (gWidth == 0 || gHeight == 0)
         errx("could not parse width or height at the start of %s\n", gFontFilename);
     gBytes = (gWidth + 7) / 8;
     gDblBytes = (2 * gWidth + 7) / 8;

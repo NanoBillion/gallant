@@ -7,6 +7,8 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 #include <stdarg.h>
 #include <locale.h>
 #include <unistd.h>
@@ -16,6 +18,7 @@
 #define PixelHeight 22
 #define LINE_MAX_WCHAR 1024
 #define FULL_BLOCK 0x2588
+#define MAX_GLYPHS 131072
 
 #define STARTCHAR 1
 #define BITMAP    2
@@ -27,20 +30,27 @@ void    errx(const char *aFormat, ...);
 int     parse_startchar(const wchar_t *aLine);
 void    parse_bitmap(const wchar_t *aLine, int aWidth);
 void    parse_endchar(const wchar_t *aLine);
+bool    seen(unsigned int aCodepoint);
+bool    lookup_codepoint(unsigned int aCodepoint);
+int     compare_codepoints(const void *aFirst, const void *aSecond);
+void   *xmalloc(size_t aSize);
 
 int     gWidth = PixelWidth;
 int     gHeight = PixelHeight;
 int     gLineNr = 0;
 unsigned int gCodepoint = 0;
+unsigned int *gSeen = NULL;
+size_t  gGlyphs = 0;
 
 int main(int aArgc, char **aArgv) {
     if (!setlocale(LC_CTYPE, "")) {
         fprintf(stderr, "Can't set the locale. Check LANG, LC_CTYPE, LC_ALL.\n");
         exit(EXIT_FAILURE);
     }
+    gSeen = xmalloc(MAX_GLYPHS * sizeof *gSeen);
+    memset(gSeen, 0, MAX_GLYPHS * sizeof *gSeen);
     int     expect = STARTCHAR;
     int     bitmaps = 0;
-    int     glyphs = 0;
     int     width = 1;
     parse_options(aArgc, aArgv);
     printf("# Width: %d\n# Height: %d\n", gWidth, gHeight);
@@ -64,7 +74,7 @@ int main(int aArgc, char **aArgv) {
             parse_endchar(wbuf);
             expect = STARTCHAR;
             bitmaps = 0;
-            ++glyphs;
+            ++gGlyphs;
             break;
         default:
             break;
@@ -72,7 +82,7 @@ int main(int aArgc, char **aArgv) {
     }
     if (expect != STARTCHAR)
         errx("line %d, glyph U+%04x: incomplete glyph due to early end-of-file\n", gLineNr, gCodepoint);
-    fprintf(stderr, "found %d glyphs\n", glyphs);
+    fprintf(stderr, "found %zu glyphs\n", gGlyphs);
     return EXIT_SUCCESS;
 }
 
@@ -80,11 +90,40 @@ int main(int aArgc, char **aArgv) {
 //
 int parse_startchar(const wchar_t *aLine) {
     if (swscanf(aLine, L"STARTCHAR U+%x", &gCodepoint) == 1) {
+        if (seen(gCodepoint))
+            errx("line %d: glyph U+%04x multiply defined\n", gLineNr, gCodepoint);
         printf("%04x:", gCodepoint);
         return wcwidth((wchar_t) gCodepoint);
     }
     errx("line %d: expected 'STARTCHAR U+xxxx', got %ls", gLineNr, aLine);
     return 0;
+}
+
+// Has this codepoint been seen already?
+//
+bool seen(unsigned int aCodepoint) {
+    if (gGlyphs == 0)
+        return false;
+    if (lookup_codepoint(aCodepoint))
+        return true;
+    if (aCodepoint < gSeen[gGlyphs - 1])
+        errx("line %d: unsorted input: codepoint U+%04x follows U+%04x\n", gLineNr, aCodepoint, gSeen[gGlyphs - 1]);
+    gSeen[gGlyphs] = aCodepoint;
+    return false;
+}
+
+// Return pointer to glyph data or of the replacement character.
+//
+bool lookup_codepoint(unsigned int aCodepoint) {
+    const unsigned int *p = bsearch(&aCodepoint, gSeen, gGlyphs, sizeof *gSeen, compare_codepoints);
+    return p != NULL;
+}
+
+// Compare callback for qsort and bsearch.
+//
+int compare_codepoints(const void *aFirst, const void *aSecond) {
+    const int *first = aFirst, *second = aSecond;
+    return *first - *second;
 }
 
 // Parse a |BITMAP| directive.
@@ -163,7 +202,14 @@ void parse_options(int aArgc, char **aArgv) {
     }
 }
 
-
+// Allocate memory and exit on failure.
+//
+void   *xmalloc(size_t aSize) {
+    void   *const mem = malloc(aSize);
+    if (mem == NULL)
+        errx("failed to allocate %zu bytes\n", aSize);
+    return mem;
+}
 
 // Output usage message and exit with status.
 //
