@@ -6,7 +6,9 @@
  *     hextobdf -w 12 -h 22 < gallant.hex > gallant.bdf
  *
  * LIMITATIONS
- *     Only for gallant font, due to hard-coded font properties.
+ *     Only for gallant font, due to hard-coded font/glyph properties.
+ *     To adapt: modify PixelWidth and PixelHeight macros and
+ *     output_bdf_preamble() and output_bdf_char() functions.
  */
 #include <stdio.h>
 #include <stdlib.h>

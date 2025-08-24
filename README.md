@@ -136,7 +136,9 @@ which reads:
 
 ```
 /*
- * [...]
+ * Copyright (c) 1992, 1993
+ *     The Regents of the University of California.  All rights reserved.
+ *
  * This code is derived from software contributed to the Computer Systems
  * Engineering Group at Lawrence Berkeley Laboratory and to the University
  * of California at Berkeley by Jef Poskanzer.

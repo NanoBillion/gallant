@@ -329,7 +329,7 @@ void load_font(void) {
 // Parse the font's Width: and Height: directives.
 //
 void parse_font_dimensions(FILE *aFile) {
-    char    line[MAX_LINE] = { 0 };
+    char    line[MAX_LINE];
     for (int i = 1; i <= 2; ++i) {
         if (fgets(line, sizeof line, aFile) != NULL) {
             if (sscanf(line, " # Width: %u", &gWidth) != 1)
@@ -349,7 +349,7 @@ void parse_font_dimensions(FILE *aFile) {
 //
 unsigned int count_glyphs(FILE *aFile) {
     unsigned int glyphs = 0;
-    char    line[MAX_LINE] = { 0 };
+    char    line[MAX_LINE];
     int     line_no = 2;
     while (fgets(line, sizeof line, aFile) != NULL) {
         char    c;
@@ -371,7 +371,7 @@ unsigned int count_glyphs(FILE *aFile) {
 void parse_font_hexdata(FILE *aFile) {
     unsigned int glyphs = 0;
     int     line_no = 0;
-    char    line[MAX_LINE] = { 0 };
+    char    line[MAX_LINE];
 
     while (fgets(line, sizeof line, aFile) != NULL) {
         ++line_no;
@@ -407,7 +407,7 @@ void parse_font_line(const char *aLine, int aLineNr, struct glyph *aGlyph) {
     uint32_t codepoint;
     if (sscanf(aLine, "%" SCNx32 "%c", &codepoint, &c) == 2 && c == ':') {
         const char *colon = strchr(aLine, ':');
-        const unsigned int len = strlen(colon + 1);
+        const size_t len = strlen(colon + 1);
         unsigned int bytes = gHeight;
         if (len == gHeight * gDblBytes * 2 + 1)
             bytes *= gDblBytes;
@@ -474,7 +474,7 @@ void fb_draw_glyph(wint_t aCodepoint, unsigned int aRow, unsigned int aColumn) {
     }
 }
 
-// Set pixel (aXpos,aYpos) in the frame buffer.
+// Set pixel (aXpos, aYpos) in the frame buffer.
 //
 void fb_draw_pixel(unsigned int aXpos, unsigned int aYpos) {
     const uint8_t mask = 1u << (7 - (aXpos % 8));
@@ -484,7 +484,7 @@ void fb_draw_pixel(unsigned int aXpos, unsigned int aYpos) {
         gFramebuffer[aYpos][aXpos / 8] |= mask;
 }
 
-// Return pointer to glyph data or of the replacement character.
+// Return pointer to glyph data or, if not found, of the replacement character.
 //
 struct glyph *lookup_glyph(wint_t aCodepoint) {
     struct glyph key = { 0 };

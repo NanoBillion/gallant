@@ -131,7 +131,7 @@ int compare_codepoints(const void *aFirst, const void *aSecond) {
 void parse_bitmap(const wchar_t *aLine, int aWidth) {
     const wchar_t *delim1 = wcschr(aLine, L'|');
     if (delim1 == NULL)
-        errx("line %d: initial delimiter '|' not found in %ls; not enough pixel lines?\n", gLineNr, aLine);
+        errx("line %d: initial delimiter '|' not found; early ENDCHAR?\n", gLineNr);
 
     const wchar_t *delim2 = wcschr(delim1 + 1, L'|');
     if (delim2 == NULL)
