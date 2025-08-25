@@ -35881,10 +35881,10 @@ ENDCHAR
 STARTCHAR U+1f00 GREEK SMALL LETTER ALPHA WITH PSILI
 22 |            |
 21 |            |
-20 |    ███     |
-19 |       █    |
-18 |       █    |
-17 |     ██     |
+20 |    ████    |
+19 |      ██    |
+18 |    ███     |
+17 |            |
 16 |            |
 15 |   ██████  █|
 14 |  ██   ███ █|
@@ -35903,14 +35903,14 @@ STARTCHAR U+1f00 GREEK SMALL LETTER ALPHA WITH PSILI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f01 GREEK SMALL LETTER ALPHA WITH DASIA
-22 |            |
-21 |            |
-20 |     ███    |
-19 |    █       |
-18 |    █       |
-17 |     ██     |
+19 |            |
+18 |            |
+22 |     ████   |
+21 |     ██     |
+20 |      ███   |
 16 |            |
-15 |   ██████  █|
+15 |            |
+17 |   ██████  █|
 14 |  ██   ███ █|
 13 | ██     ███ |
 12 | ██     ███ |
@@ -35929,10 +35929,10 @@ ENDCHAR
 STARTCHAR U+1f02 GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA
 22 |            |
 21 |            |
-20 | ███    █   |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 |   ██   ██  |
+18 | ███     █  |
+17 |            |
 16 |            |
 15 |   ██████  █|
 14 |  ██   ███ █|
@@ -35953,10 +35953,10 @@ ENDCHAR
 STARTCHAR U+1f03 GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA
 22 |            |
 21 |            |
-20 |  ███   █   |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 | ██     ██  |
+18 |  ███    █  |
+17 |            |
 16 |            |
 15 |   ██████  █|
 14 |  ██   ███ █|
@@ -35977,10 +35977,10 @@ ENDCHAR
 STARTCHAR U+1f04 GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA
 22 |            |
 21 |            |
-20 | ███     █  |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 |   ██  ██   |
+18 | ███   █    |
+17 |            |
 16 |            |
 15 |   ██████  █|
 14 |  ██   ███ █|
@@ -36001,10 +36001,10 @@ ENDCHAR
 STARTCHAR U+1f05 GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA
 22 |            |
 21 |            |
-20 |  ███    █  |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 | ██    ██   |
+18 |  ███  █    |
+17 |            |
 16 |            |
 15 |   ██████  █|
 14 |  ██   ███ █|
@@ -36026,9 +36026,9 @@ STARTCHAR U+1f06 GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |    ███     |
-18 |       █    |
-17 |     ██     |
+19 |    ████    |
+18 |      ██    |
+17 |    ███     |
 16 |            |
 15 |   ██████  █|
 14 |  ██   ███ █|
@@ -36050,9 +36050,9 @@ STARTCHAR U+1f07 GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |     ███    |
-18 |    █       |
-17 |     ██     |
+19 |    ████    |
+18 |    ██      |
+17 |     ███    |
 16 |            |
 15 |   ██████  █|
 14 |  ██   ███ █|
@@ -36072,10 +36072,10 @@ STARTCHAR U+1f07 GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI
 ENDCHAR
 STARTCHAR U+1f08 GREEK CAPITAL LETTER ALPHA WITH PSILI
 22 |            |
-21 |███         |
-20 |   █        |
-19 |   █ ██     |
-18 | ██  ██     |
+21 |████        |
+20 |  ██        |
+19 |███  ██     |
+18 |     ██     |
 17 |    █ ██    |
 16 |    █ ██    |
 15 |    █  █    |
@@ -36096,10 +36096,10 @@ STARTCHAR U+1f08 GREEK CAPITAL LETTER ALPHA WITH PSILI
 ENDCHAR
 STARTCHAR U+1f09 GREEK CAPITAL LETTER ALPHA WITH DASIA
 22 |            |
-21 | ███        |
-20 |█           |
-19 |█    ██     |
-18 | ██  ██     |
+21 |████        |
+20 |██          |
+19 | ███ ██     |
+18 |     ██     |
 17 |    █ ██    |
 16 |    █ ██    |
 15 |    █  █    |
@@ -36119,13 +36119,13 @@ STARTCHAR U+1f09 GREEK CAPITAL LETTER ALPHA WITH DASIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f0a GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA
-22 |   █        |
+22 |  ██        |
 21 |   ██       |
-20 |   ██       |
-19 |    █ ██    |
-18 |███   ██    |
-17 |   █ █ ██   |
-16 | ██  █ ██   |
+20 |    █       |
+19 |      ██    |
+18 |████  ██    |
+17 |  ██ █ ██   |
+16 |███  █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
 13 |    █   ██  |
@@ -36143,13 +36143,13 @@ STARTCHAR U+1f0a GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f0b GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA
-22 |   █        |
+22 |  ██        |
 21 |   ██       |
-20 |   ██       |
-19 |    █ ██    |
-18 | ███  ██    |
-17 |█    █ ██   |
-16 | ██  █ ██   |
+20 |    █       |
+19 |      ██    |
+18 |████  ██    |
+17 |██   █ ██   |
+16 | ███ █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
 13 |    █   ██  |
@@ -36167,13 +36167,13 @@ STARTCHAR U+1f0b GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f0c GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
-22 |    █       |
-21 |   ██       |
-20 |   ██       |
-19 |   █  ██    |
-18 |███   ██    |
-17 |   █ █ ██   |
-16 | ██  █ ██   |
+22 |   ██       |
+21 |  ██        |
+20 |  █         |
+19 |      ██    |
+18 |████  ██    |
+17 |  ██ █ ██   |
+16 |███  █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
 13 |    █   ██  |
@@ -36191,13 +36191,13 @@ STARTCHAR U+1f0c GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f0d GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA
-22 |    █       |
-21 |   ██       |
-20 |   ██       |
-19 |   █  ██    |
-18 | ███  ██    |
-17 |█    █ ██   |
-16 | ██  █ ██   |
+22 |   ██       |
+21 |  ██        |
+20 |  █         |
+19 |      ██    |
+18 |████  ██    |
+17 |██   █ ██   |
+16 | ███ █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
 13 |    █   ██  |
@@ -36219,9 +36219,9 @@ STARTCHAR U+1f0e GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI
 21 | ███   █    |
 20 |█   ███     |
 19 |      ██    |
-18 |███   ██    |
-17 |   █ █ ██   |
-16 | ██  █ ██   |
+18 |████  ██    |
+17 |  ██ █ ██   |
+16 |███  █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
 13 |    █   ██  |
@@ -36243,9 +36243,9 @@ STARTCHAR U+1f0f GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI
 21 | ███   █    |
 20 |█   ███     |
 19 |      ██    |
-18 | ███  ██    |
-17 |█    █ ██   |
-16 | ██  █ ██   |
+18 |████  ██    |
+17 |██   █ ██   |
+16 | ███ █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
 13 |    █   ██  |
@@ -36265,10 +36265,10 @@ ENDCHAR
 STARTCHAR U+1f10 GREEK SMALL LETTER EPSILON WITH PSILI
 22 |            |
 21 |            |
-20 |    ███     |
-19 |       █    |
-18 |       █    |
-17 |     ██     |
+20 |    ████    |
+19 |      ██    |
+18 |    ███     |
+17 |            |
 16 |            |
 15 |    █████   |
 14 |   ███████  |
@@ -36289,10 +36289,10 @@ ENDCHAR
 STARTCHAR U+1f11 GREEK SMALL LETTER EPSILON WITH DASIA
 22 |            |
 21 |            |
-20 |     ███    |
-19 |    █       |
-18 |    █       |
-17 |     ██     |
+20 |    ████    |
+19 |    ██      |
+18 |     ███    |
+17 |            |
 16 |            |
 15 |    █████   |
 14 |   ███████  |
@@ -36313,10 +36313,10 @@ ENDCHAR
 STARTCHAR U+1f12 GREEK SMALL LETTER EPSILON WITH PSILI AND VARIA
 22 |            |
 21 |            |
-20 | ███    █   |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 |   ██   ██  |
+18 | ███     █  |
+17 |            |
 16 |            |
 15 |    █████   |
 14 |   ███████  |
@@ -36337,10 +36337,10 @@ ENDCHAR
 STARTCHAR U+1f13 GREEK SMALL LETTER EPSILON WITH DASIA AND VARIA
 22 |            |
 21 |            |
-20 |  ███   █   |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 | ██     ██  |
+18 |  ███    █  |
+17 |            |
 16 |            |
 15 |    █████   |
 14 |   ███████  |
@@ -36361,10 +36361,10 @@ ENDCHAR
 STARTCHAR U+1f14 GREEK SMALL LETTER EPSILON WITH PSILI AND OXIA
 22 |            |
 21 |            |
-20 | ███     █  |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 |   ██  ██   |
+18 | ███   █    |
+17 |            |
 16 |            |
 15 |    █████   |
 14 |   ███████  |
@@ -36385,10 +36385,10 @@ ENDCHAR
 STARTCHAR U+1f15 GREEK SMALL LETTER EPSILON WITH DASIA AND OXIA
 22 |            |
 21 |            |
-20 |  ███    █  |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 | ██    ██   |
+18 |  ███  █    |
+17 |            |
 16 |            |
 15 |    █████   |
 14 |   ███████  |
@@ -36407,9 +36407,9 @@ STARTCHAR U+1f15 GREEK SMALL LETTER EPSILON WITH DASIA AND OXIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f18 GREEK CAPITAL LETTER EPSILON WITH PSILI
-22 |███         |
-21 |   █        |
-20 | ██         |
+22 |████        |
+21 |  ██        |
+20 |███         |
 19 | █████████  |
 18 |  ██     █  |
 17 |  ██     █  |
@@ -36431,9 +36431,9 @@ STARTCHAR U+1f18 GREEK CAPITAL LETTER EPSILON WITH PSILI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f19 GREEK CAPITAL LETTER EPSILON WITH DASIA
-22 | ███        |
-21 |█           |
-20 | ██         |
+22 |████        |
+21 |██          |
+20 | ███        |
 19 | █████████  |
 18 |  ██     █  |
 17 |  ██     █  |
@@ -36455,9 +36455,9 @@ STARTCHAR U+1f19 GREEK CAPITAL LETTER EPSILON WITH DASIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f1a GREEK CAPITAL LETTER EPSILON WITH PSILI AND VARIA
-22 |███   █     |
-21 |   █  ██    |
-20 | ██    █    |
+22 |████ ██     |
+21 |  ██  ██    |
+20 |███    █    |
 19 | █████████  |
 18 |  ██     █  |
 17 |  ██     █  |
@@ -36479,9 +36479,9 @@ STARTCHAR U+1f1a GREEK CAPITAL LETTER EPSILON WITH PSILI AND VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f1b GREEK CAPITAL LETTER EPSILON WITH DASIA AND VARIA
-22 | ███  █     |
-21 |█     ██    |
-20 | ██    █    |
+22 |████ ██     |
+21 |██    ██    |
+20 | ███   █    |
 19 | █████████  |
 18 |  ██     █  |
 17 |  ██     █  |
@@ -36503,9 +36503,9 @@ STARTCHAR U+1f1b GREEK CAPITAL LETTER EPSILON WITH DASIA AND VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f1c GREEK CAPITAL LETTER EPSILON WITH PSILI AND OXIA
-22 |███    █    |
-21 |   █  ██    |
-20 | ██   █     |
+22 |████   ██   |
+21 |  ██  ██    |
+20 |███   █     |
 19 | █████████  |
 18 |  ██     █  |
 17 |  ██     █  |
@@ -36527,9 +36527,9 @@ STARTCHAR U+1f1c GREEK CAPITAL LETTER EPSILON WITH PSILI AND OXIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f1d GREEK CAPITAL LETTER EPSILON WITH DASIA AND OXIA
-22 | ███   █    |
-21 |█     ██    |
-20 | ██   █     |
+22 |████   ██   |
+21 |██    ██    |
+20 | ███  █     |
 19 | █████████  |
 18 |  ██     █  |
 17 |  ██     █  |
@@ -36553,10 +36553,10 @@ ENDCHAR
 STARTCHAR U+1f20 GREEK SMALL LETTER ETA WITH PSILI
 22 |            |
 21 |            |
-20 |    ███     |
-19 |       █    |
-18 |       █    |
-17 |     ██     |
+20 |    ████    |
+19 |      ██    |
+18 |    ███     |
+17 |            |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -36577,10 +36577,10 @@ ENDCHAR
 STARTCHAR U+1f21 GREEK SMALL LETTER ETA WITH DASIA
 22 |            |
 21 |            |
-20 |     ███    |
-19 |    █       |
-18 |    █       |
-17 |     ██     |
+20 |    ████    |
+19 |    ██      |
+18 |     ███    |
+17 |            |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -36601,10 +36601,10 @@ ENDCHAR
 STARTCHAR U+1f22 GREEK SMALL LETTER ETA WITH PSILI AND VARIA
 22 |            |
 21 |            |
-20 | ███    █   |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 |   ██   ██  |
+18 | ███     █  |
+17 |            |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -36625,10 +36625,10 @@ ENDCHAR
 STARTCHAR U+1f23 GREEK SMALL LETTER ETA WITH DASIA AND VARIA
 22 |            |
 21 |            |
-20 |  ███   █   |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 | ██     ██  |
+18 |  ███    █  |
+17 |            |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -36649,10 +36649,10 @@ ENDCHAR
 STARTCHAR U+1f24 GREEK SMALL LETTER ETA WITH PSILI AND OXIA
 22 |            |
 21 |            |
-20 | ███     █  |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 |   ██  ██   |
+18 | ███   █    |
+17 |            |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -36673,10 +36673,10 @@ ENDCHAR
 STARTCHAR U+1f25 GREEK SMALL LETTER ETA WITH DASIA AND OXIA
 22 |            |
 21 |            |
-20 |  ███    █  |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 | ██    ██   |
+18 |  ███  █    |
+17 |            |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -36698,9 +36698,9 @@ STARTCHAR U+1f26 GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |    ███     |
-18 |       █    |
-17 |     ██     |
+19 |    ████    |
+18 |      ██    |
+17 |    ███     |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -36722,9 +36722,9 @@ STARTCHAR U+1f27 GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |     ███    |
-18 |    █       |
-17 |     ██     |
+19 |    ████    |
+18 |    ██      |
+17 |     ███    |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -36743,9 +36743,9 @@ STARTCHAR U+1f27 GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI
 01 |       ████ |
 ENDCHAR
 STARTCHAR U+1f28 GREEK CAPITAL LETTER ETA WITH PSILI
-22 |███         |
-21 |   █        |
-20 | ██         |
+22 |████        |
+21 |  ██        |
+20 |███         |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -36767,9 +36767,9 @@ STARTCHAR U+1f28 GREEK CAPITAL LETTER ETA WITH PSILI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f29 GREEK CAPITAL LETTER ETA WITH DASIA
-22 | ███        |
-21 |█           |
-20 | ██         |
+22 |████        |
+21 |██          |
+20 | ███        |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -36791,9 +36791,9 @@ STARTCHAR U+1f29 GREEK CAPITAL LETTER ETA WITH DASIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f2a GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA
-22 |███   █     |
-21 |   █  ██    |
-20 | ██    █    |
+22 |████ ██     |
+21 |  ██  ██    |
+20 |███    █    |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -36815,9 +36815,9 @@ STARTCHAR U+1f2a GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f2b GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA
-22 | ███  █     |
-21 |█     ██    |
-20 | ██    █    |
+22 |████ ██     |
+21 |██    ██    |
+20 | ███   █    |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -36839,9 +36839,9 @@ STARTCHAR U+1f2b GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f2c GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA
-22 |███    █    |
-21 |   █  ██    |
-20 | ██   █     |
+22 |████   ██   |
+21 |  ██  ██    |
+20 |███   █     |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -36863,9 +36863,9 @@ STARTCHAR U+1f2c GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f2d GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA
-22 | ███   █    |
-21 |█     ██    |
-20 | ██   █     |
+22 |████   ██   |
+21 |██    ██    |
+20 | ███  █     |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -36888,7 +36888,7 @@ STARTCHAR U+1f2d GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA
 ENDCHAR
 STARTCHAR U+1f2e GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI
 22 |███  ███   █|
-21 |  █ █   ███ |
+21 | ██ █   ███ |
 20 |██          |
 19 |████    ████|
 18 | ██      ██ |
@@ -36911,9 +36911,9 @@ STARTCHAR U+1f2e GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f2f GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI
-22 |███  ███   █|
-21 |█   █   ███ |
-20 | ██         |
+22 |████ ███   █|
+21 |██  █   ███ |
+20 | ███        |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -36937,10 +36937,10 @@ ENDCHAR
 STARTCHAR U+1f30 GREEK SMALL LETTER IOTA WITH PSILI
 22 |            |
 21 |            |
-20 |    ███     |
-19 |       █    |
-18 |       █    |
-17 |     ██     |
+20 |    ████    |
+19 |      ██    |
+18 |    ███     |
+17 |            |
 16 |            |
 15 |   ████     |
 14 |     ██     |
@@ -36961,10 +36961,10 @@ ENDCHAR
 STARTCHAR U+1f31 GREEK SMALL LETTER IOTA WITH DASIA
 22 |            |
 21 |            |
-20 |     ███    |
-19 |    █       |
-18 |    █       |
-17 |     ██     |
+20 |    ████    |
+19 |    ██      |
+18 |     ███    |
+17 |            |
 16 |            |
 15 |   ████     |
 14 |     ██     |
@@ -36985,10 +36985,10 @@ ENDCHAR
 STARTCHAR U+1f32 GREEK SMALL LETTER IOTA WITH PSILI AND VARIA
 22 |            |
 21 |            |
-20 | ███    █   |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 |   ██   ██  |
+18 | ███     █  |
+17 |            |
 16 |            |
 15 |   ████     |
 14 |     ██     |
@@ -37009,10 +37009,10 @@ ENDCHAR
 STARTCHAR U+1f33 GREEK SMALL LETTER IOTA WITH DASIA AND VARIA
 22 |            |
 21 |            |
-20 |  ███   █   |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 | ██     ██  |
+18 |  ███    █  |
+17 |            |
 16 |            |
 15 |   ████     |
 14 |     ██     |
@@ -37033,10 +37033,10 @@ ENDCHAR
 STARTCHAR U+1f34 GREEK SMALL LETTER IOTA WITH PSILI AND OXIA
 22 |            |
 21 |            |
-20 | ███     █  |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 |   ██  ██   |
+18 | ███   █    |
+17 |            |
 16 |            |
 15 |   ████     |
 14 |     ██     |
@@ -37057,10 +37057,10 @@ ENDCHAR
 STARTCHAR U+1f35 GREEK SMALL LETTER IOTA WITH DASIA AND OXIA
 22 |            |
 21 |            |
-20 |  ███    █  |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 | ██    ██   |
+18 |  ███  █    |
+17 |            |
 16 |            |
 15 |   ████     |
 14 |     ██     |
@@ -37082,9 +37082,9 @@ STARTCHAR U+1f36 GREEK SMALL LETTER IOTA WITH PSILI AND PERISPOMENI
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |    ███     |
-18 |       █    |
-17 |     ██     |
+19 |    ████    |
+18 |      ██    |
+17 |    ███     |
 16 |            |
 15 |   ████     |
 14 |     ██     |
@@ -37106,9 +37106,9 @@ STARTCHAR U+1f37 GREEK SMALL LETTER IOTA WITH DASIA AND PERISPOMENI
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |     ███    |
-18 |    █       |
-17 |     ██     |
+19 |    ████    |
+18 |    ██      |
+17 |     ███    |
 16 |            |
 15 |   ████     |
 14 |     ██     |
@@ -37127,10 +37127,10 @@ STARTCHAR U+1f37 GREEK SMALL LETTER IOTA WITH DASIA AND PERISPOMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f38 GREEK CAPITAL LETTER IOTA WITH PSILI
-22 |███         |
-21 |   █        |
-20 |   █        |
-19 | ██ █████   |
+22 |████        |
+21 |  ██        |
+20 |███         |
+19 |    █████   |
 18 |     ██     |
 17 |     ██     |
 16 |     ██     |
@@ -37151,10 +37151,10 @@ STARTCHAR U+1f38 GREEK CAPITAL LETTER IOTA WITH PSILI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f39 GREEK CAPITAL LETTER IOTA WITH DASIA
-22 | ███        |
-21 |█           |
-20 |█           |
-19 | ██ █████   |
+22 |████        |
+21 |██          |
+20 | ███        |
+19 |    █████   |
 18 |     ██     |
 17 |     ██     |
 16 |     ██     |
@@ -37175,9 +37175,9 @@ STARTCHAR U+1f39 GREEK CAPITAL LETTER IOTA WITH DASIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f3a GREEK CAPITAL LETTER IOTA WITH PSILI AND VARIA
-22 |███   █     |
-21 |   █  ██    |
-20 | ██    █    |
+22 |████ ██     |
+21 |  ██  ██    |
+20 |███    █    |
 19 |   ██████   |
 18 |     ██     |
 17 |     ██     |
@@ -37199,10 +37199,10 @@ STARTCHAR U+1f3a GREEK CAPITAL LETTER IOTA WITH PSILI AND VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f3b GREEK CAPITAL LETTER IOTA WITH DASIA AND VARIA
-22 | ███  █     |
-21 |█     ██    |
-20 | ██    █    |
-19 |   ██████   |
+22 |████ ██     |
+21 |██    ██    |
+20 | ███   █    |
+19 |    █████   |
 18 |     ██     |
 17 |     ██     |
 16 |     ██     |
@@ -37223,9 +37223,9 @@ STARTCHAR U+1f3b GREEK CAPITAL LETTER IOTA WITH DASIA AND VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f3c GREEK CAPITAL LETTER IOTA WITH PSILI AND OXIA
-22 |███    █    |
-21 |   █  ██    |
-20 | ██   █     |
+22 |████   █    |
+21 |  ██  ██    |
+20 |███   █     |
 19 |   ██████   |
 18 |     ██     |
 17 |     ██     |
@@ -37247,9 +37247,9 @@ STARTCHAR U+1f3c GREEK CAPITAL LETTER IOTA WITH PSILI AND OXIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f3d GREEK CAPITAL LETTER IOTA WITH DASIA AND OXIA
-22 | ███   █    |
-21 |█     ██    |
-20 | ██   █     |
+22 |████   ██   |
+21 |██    ██    |
+20 | ███  █     |
 19 |   ██████   |
 18 |     ██     |
 17 |     ██     |
@@ -37272,7 +37272,7 @@ STARTCHAR U+1f3d GREEK CAPITAL LETTER IOTA WITH DASIA AND OXIA
 ENDCHAR
 STARTCHAR U+1f3e GREEK CAPITAL LETTER IOTA WITH PSILI AND PERISPOMENI
 22 |███  ███   █|
-21 |  █ █   ███ |
+21 | ██ █   ███ |
 20 |██          |
 19 |   ██████   |
 18 |     ██     |
@@ -37295,9 +37295,9 @@ STARTCHAR U+1f3e GREEK CAPITAL LETTER IOTA WITH PSILI AND PERISPOMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f3f GREEK CAPITAL LETTER IOTA WITH DASIA AND PERISPOMENI
-22 |███  ███   █|
-21 |█   █   ███ |
-20 | ██         |
+22 |████ ███   █|
+21 |██  █   ███ |
+20 | ███        |
 19 |   ██████   |
 18 |     ██     |
 17 |     ██     |
@@ -37321,10 +37321,10 @@ ENDCHAR
 STARTCHAR U+1f40 GREEK SMALL LETTER OMICRON WITH PSILI
 22 |            |
 21 |            |
-20 |    ███     |
-19 |       █    |
-18 |       █    |
-17 |     ██     |
+20 |    ████    |
+19 |      ██    |
+18 |    ███     |
+17 |            |
 16 |            |
 15 |    █████   |
 14 |   █   ███  |
@@ -37345,10 +37345,10 @@ ENDCHAR
 STARTCHAR U+1f41 GREEK SMALL LETTER OMICRON WITH DASIA
 22 |            |
 21 |            |
-20 |     ███    |
-19 |    █       |
-18 |    █       |
-17 |     ██     |
+20 |    ████    |
+19 |    ██      |
+18 |     ███    |
+17 |            |
 16 |            |
 15 |    █████   |
 14 |   █   ███  |
@@ -37369,10 +37369,10 @@ ENDCHAR
 STARTCHAR U+1f42 GREEK SMALL LETTER OMICRON WITH PSILI AND VARIA
 22 |            |
 21 |            |
-20 | ███    █   |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 |   ██   ██  |
+18 | ███     █  |
+17 |            |
 16 |            |
 15 |    █████   |
 14 |   █   ███  |
@@ -37393,10 +37393,10 @@ ENDCHAR
 STARTCHAR U+1f43 GREEK SMALL LETTER OMICRON WITH DASIA AND VARIA
 22 |            |
 21 |            |
-20 |  ███   █   |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 | ██     ██  |
+18 |  ███    █  |
+17 |            |
 16 |            |
 15 |    █████   |
 14 |   █   ███  |
@@ -37417,10 +37417,10 @@ ENDCHAR
 STARTCHAR U+1f44 GREEK SMALL LETTER OMICRON WITH PSILI AND OXIA
 22 |            |
 21 |            |
-20 | ███     █  |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 |   ██  ██   |
+18 | ███   █    |
+17 |            |
 16 |            |
 15 |    █████   |
 14 |   █   ███  |
@@ -37441,10 +37441,10 @@ ENDCHAR
 STARTCHAR U+1f45 GREEK SMALL LETTER OMICRON WITH DASIA AND OXIA
 22 |            |
 21 |            |
-20 |  ███    █  |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 | ██    ██   |
+18 |  ███  █    |
+17 |            |
 16 |            |
 15 |    █████   |
 14 |   █   ███  |
@@ -37463,10 +37463,10 @@ STARTCHAR U+1f45 GREEK SMALL LETTER OMICRON WITH DASIA AND OXIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f48 GREEK CAPITAL LETTER OMICRON WITH PSILI
-22 |███         |
-21 |   █        |
-20 |   █        |
-19 | ██ ████    |
+22 |████        |
+21 |  ██        |
+20 |███         |
+19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
 16 |  █      ██ |
@@ -37487,10 +37487,10 @@ STARTCHAR U+1f48 GREEK CAPITAL LETTER OMICRON WITH PSILI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f49 GREEK CAPITAL LETTER OMICRON WITH DASIA
-22 | ███        |
-21 |█           |
-20 |█           |
-19 | ██ ████    |
+22 |████        |
+21 |██          |
+20 | ███        |
+19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
 16 |  █      ██ |
@@ -37511,9 +37511,9 @@ STARTCHAR U+1f49 GREEK CAPITAL LETTER OMICRON WITH DASIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f4a GREEK CAPITAL LETTER OMICRON WITH PSILI AND VARIA
-22 |███   █     |
-21 |   █  ██    |
-20 | ██    █    |
+22 |████ ██     |
+21 |  ██  ██    |
+20 |███    █    |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -37535,9 +37535,9 @@ STARTCHAR U+1f4a GREEK CAPITAL LETTER OMICRON WITH PSILI AND VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f4b GREEK CAPITAL LETTER OMICRON WITH DASIA AND VARIA
-22 | ███  █     |
-21 |█     ██    |
-20 | ██    █    |
+22 |████ ██     |
+21 |██    ██    |
+20 | ███   █    |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -37559,9 +37559,9 @@ STARTCHAR U+1f4b GREEK CAPITAL LETTER OMICRON WITH DASIA AND VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f4c GREEK CAPITAL LETTER OMICRON WITH PSILI AND OXIA
-22 |███    █    |
-21 |   █  ██    |
-20 | ██   █     |
+22 |████   █    |
+21 |  ██  ██    |
+20 |███   █     |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -37583,9 +37583,9 @@ STARTCHAR U+1f4c GREEK CAPITAL LETTER OMICRON WITH PSILI AND OXIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f4d GREEK CAPITAL LETTER OMICRON WITH DASIA AND OXIA
-22 | ███   █    |
-21 |█     ██    |
-20 | ██   █     |
+22 |████   ██   |
+21 |██    ██    |
+20 | ███  █     |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -37609,10 +37609,10 @@ ENDCHAR
 STARTCHAR U+1f50 GREEK SMALL LETTER UPSILON WITH PSILI
 22 |            |
 21 |            |
-20 |    ███     |
-19 |       █    |
-18 |       █    |
-17 |     ██     |
+20 |    ████    |
+19 |      ██    |
+18 |    ███     |
+17 |            |
 16 |            |
 15 | ████  ████ |
 14 |  ██    ██  |
@@ -37633,10 +37633,10 @@ ENDCHAR
 STARTCHAR U+1f51 GREEK SMALL LETTER UPSILON WITH DASIA
 22 |            |
 21 |            |
-20 |     ███    |
-19 |    █       |
-18 |    █       |
-17 |     ██     |
+20 |    ████    |
+19 |    ██      |
+18 |     ███    |
+17 |            |
 16 |            |
 15 | ████  ████ |
 14 |  ██    ██  |
@@ -37657,10 +37657,10 @@ ENDCHAR
 STARTCHAR U+1f52 GREEK SMALL LETTER UPSILON WITH PSILI AND VARIA
 22 |            |
 21 |            |
-20 | ███    █   |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 |   ██   ██  |
+18 | ███     █  |
+17 |            |
 16 |            |
 15 | ████  ████ |
 14 |  ██    ██  |
@@ -37681,10 +37681,10 @@ ENDCHAR
 STARTCHAR U+1f53 GREEK SMALL LETTER UPSILON WITH DASIA AND VARIA
 22 |            |
 21 |            |
-20 |  ███   █   |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 | ██     ██  |
+18 |  ███    █  |
+17 |            |
 16 |            |
 15 | ████  ████ |
 14 |  ██    ██  |
@@ -37705,10 +37705,10 @@ ENDCHAR
 STARTCHAR U+1f54 GREEK SMALL LETTER UPSILON WITH PSILI AND OXIA
 22 |            |
 21 |            |
-20 | ███     █  |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 |   ██  ██   |
+18 | ███   █    |
+17 |            |
 16 |            |
 15 | ████  ████ |
 14 |  ██    ██  |
@@ -37729,10 +37729,10 @@ ENDCHAR
 STARTCHAR U+1f55 GREEK SMALL LETTER UPSILON WITH DASIA AND OXIA
 22 |            |
 21 |            |
-20 |  ███    █  |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 | ██    ██   |
+18 |  ███  █    |
+17 |            |
 16 |            |
 15 | ████  ████ |
 14 |  ██    ██  |
@@ -37754,9 +37754,9 @@ STARTCHAR U+1f56 GREEK SMALL LETTER UPSILON WITH PSILI AND PERISPOMENI
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |    ███     |
-18 |       █    |
-17 |     ██     |
+19 |    ████    |
+18 |      ██    |
+17 |    ███     |
 16 |            |
 15 | ████  ████ |
 14 |  ██    ██  |
@@ -37778,9 +37778,9 @@ STARTCHAR U+1f57 GREEK SMALL LETTER UPSILON WITH DASIA AND PERISPOMENI
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |     ███    |
-18 |    █       |
-17 |     ██     |
+19 |    ████    |
+18 |    ██      |
+17 |     ███    |
 16 |            |
 15 | ████  ████ |
 14 |  ██    ██  |
@@ -37799,9 +37799,9 @@ STARTCHAR U+1f57 GREEK SMALL LETTER UPSILON WITH DASIA AND PERISPOMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f59 GREEK CAPITAL LETTER UPSILON WITH DASIA
-22 | ███        |
+22 |████        |
 21 |█           |
-20 | ██         |
+20 | ███        |
 19 |████     ███|
 18 | ██       █ |
 17 |  ██     █  |
@@ -37823,9 +37823,9 @@ STARTCHAR U+1f59 GREEK CAPITAL LETTER UPSILON WITH DASIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f5b GREEK CAPITAL LETTER UPSILON WITH DASIA AND VARIA
-22 | ███  █     |
-21 |█     ██    |
-20 | ██    █    |
+22 |████ ██     |
+21 |██    ██    |
+20 | ███   █    |
 19 |████     ███|
 18 | ██       █ |
 17 |  ██     █  |
@@ -37847,9 +37847,9 @@ STARTCHAR U+1f5b GREEK CAPITAL LETTER UPSILON WITH DASIA AND VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f5d GREEK CAPITAL LETTER UPSILON WITH DASIA AND OXIA
-22 | ███   █    |
-21 |█     ██    |
-20 | ██   █     |
+22 |████   ██   |
+21 |██    ██    |
+20 | ███  █     |
 19 |████     ███|
 18 | ██       █ |
 17 |  ██     █  |
@@ -37871,9 +37871,9 @@ STARTCHAR U+1f5d GREEK CAPITAL LETTER UPSILON WITH DASIA AND OXIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f5f GREEK CAPITAL LETTER UPSILON WITH DASIA AND PERISPOMENI
-22 |███  ███   █|
-21 |█   █   ███ |
-20 | ██         |
+22 |████ ███   █|
+21 |██  █   ███ |
+20 | ███        |
 19 |████     ███|
 18 | ██       █ |
 17 |  ██     █  |
@@ -37897,10 +37897,10 @@ ENDCHAR
 STARTCHAR U+1f60 GREEK SMALL LETTER OMEGA WITH PSILI
 22 |            |
 21 |            |
-20 |    ███     |
-19 |       █    |
-18 |       █    |
-17 |     ██     |
+20 |    ████    |
+19 |      ██    |
+18 |    ███     |
+17 |            |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -37921,10 +37921,10 @@ ENDCHAR
 STARTCHAR U+1f61 GREEK SMALL LETTER OMEGA WITH DASIA
 22 |            |
 21 |            |
-20 |     ███    |
-19 |    █       |
-18 |    █       |
-17 |     ██     |
+20 |    ████    |
+19 |    ██      |
+18 |     ███    |
+17 |            |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -37945,10 +37945,10 @@ ENDCHAR
 STARTCHAR U+1f62 GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA
 22 |            |
 21 |            |
-20 | ███    █   |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 |   ██   ██  |
+18 | ███     █  |
+17 |            |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -37969,10 +37969,10 @@ ENDCHAR
 STARTCHAR U+1f63 GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA
 22 |            |
 21 |            |
-20 |  ███   █   |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 | ██     ██  |
+18 |  ███    █  |
+17 |            |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -37993,10 +37993,10 @@ ENDCHAR
 STARTCHAR U+1f64 GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA
 22 |            |
 21 |            |
-20 | ███     █  |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 |   ██  ██   |
+18 | ███   █    |
+17 |            |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -38017,10 +38017,10 @@ ENDCHAR
 STARTCHAR U+1f65 GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA
 22 |            |
 21 |            |
-20 |  ███    █  |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 | ██    ██   |
+18 |  ███  █    |
+17 |            |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -38042,9 +38042,9 @@ STARTCHAR U+1f66 GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |    ███     |
-18 |       █    |
-17 |     ██     |
+19 |    ████    |
+18 |      ██    |
+17 |    ███     |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -38066,9 +38066,9 @@ STARTCHAR U+1f67 GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |     ███    |
-18 |    █       |
-17 |     ██     |
+19 |    ████    |
+18 |    ██      |
+17 |     ███    |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -38087,10 +38087,10 @@ STARTCHAR U+1f67 GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f68 GREEK CAPITAL LETTER OMEGA WITH PSILI
-22 |███         |
-21 |   █        |
-20 |   █        |
-19 | ██ ████    |
+22 |████        |
+21 |  ██        |
+20 |███         |
+19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
 16 |  █      ██ |
@@ -38111,10 +38111,10 @@ STARTCHAR U+1f68 GREEK CAPITAL LETTER OMEGA WITH PSILI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f69 GREEK CAPITAL LETTER OMEGA WITH DASIA
-22 | ███        |
-21 |█           |
-20 |█           |
-19 | ██ ████    |
+22 |████        |
+21 |██          |
+20 | ███        |
+19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
 16 |  █      ██ |
@@ -38135,9 +38135,9 @@ STARTCHAR U+1f69 GREEK CAPITAL LETTER OMEGA WITH DASIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f6a GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA
-22 |███   █     |
-21 |   █  ██    |
-20 | ██    █    |
+22 |████ ██     |
+21 |  ██  ██    |
+20 |███    █    |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -38159,9 +38159,9 @@ STARTCHAR U+1f6a GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f6b GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA
-22 | ███  █     |
-21 |█     ██    |
-20 | ██    █    |
+22 |████ ██     |
+21 |██    ██    |
+20 | ███   █    |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -38183,9 +38183,9 @@ STARTCHAR U+1f6b GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f6c GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA
-22 |███    █    |
-21 |   █  ██    |
-20 | ██   █     |
+22 |████   ██   |
+21 |  ██  ██    |
+20 |███   █     |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -38207,9 +38207,9 @@ STARTCHAR U+1f6c GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1f6d GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA
-22 | ███   █    |
-21 |█     ██    |
-20 | ██   █     |
+22 |████   ██   |
+21 |██    ██    |
+20 | ███  █     |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -38232,7 +38232,7 @@ STARTCHAR U+1f6d GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA
 ENDCHAR
 STARTCHAR U+1f6e GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI
 22 |███  ███   █|
-21 |  █ █   ███ |
+21 | ██ █   ███ |
 20 |██          |
 19 |    ████    |
 18 |   █   ███  |
@@ -38255,9 +38255,9 @@ STARTCHAR U+1f6e GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f6f GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI
-22 |███  ███   █|
-21 |█   █   ███ |
-20 | ██         |
+22 |████ ███   █|
+21 |██  █   ███ |
+20 | ███        |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -38283,7 +38283,7 @@ STARTCHAR U+1f70 GREEK SMALL LETTER ALPHA WITH VARIA
 21 |            |
 20 |    ██      |
 19 |     ██     |
-18 |      ██    |
+18 |      █     |
 17 |            |
 16 |            |
 15 |   ██████  █|
@@ -38307,7 +38307,7 @@ STARTCHAR U+1f71 GREEK SMALL LETTER ALPHA WITH OXIA
 21 |            |
 20 |      ██    |
 19 |     ██     |
-18 |    ██      |
+18 |     █      |
 17 |            |
 16 |            |
 15 |   ██████  █|
@@ -38332,7 +38332,7 @@ STARTCHAR U+1f72 GREEK SMALL LETTER EPSILON WITH VARIA
 20 |            |
 19 |    ██      |
 18 |     ██     |
-17 |      ██    |
+17 |      █     |
 16 |            |
 15 |    █████   |
 14 |   ███████  |
@@ -38356,7 +38356,7 @@ STARTCHAR U+1f73 GREEK SMALL LETTER EPSILON WITH OXIA
 20 |            |
 19 |      ██    |
 18 |     ██     |
-17 |    ██      |
+17 |     █      |
 16 |            |
 15 |    █████   |
 14 |   ███████  |
@@ -38379,7 +38379,7 @@ STARTCHAR U+1f74 GREEK SMALL LETTER ETA WITH VARIA
 21 |            |
 20 |    ██      |
 19 |     ██     |
-18 |      ██    |
+18 |      █     |
 17 |            |
 16 |            |
 15 |  █  ████   |
@@ -38403,7 +38403,7 @@ STARTCHAR U+1f75 GREEK SMALL LETTER ETA WITH OXIA
 21 |            |
 20 |      ██    |
 19 |     ██     |
-18 |    ██      |
+18 |     █      |
 17 |            |
 16 |            |
 15 |  █  ████   |
@@ -38427,7 +38427,7 @@ STARTCHAR U+1f76 GREEK SMALL LETTER IOTA WITH VARIA
 21 |            |
 20 |    ██      |
 19 |     ██     |
-18 |      ██    |
+18 |      █     |
 17 |            |
 16 |            |
 15 |   ████     |
@@ -38451,7 +38451,7 @@ STARTCHAR U+1f77 GREEK SMALL LETTER IOTA WITH OXIA
 21 |            |
 20 |      ██    |
 19 |     ██     |
-18 |    ██      |
+18 |     █      |
 17 |            |
 16 |            |
 15 |   ████     |
@@ -38475,7 +38475,7 @@ STARTCHAR U+1f78 GREEK SMALL LETTER OMICRON WITH VARIA
 21 |            |
 20 |    ██      |
 19 |     ██     |
-18 |      ██    |
+18 |      █     |
 17 |            |
 16 |            |
 15 |    █████   |
@@ -38499,7 +38499,7 @@ STARTCHAR U+1f79 GREEK SMALL LETTER OMICRON WITH OXIA
 21 |            |
 20 |      ██    |
 19 |     ██     |
-18 |    ██      |
+18 |     █      |
 17 |            |
 16 |            |
 15 |    █████   |
@@ -38523,7 +38523,7 @@ STARTCHAR U+1f7a GREEK SMALL LETTER UPSILON WITH VARIA
 21 |            |
 20 |    ██      |
 19 |     ██     |
-18 |      ██    |
+18 |      █     |
 17 |            |
 16 |            |
 15 | ████  ████ |
@@ -38547,7 +38547,7 @@ STARTCHAR U+1f7b GREEK SMALL LETTER UPSILON WITH OXIA
 21 |            |
 20 |      ██    |
 19 |     ██     |
-18 |    ██      |
+18 |     █      |
 17 |            |
 16 |            |
 15 | ████  ████ |
@@ -38571,7 +38571,7 @@ STARTCHAR U+1f7c GREEK SMALL LETTER OMEGA WITH VARIA
 21 |            |
 20 |    ██      |
 19 |     ██     |
-18 |      ██    |
+18 |      █     |
 17 |            |
 16 |            |
 15 | ██      ██ |
@@ -38593,9 +38593,9 @@ ENDCHAR
 STARTCHAR U+1f7d GREEK SMALL LETTER OMEGA WITH OXIA
 22 |            |
 21 |            |
-20 |      ██    |
-19 |     ██     |
-18 |    ██      |
+20 |     ███    |
+19 |    ██      |
+18 |    █       |
 17 |            |
 16 |            |
 15 | ██      ██ |
@@ -38617,10 +38617,10 @@ ENDCHAR
 STARTCHAR U+1f80 GREEK SMALL LETTER ALPHA WITH PSILI AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 |    ███     |
-19 |       █    |
-18 |       █    |
-17 |     ██     |
+20 |    ████    |
+19 |      ██    |
+18 |    ███     |
+17 |            |
 16 |            |
 15 |   ██████  █|
 14 |  ██   ███ █|
@@ -38641,10 +38641,10 @@ ENDCHAR
 STARTCHAR U+1f81 GREEK SMALL LETTER ALPHA WITH DASIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 |     ███    |
-19 |    █       |
-18 |    █       |
-17 |     ██     |
+20 |    ████    |
+19 |    ██      |
+18 |     ███    |
+17 |            |
 16 |            |
 15 |   ██████  █|
 14 |  ██   ███ █|
@@ -38665,10 +38665,10 @@ ENDCHAR
 STARTCHAR U+1f82 GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 | ███    █   |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 |   ██   ██  |
+18 | ███     █  |
+17 |            |
 16 |            |
 15 |   ██████  █|
 14 |  ██   ███ █|
@@ -38689,10 +38689,10 @@ ENDCHAR
 STARTCHAR U+1f83 GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 | ████   █   |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██     █  |
+20 | ████  ██   |
+19 | ██     ██  |
+18 |  ███    █  |
+17 |            |
 16 |            |
 15 |   ██████  █|
 14 |  ██   ███ █|
@@ -38713,10 +38713,10 @@ ENDCHAR
 STARTCHAR U+1f84 GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 | ███     █  |
-19 |    █   ██  |
-18 |    █   ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 |   ██  ██   |
+18 | ███   █    |
+17 |            |
 16 |            |
 15 |   ██████  █|
 14 |  ██   ███ █|
@@ -38737,10 +38737,10 @@ ENDCHAR
 STARTCHAR U+1f85 GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 | ████    █  |
-19 | █      ██  |
-18 | █      ██  |
-17 |  ██    █   |
+20 | ████   ██  |
+19 | ██    ██   |
+18 |  ███  █    |
+17 |            |
 16 |            |
 15 |   ██████  █|
 14 |  ██   ███ █|
@@ -38762,9 +38762,9 @@ STARTCHAR U+1f86 GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGR
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |    ███     |
-18 |       █    |
-17 |     ██     |
+19 |    ████    |
+18 |      ██    |
+17 |    ███     |
 16 |            |
 15 |   ██████  █|
 14 |  ██   ███ █|
@@ -38786,9 +38786,9 @@ STARTCHAR U+1f87 GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGR
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |     ███    |
-18 |    █       |
-17 |     ██     |
+19 |    ████    |
+18 |    ██      |
+17 |     ███    |
 16 |            |
 15 |   ██████  █|
 14 |  ██   ███ █|
@@ -38809,9 +38809,9 @@ ENDCHAR
 STARTCHAR U+1f88 GREEK CAPITAL LETTER ALPHA WITH PSILI AND PROSGEGRAMMENI
 22 |            |
 21 |            |
-20 |███         |
-19 |   █ ██     |
-18 | ██  ██     |
+20 |████        |
+19 |  ██ ██     |
+18 |███  ██     |
 17 |    █ ██    |
 16 |    █ ██    |
 15 |    █  █    |
@@ -38833,9 +38833,9 @@ ENDCHAR
 STARTCHAR U+1f89 GREEK CAPITAL LETTER ALPHA WITH DASIA AND PROSGEGRAMMENI
 22 |            |
 21 |            |
-20 | ███        |
-19 |█    ██     |
-18 | ██  ██     |
+20 |████        |
+19 |██   ██     |
+18 | ███ ██     |
 17 |    █ ██    |
 16 |    █ ██    |
 15 |    █  █    |
@@ -38855,13 +38855,13 @@ STARTCHAR U+1f89 GREEK CAPITAL LETTER ALPHA WITH DASIA AND PROSGEGRAMMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f8a GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
-22 |   █        |
+22 |  ██        |
 21 |   ██       |
-20 |   ██       |
-19 |    █ ██    |
-18 |███   ██    |
-17 |   █ █ ██   |
-16 | ██  █ ██   |
+20 |    █       |
+19 |      ██    |
+18 |████  ██    |
+17 |  ██ █ ██   |
+16 |███  █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
 13 |    █   ██  |
@@ -38879,13 +38879,13 @@ STARTCHAR U+1f8a GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMM
 01 |            |
 ENDCHAR
 STARTCHAR U+1f8b GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
-22 |   █        |
+22 |  ██        |
 21 |   ██       |
-20 |   ██       |
-19 |    █ ██    |
-18 | ███  ██    |
-17 |█    █ ██   |
-16 | ██  █ ██   |
+20 |    █       |
+19 |      ██    |
+18 |████  ██    |
+17 |██   █ ██   |
+16 | ███ █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
 13 |    █   ██  |
@@ -38903,13 +38903,13 @@ STARTCHAR U+1f8b GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMM
 01 |            |
 ENDCHAR
 STARTCHAR U+1f8c GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-22 |    █       |
+22 |    ██      |
 21 |   ██       |
-20 |   ██       |
-19 |   █  ██    |
-18 |███   ██    |
-17 |   █ █ ██   |
-16 | ██  █ ██   |
+20 |   █        |
+19 |      ██    |
+18 |████  ██    |
+17 |  ██ █ ██   |
+16 |███  █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
 13 |    █   ██  |
@@ -38927,13 +38927,13 @@ STARTCHAR U+1f8c GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMME
 01 |            |
 ENDCHAR
 STARTCHAR U+1f8d GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-22 |    █       |
+22 |    ██      |
 21 |   ██       |
-20 |   ██       |
-19 |   █  ██    |
-18 | ███  ██    |
-17 |█    █ ██   |
-16 | ██  █ ██   |
+20 |   █        |
+19 |      ██    |
+18 |████  ██    |
+17 |██   █ ██   |
+16 | ███ █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
 13 |    █   ██  |
@@ -38955,9 +38955,9 @@ STARTCHAR U+1f8e GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSG
 21 | ███   █    |
 20 |█   ███     |
 19 |      ██    |
-18 |███   ██    |
-17 |   █ █ ██   |
-16 | ██  █ ██   |
+18 |████  ██    |
+17 |  ██ █ ██   |
+16 |███  █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
 13 |    █   ██  |
@@ -38979,9 +38979,9 @@ STARTCHAR U+1f8f GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSG
 21 | ███   █    |
 20 |█   ███     |
 19 |      ██    |
-18 | ███  ██    |
-17 |█    █ ██   |
-16 | ██  █ ██   |
+18 |████  ██    |
+17 |██   █ ██   |
+16 | ███ █ ██   |
 15 |     █  █   |
 14 |    █   ██  |
 13 |    █   ██  |
@@ -39001,10 +39001,10 @@ ENDCHAR
 STARTCHAR U+1f90 GREEK SMALL LETTER ETA WITH PSILI AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 |    ███     |
-19 |       █    |
-18 |       █    |
-17 |     ██     |
+20 |    ████    |
+19 |      ██    |
+18 |    ███     |
+17 |            |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -39025,10 +39025,10 @@ ENDCHAR
 STARTCHAR U+1f91 GREEK SMALL LETTER ETA WITH DASIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 |     ███    |
-19 |    █       |
-18 |    █       |
-17 |     ██     |
+20 |    ████    |
+19 |    ██      |
+18 |     ███    |
+17 |            |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -39050,9 +39050,9 @@ STARTCHAR U+1f92 GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
 20 |            |
-19 | ███  ██    |
-18 |    █  ██   |
-17 |  ██    ██  |
+19 | ████ ██    |
+18 |   ██  ██   |
+17 | ███    █   |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -39074,9 +39074,9 @@ STARTCHAR U+1f93 GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
 20 |            |
-19 |  ███ ██    |
-18 | █     ██   |
-17 |  ██    ██  |
+19 | ████ ██    |
+18 | ██    ██   |
+17 |  ███   █   |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -39098,9 +39098,9 @@ STARTCHAR U+1f94 GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
 20 |            |
-19 | ███    ██  |
-18 |    █  ██   |
-17 |  ██  ██    |
+19 | ████   ██  |
+18 |   ██  ██   |
+17 | ███   █    |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -39122,9 +39122,9 @@ STARTCHAR U+1f95 GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
 20 |            |
-19 |  ███   ██  |
-18 | █     ██   |
-17 |  ██  ██    |
+19 | ████   ██  |
+18 | ██    ██   |
+17 |  ███  █    |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -39146,9 +39146,9 @@ STARTCHAR U+1f96 GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAM
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |    ███     |
-18 |       █    |
-17 |     ██     |
+19 |    ████    |
+18 |      ██    |
+17 |    ███     |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -39170,9 +39170,9 @@ STARTCHAR U+1f97 GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAM
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |     ███    |
-18 |    █       |
-17 |     ██     |
+19 |    ████    |
+18 |    ██      |
+17 |     ███    |
 16 |            |
 15 |  █  ████   |
 14 | ████  ███  |
@@ -39191,9 +39191,9 @@ STARTCHAR U+1f97 GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAM
 01 |       ████ |
 ENDCHAR
 STARTCHAR U+1f98 GREEK CAPITAL LETTER ETA WITH PSILI AND PROSGEGRAMMENI
-22 |███         |
-21 |   █        |
-20 | ██         |
+22 |████        |
+21 |  ██        |
+20 |███         |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39215,9 +39215,9 @@ STARTCHAR U+1f98 GREEK CAPITAL LETTER ETA WITH PSILI AND PROSGEGRAMMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f99 GREEK CAPITAL LETTER ETA WITH DASIA AND PROSGEGRAMMENI
-22 | ███        |
-21 |█           |
-20 | ██         |
+22 |████        |
+21 |██          |
+20 | ███        |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39239,9 +39239,9 @@ STARTCHAR U+1f99 GREEK CAPITAL LETTER ETA WITH DASIA AND PROSGEGRAMMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f9a GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
-22 |███  ██     |
-21 |   █  ██    |
-20 | ██    ██   |
+22 |████ ██     |
+21 |  ██  ██    |
+20 |███    █    |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39263,9 +39263,9 @@ STARTCHAR U+1f9a GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMEN
 01 |            |
 ENDCHAR
 STARTCHAR U+1f9b GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
-22 | ███ ██     |
-21 |█     ██    |
-20 | ██    ██   |
+22 |████ ██     |
+21 |██    ██    |
+20 | ███   █    |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39287,9 +39287,9 @@ STARTCHAR U+1f9b GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMEN
 01 |            |
 ENDCHAR
 STARTCHAR U+1f9c GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-22 |███    ██   |
-21 |   █  ██    |
-20 | ██  ██     |
+22 |████   ██   |
+21 |  ██  ██    |
+20 |███   █     |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39311,9 +39311,9 @@ STARTCHAR U+1f9c GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1f9d GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-22 | ███   ██   |
-21 |█     ██    |
-20 | ██  ██     |
+22 |████   ██   |
+21 |██    ██    |
+20 | ███  █     |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39336,8 +39336,8 @@ STARTCHAR U+1f9d GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
 ENDCHAR
 STARTCHAR U+1f9e GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
 22 |███  ███   █|
-21 |  █ █   ███ |
-20 | ██         |
+21 | ██ █   ███ |
+20 |██          |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39359,9 +39359,9 @@ STARTCHAR U+1f9e GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEG
 01 |            |
 ENDCHAR
 STARTCHAR U+1f9f GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
-22 |███  ███   █|
-21 |█   █   ███ |
-20 | ██         |
+22 |████ ███   █|
+21 |██  █   ███ |
+20 | ███        |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -39385,10 +39385,10 @@ ENDCHAR
 STARTCHAR U+1fa0 GREEK SMALL LETTER OMEGA WITH PSILI AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 |    ███     |
-19 |       █    |
-18 |       █    |
-17 |     ██     |
+20 |    ████    |
+19 |      ██    |
+18 |    ███     |
+17 |            |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -39409,10 +39409,10 @@ ENDCHAR
 STARTCHAR U+1fa1 GREEK SMALL LETTER OMEGA WITH DASIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 |     ███    |
-19 |    █       |
-18 |    █       |
-17 |     ██     |
+20 |    ████    |
+19 |    ██      |
+18 |     ███    |
+17 |            |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -39433,10 +39433,10 @@ ENDCHAR
 STARTCHAR U+1fa2 GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 |  ███   █   |
-19 |     █  ██  |
-18 |     █  ██  |
-17 |   ██    █  |
+20 |  ████ ██   |
+19 |    ██  ██  |
+18 |  ███    █  |
+17 |            |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -39457,10 +39457,10 @@ ENDCHAR
 STARTCHAR U+1fa3 GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 |   ███  █   |
-19 |  █     ██  |
-18 |  █     ██  |
-17 |   ██    █  |
+20 |  ████ ██   |
+19 |  ██    ██  |
+18 |   ███   █  |
+17 |            |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -39481,10 +39481,10 @@ ENDCHAR
 STARTCHAR U+1fa4 GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 |  ███    █  |
-19 |     █  ██  |
-18 |     █  ██  |
-17 |   ██   █   |
+20 |  ████   ██ |
+19 |    ██  ██  |
+18 |  ███   █   |
+17 |            |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -39505,10 +39505,10 @@ ENDCHAR
 STARTCHAR U+1fa5 GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
 22 |            |
 21 |            |
-20 |   ███   █  |
-19 |  █     ██  |
-18 |  █     ██  |
-17 |   ██   █   |
+20 |  ████   ██ |
+19 |  ██    ██  |
+18 |   ███  █   |
+17 |            |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -39530,9 +39530,9 @@ STARTCHAR U+1fa6 GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGR
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |    ███     |
-18 |       █    |
-17 |     ██     |
+19 |    ████    |
+18 |      ██    |
+17 |    ███     |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -39554,9 +39554,9 @@ STARTCHAR U+1fa7 GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGR
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |     ███    |
-18 |    █       |
-17 |     ██     |
+19 |    ████    |
+18 |    ██      |
+17 |     ███    |
 16 |            |
 15 | ██      ██ |
 14 |██        ██|
@@ -39576,9 +39576,9 @@ STARTCHAR U+1fa7 GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGR
 ENDCHAR
 STARTCHAR U+1fa8 GREEK CAPITAL LETTER OMEGA WITH PSILI AND PROSGEGRAMMENI
 22 |     ███   █|
-21 |███ █   ███ |
-20 |   █        |
-19 | ██ ████    |
+21 |█████   ███ |
+20 |  ██        |
+19 |███ ████    |
 18 |   █   ███  |
 17 |  █     ██  |
 16 |  █      ██ |
@@ -39599,10 +39599,10 @@ STARTCHAR U+1fa8 GREEK CAPITAL LETTER OMEGA WITH PSILI AND PROSGEGRAMMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1fa9 GREEK CAPITAL LETTER OMEGA WITH DASIA AND PROSGEGRAMMENI
-22 |            |
-21 |███         |
-20 |█           |
-19 | ██ ████    |
+22 |████        |
+21 |██          |
+20 | ███        |
+19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
 16 |  █      ██ |
@@ -39623,9 +39623,9 @@ STARTCHAR U+1fa9 GREEK CAPITAL LETTER OMEGA WITH DASIA AND PROSGEGRAMMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1faa GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
-22 |███   █     |
-21 |   █  ██    |
-20 | ██    █    |
+22 |████ ██     |
+21 |  ██  ██    |
+20 |███    █    |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -39647,9 +39647,9 @@ STARTCHAR U+1faa GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMM
 01 |            |
 ENDCHAR
 STARTCHAR U+1fab GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
-22 | ███ ██     |
-21 |█     ██    |
-20 | ██    ██   |
+22 |████ ██     |
+21 |██    ██    |
+20 | ███   █    |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -39671,9 +39671,9 @@ STARTCHAR U+1fab GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMM
 01 |            |
 ENDCHAR
 STARTCHAR U+1fac GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-22 |███    ██   |
-21 |   █  ██    |
-20 | ██  ██     |
+22 |████   ██   |
+21 |  ██  ██    |
+20 |███   █     |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -39695,9 +39695,9 @@ STARTCHAR U+1fac GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMME
 01 |            |
 ENDCHAR
 STARTCHAR U+1fad GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-22 | ███   ██   |
-21 |█     ██    |
-20 | ██  ██     |
+22 |████   ██   |
+21 |██    ██    |
+20 | ███  █     |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -39720,7 +39720,7 @@ STARTCHAR U+1fad GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMME
 ENDCHAR
 STARTCHAR U+1fae GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
 22 |███  ███   █|
-21 |  █ █   ███ |
+21 | ██ █   ███ |
 20 |██          |
 19 |    ████    |
 18 |   █   ███  |
@@ -39743,9 +39743,9 @@ STARTCHAR U+1fae GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSG
 01 |            |
 ENDCHAR
 STARTCHAR U+1faf GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
-22 |███  ███   █|
-21 |█   █   ███ |
-20 | ██         |
+22 |████ ███   █|
+21 |██  █   ███ |
+20 | ███        |
 19 |    ████    |
 18 |   █   ███  |
 17 |  █     ██  |
@@ -39819,7 +39819,7 @@ STARTCHAR U+1fb2 GREEK SMALL LETTER ALPHA WITH VARIA AND YPOGEGRAMMENI
 21 |            |
 20 |    ██      |
 19 |     ██     |
-18 |      ██    |
+18 |      █     |
 17 |            |
 16 |            |
 15 |   ██████  █|
@@ -39867,7 +39867,7 @@ STARTCHAR U+1fb4 GREEK SMALL LETTER ALPHA WITH OXIA AND YPOGEGRAMMENI
 21 |            |
 20 |      ██    |
 19 |     ██     |
-18 |    ██      |
+18 |     █      |
 17 |            |
 16 |            |
 15 |   ██████  █|
@@ -39987,7 +39987,7 @@ STARTCHAR U+1fba GREEK CAPITAL LETTER ALPHA WITH VARIA
 21 |            |
 20 |██          |
 19 | ██  ██     |
-18 |  ██ ██     |
+18 |  █  ██     |
 17 |    █ ██    |
 16 |    █ ██    |
 15 |    █  █    |
@@ -40011,7 +40011,7 @@ STARTCHAR U+1fbb GREEK CAPITAL LETTER ALPHA WITH OXIA
 21 |            |
 20 |  ██        |
 19 | ██  ██     |
-18 |██   ██     |
+18 | █   ██     |
 17 |    █ ██    |
 16 |    █ ██    |
 15 |    █  █    |
@@ -40179,7 +40179,7 @@ STARTCHAR U+1fc2 GREEK SMALL LETTER ETA WITH VARIA AND YPOGEGRAMMENI
 21 |            |
 20 |    ██      |
 19 |     ██     |
-18 |      ██    |
+18 |      █     |
 17 |            |
 16 |            |
 15 |  █  ████   |
@@ -40227,7 +40227,7 @@ STARTCHAR U+1fc4 GREEK SMALL LETTER ETA WITH OXIA AND YPOGEGRAMMENI
 21 |            |
 20 |      ██    |
 19 |     ██     |
-18 |    ██      |
+18 |     █      |
 17 |            |
 16 |            |
 15 |  █  ████   |
@@ -40297,7 +40297,7 @@ ENDCHAR
 STARTCHAR U+1fc8 GREEK CAPITAL LETTER EPSILON WITH VARIA
 22 |██          |
 21 | ██         |
-20 |  ██        |
+20 |  █         |
 19 | █████████  |
 18 |  ██     █  |
 17 |  ██     █  |
@@ -40319,9 +40319,9 @@ STARTCHAR U+1fc8 GREEK CAPITAL LETTER EPSILON WITH VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1fc9 GREEK CAPITAL LETTER EPSILON WITH OXIA
-22 |  ██        |
-21 | ██         |
-20 |██          |
+22 | ██         |
+21 |██          |
+20 |█           |
 19 | █████████  |
 18 |  ██     █  |
 17 |  ██     █  |
@@ -40345,7 +40345,7 @@ ENDCHAR
 STARTCHAR U+1fca GREEK CAPITAL LETTER ETA WITH VARIA
 22 |██          |
 21 | ██         |
-20 |  ██        |
+20 |  █         |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -40367,9 +40367,9 @@ STARTCHAR U+1fca GREEK CAPITAL LETTER ETA WITH VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1fcb GREEK CAPITAL LETTER ETA WITH OXIA
-22 |  ██        |
-21 | ██         |
-20 |██          |
+22 | ██         |
+21 |██          |
+20 |█           |
 19 |████    ████|
 18 | ██      ██ |
 17 | ██      ██ |
@@ -40415,10 +40415,10 @@ STARTCHAR U+1fcc GREEK CAPITAL LETTER ETA WITH PROSGEGRAMMENI
 01 |            |
 ENDCHAR
 STARTCHAR U+1fcd GREEK PSILI AND VARIA
-22 |  ███       |
-21 |     █ ██   |
-20 |     █  ██  |
-19 |   ██    ██ |
+22 |  ████ ██   |
+21 |    ██  ██  |
+20 |  ███    █  |
+19 |            |
 18 |            |
 17 |            |
 16 |            |
@@ -40439,10 +40439,10 @@ STARTCHAR U+1fcd GREEK PSILI AND VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1fce GREEK PSILI AND OXIA
-22 |  ███       |
-21 |     █   ██ |
-20 |     █  ██  |
-19 |   ██  ██   |
+22 |  ████  ██  |
+21 |    ██ ██   |
+20 |  ███  █    |
+19 |            |
 18 |            |
 17 |            |
 16 |            |
@@ -40539,7 +40539,7 @@ STARTCHAR U+1fd2 GREEK SMALL LETTER IOTA WITH DIALYTIKA AND VARIA
 21 |            |
 20 |   ██       |
 19 |    ██      |
-18 | ██  ██ ██  |
+18 | ██  █  ██  |
 17 | ██     ██  |
 16 |            |
 15 |   ████     |
@@ -40563,7 +40563,7 @@ STARTCHAR U+1fd3 GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
 21 |            |
 20 |      ██    |
 19 |     ██     |
-18 | ██ ██  ██  |
+18 | ██  █  ██  |
 17 | ██     ██  |
 16 |            |
 15 |   ████     |
@@ -40684,7 +40684,7 @@ STARTCHAR U+1fda GREEK CAPITAL LETTER IOTA WITH VARIA
 20 |            |
 19 |██ ██████   |
 18 | ██  ██     |
-17 |  ██ ██     |
+17 |  █  ██     |
 16 |     ██     |
 15 |     ██     |
 14 |     ██     |
@@ -40706,9 +40706,9 @@ STARTCHAR U+1fdb GREEK CAPITAL LETTER IOTA WITH OXIA
 22 |            |
 21 |            |
 20 |            |
-19 |  ██ ██████ |
-18 | ██    ██   |
-17 |██     ██   |
+19 | ██  ██████ |
+18 |██     ██   |
+17 |█      ██   |
 16 |       ██   |
 15 |       ██   |
 14 |       ██   |
@@ -40727,10 +40727,10 @@ STARTCHAR U+1fdb GREEK CAPITAL LETTER IOTA WITH OXIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1fdd GREEK DASIA AND VARIA
-22 |   ███      |
-21 |  █    ██   |
-20 |  █     ██  |
-19 |   ██    ██ |
+22 |  ████ ██   |
+21 |  ██    ██  |
+20 |   ███   █  |
+19 |            |
 18 |            |
 17 |            |
 16 |            |
@@ -40751,10 +40751,10 @@ STARTCHAR U+1fdd GREEK DASIA AND VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1fde GREEK DASIA AND OXIA
-22 |   ███      |
-21 |  █      ██ |
-20 |  █     ██  |
-19 |   ██  ██   |
+22 |  ████  ██  |
+21 |  ██   ██   |
+20 |   ███ █    |
+19 |            |
 18 |            |
 17 |            |
 16 |            |
@@ -40778,9 +40778,9 @@ STARTCHAR U+1fdf GREEK DASIA AND PERISPOMENI
 22 |   ███   █  |
 21 |  █   ███   |
 20 |            |
-19 |     ███    |
-18 |    █       |
-17 |     ██     |
+19 |    ████    |
+18 |    ██      |
+17 |     ███    |
 16 |            |
 15 |            |
 14 |            |
@@ -40851,7 +40851,7 @@ STARTCHAR U+1fe2 GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND VARIA
 21 |            |
 20 |   ██       |
 19 |    ██      |
-18 | ██  ██ ██  |
+18 | ██  █  ██  |
 17 | ██     ██  |
 16 |            |
 15 | ████  ████ |
@@ -40875,7 +40875,7 @@ STARTCHAR U+1fe3 GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
 21 |            |
 20 |      ██    |
 19 |     ██     |
-18 | ██ ██  ██  |
+18 | ██  █  ██  |
 17 | ██     ██  |
 16 |            |
 15 | ████  ████ |
@@ -40897,10 +40897,10 @@ ENDCHAR
 STARTCHAR U+1fe4 GREEK SMALL LETTER RHO WITH PSILI
 22 |            |
 21 |            |
-20 |    ███     |
-19 |       █    |
-18 |       █    |
-17 |     ██     |
+20 |    ████    |
+19 |      ██    |
+18 |    ███     |
+17 |            |
 16 |            |
 15 |    █████   |
 14 |   █   ███  |
@@ -40921,10 +40921,10 @@ ENDCHAR
 STARTCHAR U+1fe5 GREEK SMALL LETTER RHO WITH DASIA
 22 |            |
 21 |            |
-20 |     ███    |
-19 |    █       |
-18 |    █       |
-17 |     ██     |
+20 |    ████    |
+19 |    ██      |
+18 |     ███    |
+17 |            |
 16 |            |
 15 |    █████   |
 14 |   █   ███  |
@@ -41041,7 +41041,7 @@ ENDCHAR
 STARTCHAR U+1fea GREEK CAPITAL LETTER UPSILON WITH VARIA
 22 |██          |
 21 | ██         |
-20 |  ██        |
+20 |  █         |
 19 |████     ███|
 18 | ██       █ |
 17 |  ██     █  |
@@ -41063,9 +41063,9 @@ STARTCHAR U+1fea GREEK CAPITAL LETTER UPSILON WITH VARIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1feb GREEK CAPITAL LETTER UPSILON WITH OXIA
-22 |  ██        |
-21 | ██         |
-20 |██          |
+22 | ██         |
+21 |██          |
+20 |█           |
 19 |████     ███|
 18 | ██       █ |
 17 |  ██     █  |
@@ -41087,9 +41087,9 @@ STARTCHAR U+1feb GREEK CAPITAL LETTER UPSILON WITH OXIA
 01 |            |
 ENDCHAR
 STARTCHAR U+1fec GREEK CAPITAL LETTER RHO WITH DASIA
-22 | ███        |
-21 |█           |
-20 | ██         |
+22 |████        |
+21 |██          |
+20 | ███        |
 19 | ████████   |
 18 |  ██    ██  |
 17 |  ██     ██ |
@@ -41114,7 +41114,7 @@ STARTCHAR U+1fed GREEK DIALYTIKA AND VARIA
 22 |            |
 21 |   ██       |
 20 |    ██      |
-19 | ██  ██ ██  |
+19 | ██  █  ██  |
 18 | ██     ██  |
 17 |            |
 16 |            |
@@ -41138,7 +41138,7 @@ STARTCHAR U+1fee GREEK DIALYTIKA AND OXIA
 22 |            |
 21 |      ██    |
 20 |     ██     |
-19 | ██ ██  ██  |
+19 | ██  █  ██  |
 18 | ██     ██  |
 17 |            |
 16 |            |
@@ -41162,7 +41162,7 @@ STARTCHAR U+1fef GREEK VARIA
 22 |            |
 21 |    ██      |
 20 |     ██     |
-19 |      ██    |
+19 |      █     |
 18 |            |
 17 |            |
 16 |            |
@@ -41187,7 +41187,7 @@ STARTCHAR U+1ff2 GREEK SMALL LETTER OMEGA WITH VARIA AND YPOGEGRAMMENI
 21 |            |
 20 |    ██      |
 19 |     ██     |
-18 |      ██    |
+18 |      █     |
 17 |            |
 16 |            |
 15 | ██      ██ |
@@ -41235,7 +41235,7 @@ STARTCHAR U+1ff4 GREEK SMALL LETTER OMEGA WITH OXIA AND YPOGEGRAMMENI
 21 |            |
 20 |      ██    |
 19 |     ██     |
-18 |    ██      |
+18 |     █      |
 17 |            |
 16 |            |
 15 | ██      ██ |
@@ -41304,10 +41304,10 @@ STARTCHAR U+1ff7 GREEK SMALL LETTER OMEGA WITH PERISPOMENI AND YPOGEGRAMMENI
 ENDCHAR
 STARTCHAR U+1ff8 GREEK CAPITAL LETTER OMICRON WITH VARIA
 22 |            |
-21 |            |
-20 |██          |
-19 | ██ ████    |
-18 |  ██   ███  |
+21 |██          |
+20 | ██         |
+19 |  █ ████    |
+18 |   █   ███  |
 17 |  █     ██  |
 16 |  █      ██ |
 15 | ██      ██ |
@@ -41329,9 +41329,9 @@ ENDCHAR
 STARTCHAR U+1ff9 GREEK CAPITAL LETTER OMICRON WITH OXIA
 22 |            |
 21 |            |
-20 |  ██        |
-19 | ██ ████    |
-18 |██ █   ███  |
+20 | ██         |
+19 |██  ████    |
+18 |█  █   ███  |
 17 |  █     ██  |
 16 |  █      ██ |
 15 | ██      ██ |
@@ -41352,10 +41352,10 @@ STARTCHAR U+1ff9 GREEK CAPITAL LETTER OMICRON WITH OXIA
 ENDCHAR
 STARTCHAR U+1ffa GREEK CAPITAL LETTER OMEGA WITH VARIA
 22 |            |
-21 |            |
-20 |██          |
-19 | ██ ████    |
-18 |  ██   ███  |
+21 |██          |
+20 | ██         |
+19 |  █ ████    |
+18 |   █   ███  |
 17 |  █     ██  |
 16 |  █      ██ |
 15 | ██      ██ |
@@ -41377,9 +41377,9 @@ ENDCHAR
 STARTCHAR U+1ffb GREEK CAPITAL LETTER OMEGA WITH OXIA
 22 |            |
 21 |            |
-20 |  ██        |
-19 | ██ ████    |
-18 |██ █   ███  |
+20 | ██         |
+19 |██  ████    |
+18 |█  █   ███  |
 17 |  █     ██  |
 16 |  █      ██ |
 15 | ██      ██ |
@@ -41426,7 +41426,7 @@ STARTCHAR U+1ffd GREEK OXIA
 22 |            |
 21 |      ██    |
 20 |     ██     |
-19 |    ██      |
+19 |     █      |
 18 |            |
 17 |            |
 16 |            |
@@ -41449,9 +41449,9 @@ ENDCHAR
 STARTCHAR U+1ffe GREEK DASIA
 22 |            |
 21 |     ████   |
-20 |     █      |
-19 |     █      |
-18 |      ██    |
+20 |     ██     |
+19 |      ███   |
+18 |            |
 17 |            |
 16 |            |
 15 |            |
