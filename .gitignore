@@ -2,6 +2,7 @@
 *.o
 *.pdf
 *.vim
+[A-Z]*.txt
 
 .indent.pro
 hextobdf

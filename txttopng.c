@@ -378,9 +378,10 @@ void parse_font_hexdata(FILE *aFile) {
         if (line[0] == '#')
             continue;
         parse_font_line(line, line_no, &gGlyphset[glyphs]);
+        ++glyphs;
     }
     if (gGlyphs != glyphs)
-        errx("glyph count changed unexpectedly\n");
+        errx("glyph count changed unexpectedly (%zu != %zu)\n", gGlyphs, glyphs);
     qsort(gGlyphset, gGlyphs, sizeof *gGlyphset, compare_glyphs);
     set_replacement_character();
 }
