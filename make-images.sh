@@ -3,6 +3,7 @@
 while read -r name first last; do
   ./lscp "0x$first" "0x$last" > "$name.txt"
   ./txttopng -f gallant.hex -t "$name.txt" -p "Images/$name.png"
+  ./txttopng -f gallant.hex -t "$name.txt" -p "Images/$name-Inverted.png" -i
 done << EOF
 BasicLatin 0000 007F
 Latin-1-Supplement 00A0 0100
@@ -45,3 +46,4 @@ Specials FFF0 10000
 EOF
 
 ./txttopng -f gallant.hex -t "$HOME/UTF-8-demo.txt" -p "Images/UTF-8-demo-Markus-Kuhn-2002.png"
+./txttopng -f gallant.hex -t "$HOME/UTF-8-demo.txt" -p "Images/UTF-8-demo-Markus-Kuhn-2002-Inverted.png" -i
