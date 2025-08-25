@@ -54,7 +54,7 @@ none are present.
 |U+1D80 - U+1DBF|[Phonetic Extensions Supplement](https://www.unicode.org/charts/PDF/U1D80.pdf)         |TODO     |
 |U+1DC0 - U+1DFF|[Combining Diacritical Marks Supplement](https://www.unicode.org/charts/PDF/U1DC0.pdf) |TODO     |
 |U+1E00 - U+1EFF|[Latin Extended Additional](https://www.unicode.org/charts/PDF/U1E00.pdf)              |Complete |
-|U+1F00 - U+1FFF|[Greek Extended](https://www.unicode.org/charts/PDF/U1F00.pdf)                         |Partial  |
+|U+1F00 - U+1FFF|[Greek Extended](https://www.unicode.org/charts/PDF/U1F00.pdf)                         |Complete |
 |U+2000 - U+206F|[General Punctuation](https://www.unicode.org/charts/PDF/U2000.pdf)                    |Complete |
 |U+2070 - U+209F|[Superscripts and Subscripts](https://www.unicode.org/charts/PDF/U2070.pdf)            |Complete |
 |U+20A0 - U+20CF|[Currency Symbols](https://www.unicode.org/charts/PDF/U20A0.pdf)                       |Complete |
