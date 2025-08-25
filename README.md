@@ -7,7 +7,7 @@ originally part of BSD.
 
 The starting point was the `gallant.hex` file as found on FreeBSD 14,
 which contained 502 glyphs at the time. This project currently provides
-more than 4300 glyphs. Major additions:
+more than 4500 glyphs. Major additions:
 
 * Greek
 * Cyrillic
@@ -16,8 +16,9 @@ more than 4300 glyphs. Major additions:
 * Zapf Dingbats
 * Tons of arrows
 * Tons of mathematical symbols
+* Letterlike symbols and enclosed alphanumerics
 * Pixel-perfect box drawing
-* Currency and letterlike symbols
+* Currency symbols
 * More punctuation
 * Just enough Katakana to say コンニチハ
 * Powerline glyphs in the *Private Use Area* at U+e0a0
@@ -58,14 +59,14 @@ none are present.
 |U+2070 - U+209F|[Superscripts and Subscripts](https://www.unicode.org/charts/PDF/U2070.pdf)            |Complete |
 |U+20A0 - U+20CF|[Currency Symbols](https://www.unicode.org/charts/PDF/U20A0.pdf)                       |Complete |
 |U+20D0 - U+20FF|[Combining Diacritical Marks for Symbols](https://www.unicode.org/charts/PDF/U20D0.pdf)|Complete |
-|U+2100 - U+214F|[Letterlike Symbols](https://www.unicode.org/charts/PDF/U2100.pdf)                     |Partial  |
+|U+2100 - U+214F|[Letterlike Symbols](https://www.unicode.org/charts/PDF/U2100.pdf)                     |Complete |
 |U+2150 - U+218F|[Number Forms](https://www.unicode.org/charts/PDF/U2150.pdf)                           |Complete |
 |U+2190 - U+21FF|[Arrows](https://www.unicode.org/charts/PDF/U2190.pdf)                                 |Complete |
 |U+2200 - U+22FF|[Mathematical Operators](https://www.unicode.org/charts/PDF/U2200.pdf)                 |Complete |
 |U+2300 - U+23FF|[Miscellaneous Technical](https://www.unicode.org/charts/PDF/U2300.pdf)                |Complete |
 |U+2400 - U+243F|[Control Pictures](https://www.unicode.org/charts/PDF/U2400.pdf)                       |Complete |
 |U+2440 - U+245F|[Optical Character Recognition](https://www.unicode.org/charts/PDF/U2440.pdf)          |Complete |
-|U+2460 - U+24FF|[Enclosed Alphanumerics](https://www.unicode.org/charts/PDF/U2460.pdf)                 |TODO     |
+|U+2460 - U+24FF|[Enclosed Alphanumerics](https://www.unicode.org/charts/PDF/U2460.pdf)                 |Complete |
 |U+2500 - U+257F|[Box Drawing](https://www.unicode.org/charts/PDF/U2500.pdf)                            |Complete |
 |U+2580 - U+259F|[Block Elements](https://www.unicode.org/charts/PDF/U2580.pdf)                         |Complete |
 |U+25A0 - U+25FF|[Geometric Shapes](https://www.unicode.org/charts/PDF/U25A0.pdf)                       |Complete |
@@ -94,18 +95,25 @@ none are present.
 
 Codepoints >= U+10000 can be part of a BDF file, but cannot be used by
 core X11 since it internally restricts glyph encoding numbers to 16 bit.
-(This does not apply to **Xft** rendered fonts).
+(This limitation does not apply to **Xft** rendered fonts).
 
 The FreeBSD
 [vt(4)](https://man.freebsd.org/cgi/man.cgi?query=vt&apropos=0&sektion=4)
-driver would work with fine with the full codepoint range.
+driver works with fine with the full 32 bit codepoint range.
 
 ## How do I load/use this font?
 
 ### As an X11 Raster Font, e.g. for Xterm(1)
 
-Install the BDF file where X11 looks for fonts. The following example
-uses `$HOME/.fonts` as the font directory.
+Install the BDF file `gallant.bdf` where X11 looks for fonts. You can
+query the current font path with `xset q | sed -n '/^Font/,/^ /p'`. If
+you do not have write permission to any of the font directories, you may
+create your own under, say, `$HOME/.fonts`.
+
+The following example uses `$HOME/.fonts` as the font directory and adds
+it to the font path. To make the font path addition permanent, you
+should add the `xset` lines to your `$HOME/.xinitrc` or equivalent X11
+startup file.
 
 ```
 mkdir -p $HOME/.fonts
