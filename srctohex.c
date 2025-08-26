@@ -112,14 +112,14 @@ bool seen(unsigned int aCodepoint) {
     return false;
 }
 
-// Return pointer to glyph data or of the replacement character.
+// Return true if codepoint is in gSeen[], false otherwise.
 //
 bool lookup_codepoint(unsigned int aCodepoint) {
     const unsigned int *p = bsearch(&aCodepoint, gSeen, gGlyphs, sizeof *gSeen, compare_codepoints);
     return p != NULL;
 }
 
-// Compare callback for qsort and bsearch.
+// Comparison callback function for bsearch().
 //
 int compare_codepoints(const void *aFirst, const void *aSecond) {
     const int *first = aFirst, *second = aSecond;
