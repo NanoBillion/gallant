@@ -99,7 +99,7 @@ core X11 since it internally restricts glyph encoding numbers to 16 bit.
 
 The FreeBSD
 [vt(4)](https://man.freebsd.org/cgi/man.cgi?query=vt&apropos=0&sektion=4)
-driver works with fine with the full 32 bit codepoint range.
+driver works fine with the full 32 bit codepoint range.
 
 ## How does it look?
 
