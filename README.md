@@ -106,7 +106,9 @@ driver works fine with the full 32 bit codepoint range.
 The [Images](Images) directory contains white-on-black and
 black-on-white (suffixed `-Inverted`) PNG image files for the separate
 blocks and [Markus Kuhn's](https://www.cl.cam.ac.uk/~mgk25/)
-[UTF-8-demo.txt](https://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-demo.txt).
+[UTF-8-demo.txt](https://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-demo.txt),
+licensed [CC BY](https://creativecommons.org/licenses/by/4.0/); no changes
+were made to the text before rendering it in Gallant.
 
 ## How do I load/use this font?
 
@@ -149,7 +151,7 @@ notice in [NetBSD's
 gallant12x22.h](https://ftp.netbsd.org/pub/NetBSD/NetBSD-current/src/sys/dev/wsfont/gallant12x22.h)
 which reads:
 
-```
+```c
 /*
  * Copyright (c) 1992, 1993
  *     The Regents of the University of California.  All rights reserved.

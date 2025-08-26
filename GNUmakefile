@@ -57,6 +57,9 @@ images:
 check:
 	@grep ^STARTCHAR gallant.src | sort -c
 
+README.html: README.md
+	comrak --gfm --syntax-highlighting base16-ocean.light $^ > $@
+
 # FreeBSD: Libs and <uniname.h> are in devel/libunistring
 CC = cc -std=c99
 APP_WARNS  += -Werror
