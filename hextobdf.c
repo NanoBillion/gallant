@@ -3,7 +3,7 @@
  *     hextobdf - convert font from hex format to bdf
  *
  * EXAMPLE USAGE
- *     hextobdf -w 12 -h 22 < gallant.hex > gallant.bdf
+ *     hextobdf < gallant.hex > gallant.bdf
  *
  * LIMITATIONS
  *     Only for gallant font, due to hard-coded font/glyph properties.
