@@ -38,7 +38,7 @@ Supplemental-Arrows-A 27F0 2800
 Braille-Patterns 2800 2900
 Supplemental-Arrows-B 2900 2980
 Supplemental-Mathematical-Operators 2A00 2B00
-Misclellaneous-Symbols-and-Arrows 2B00 2C00
+Miscellaneous-Symbols-and-Arrows 2B00 2C00
 Katakana 30A0 3100
 Private-Use-Area E0A0 E0F0
 Alphabetic-Presentation-Forms FB00 FB50
