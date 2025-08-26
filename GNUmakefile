@@ -47,6 +47,10 @@ install: gallant.bdf gallant.fnt
 	  fi; \
 	fi
 
+.PHONY: images
+images:
+	./make-images.sh
+
 # Find un-sorted codepoints in gallant.src.
 #
 .PHONY: check
