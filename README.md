@@ -49,7 +49,7 @@ none are present.
 |U+0370 - U+03FF|[Greek and Coptic](https://www.unicode.org/charts/PDF/U0370.pdf)                       |Complete |
 |U+0400 - U+04FF|[Cyrillic](https://www.unicode.org/charts/PDF/U0400.pdf)                               |Complete |
 |U+0500 - U+052F|[Cyrillic Supplement](https://www.unicode.org/charts/PDF/U0500.pdf)                    |TODO     |
-|U+0530 - U+1cff|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/U0530.pdf)           |TODO     |
+|U+0530 - U+1CFF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/U0530.pdf)           |TODO     |
 |U+1D00 - U+1D7F|[Phonetic Extensions](https://www.unicode.org/charts/PDF/U1D00.pdf)                    |TODO     |
 |U+1D80 - U+1DBF|[Phonetic Extensions Supplement](https://www.unicode.org/charts/PDF/U1D80.pdf)         |TODO     |
 |U+1DC0 - U+1DFF|[Combining Diacritical Marks Supplement](https://www.unicode.org/charts/PDF/U1DC0.pdf) |TODO     |
@@ -81,7 +81,7 @@ none are present.
 |U+2B00 - U+2BFF|[Miscellaneous Symbols and Arrows](https://www.unicode.org/charts/PDF/U2B00.pdf)       |Partial  |
 |U+2C00 - U+2C5F|[Glagolitic](https://www.unicode.org/charts/PDF/U2C00.pdf)                             |TODO     |
 |U+2C60 - U+2C7F|[Latin Extended-C](https://www.unicode.org/charts/PDF/U2C60.pdf)                       |TODO     |
-|U+2C80 - U+A6FF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/U2C80.pdf)           |TODO     |
+|U+2C80 - U+30BF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/U2C80.pdf)           |TODO     |
 |U+30A0 - U+30FF|[Katakana](https://www.unicode.org/charts/PDF/U30A0.pdf)                               |Partial  |
 |U+3100 - U+A6FF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/U2C80.pdf)           |TODO     |
 |U+A700 - U+A71F|[Modifier Tone Letters](https://www.unicode.org/charts/PDF/UA700.pdf)                  |TODO     |
@@ -100,6 +100,13 @@ core X11 since it internally restricts glyph encoding numbers to 16 bit.
 The FreeBSD
 [vt(4)](https://man.freebsd.org/cgi/man.cgi?query=vt&apropos=0&sektion=4)
 driver works with fine with the full 32 bit codepoint range.
+
+## How does it look?
+
+The [Images](Images) directory contains white-on-black and
+black-on-white (suffixed `-Inverted`) PNG image files for the separate
+blocks and [Markus Kuhn's](https://www.cl.cam.ac.uk/~mgk25/)
+[UTF-8-demo.txt](https://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-demo.txt).
 
 ## How do I load/use this font?
 
