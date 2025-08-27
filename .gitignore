@@ -2,7 +2,7 @@
 *.o
 *.pdf
 *.vim
-[A-Z]*.txt
+[A-TV-Z]*.txt
 
 .indent.pro
 README.html

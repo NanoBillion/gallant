@@ -37,6 +37,9 @@ gallant.hex: gallant.src
 gallant.fnt: gallant.hex
 	  vtfontcvt -v -o $@ $^
 
+gallant.pcf: gallant.bdf
+	bdftopcf -o $@ $^
+
 .PHONY: install
 install: gallant.bdf gallant.fnt
 	cp gallant.bdf ~/.fonts

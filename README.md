@@ -122,7 +122,7 @@ create your own under, say, `$HOME/.fonts`.
 The following example uses `$HOME/.fonts` as the font directory and adds
 it to the font path. To make the font path addition permanent, you
 should add the `xset` lines to your `$HOME/.xinitrc` or equivalent X11
-startup file.
+startup file (common candidates are `.xsession` and `.xprofile`).
 
 ```
 mkdir -p $HOME/.fonts
@@ -143,6 +143,31 @@ vidcontrol -f /path/to/gallant.fnt
 You may also drop the font files into directory `/usr/share/vt/fonts` and
 add `allscreens_flags="-f gallant"` to your `/etc/rc.conf`. This way all
 console terminals use the font after boot.
+
+### Linux, NetBSD, OpenBSD Console
+
+The Linux console uses
+[PSF](https://en.wikipedia.org/wiki/PC_Screen_Font) fonts. As of 2025
+this format can only contain 256 or 512 glyphs.
+
+The NetBSD console is also restricted to 512 glyphs. It does not handle
+double width or combining characters.
+
+OpenBSD inherited the `wscons` from NetBSD, so similar restrictions apply.
+
+The glyphs in this gallant project would have to be severely reduced in
+number to fit. If someone wants to contribute a stripped down font in
+the appropriate format, I'm willing to add it to this project.
+
+## Who are you?
+
+I'm an ex-Sun Microsystems software engineer who had a stint in the
+company shortly before Oracle took over (2008/2009). I was nowhere near
+the OpenBoot PROM files which contained the gallant font. My first
+contact with SUN hardware was in the late 80's and early 90's at
+university with the 3/60 and the SPARCstations. It was then and there
+that the gallant font and the Trinitron CRT raster were burnt in my
+retina.
 
 ## History
 
