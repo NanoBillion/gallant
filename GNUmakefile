@@ -15,6 +15,8 @@ TOP_LEVEL_TARGETS += srctohex
 TOP_LEVEL_TARGETS += hextobdf
 TOP_LEVEL_TARGETS += gallant.bdf
 TOP_LEVEL_TARGETS += gallant.fnt
+TOP_LEVEL_TARGETS += gallant.pcf
+TOP_LEVEL_TARGETS += images
 
 
 .PHONY: all
