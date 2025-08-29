@@ -2,8 +2,7 @@
 
 This is the Gallant font, as used by the Sun Microsystems SPARCstation
 console, extended with glyphs for many Unicode blocks. It is a raster
-font with a 22x12 pixel character cell, descent 5 and ascent 17,
-originally part of BSD.
+font with a 22x12 pixel character cell, descent 5 and ascent 17.
 
 The starting point was the `gallant.hex` file as found on FreeBSD 14,
 which contained 502 glyphs at the time. This project currently provides
@@ -189,11 +188,54 @@ which reads:
  */
 ```
 
+In private conversation with the author, Jef said he guessed that the
+gallant font was designed by someone at Sun Microsystems before it made
+its way to Berkeley.
 
 ## Remarks
 
-* Codepoints 0 through 31 differ from the Unicode standard.
-  They were left unmodified to not change their intended use on SPARC hardware.
+Codepoints 0 through 31 contain glyphs of the VT100 line-drawing
+character set othwise known as the [DEC Special Character and Line
+Drawing Set](https://en.wikipedia.org/wiki/DEC_Special_Graphics). They
+were left unmodified to not change their intended use by applications
+that expect them there. Each of the special characters also has an
+"official" Unicode codepoint. Contemporary applications should never
+need to render them. This is the mapping:
+
+|Special |Official |Name |
+|--------|---------|---------|
+|U+0000  |U+25AE   |black vertical rectangle |
+|U+0001  |U+25C6   |black diamond |
+|U+0002  |U+2592   |medium shade |
+|U+0003  |U+2409   |symbol for horizontal tabulation |
+|U+0004  |U+240C   |symbol for form feed |
+|U+0005  |U+240D   |symbol for carriage return |
+|U+0006  |U+240A   |symbol for line feed |
+|U+0007  |U+00B0   |degree sign |
+|U+0008  |U+00B1   |plus-minus sign |
+|U+0009  |U+2424   |symbol for newline |
+|U+000a  |U+240B   |symbol for vertical tabulation |
+|U+000b  |U+2518   |box drawings light up and left |
+|U+000c  |U+2510   |box drawings light down and left |
+|U+000d  |U+250C   |box drawings light down and right |
+|U+000e  |U+2514   |box drawings light up and right |
+|U+000f  |U+253C   |box drawings light vertical and horizontal |
+|U+0010  |U+23BA   |box drawings scan 1 |
+|U+0011  |U+23BB   |box drawings scan 3 |
+|U+0012  |U+2500   |box drawings light horizontal |
+|U+0013  |U+23BC   |box drawings scan 7 |
+|U+0014  |U+23BD   |box drawings scan 9 |
+|U+0015  |U+251C   |box drawings light vertical and right |
+|U+0016  |U+2524   |box drawings light vertical and left |
+|U+0017  |U+2534   |box drawings light up and horizontal |
+|U+0018  |U+252C   |box drawings light down and horizontal |
+|U+0019  |U+2502   |box drawings light vertical |
+|U+001a  |U+2264   |less-than or equal to |
+|U+001b  |U+2265   |greater-than or equal to |
+|U+001c  |U+03C0   |greek small letter pi |
+|U+001d  |U+2260   |not equal to |
+|U+001e  |U+00A3   |pound sign |
+|U+001f  |U+00B7   |middle dot |
 
 ## TODO
 

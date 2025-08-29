@@ -9,13 +9,13 @@ export LC_ALL = C.UTF-8
 
 .DEFAULT_GOAL = install
 
-TOP_LEVEL_TARGETS = lscp
-TOP_LEVEL_TARGETS += txttopng
-TOP_LEVEL_TARGETS += srctohex
-TOP_LEVEL_TARGETS += hextobdf
+TOOLS = lscp hextobdf srctohex txttopng
+
+TOP_LEVEL_TARGETS = $(TOOLS)
 TOP_LEVEL_TARGETS += gallant.bdf
 TOP_LEVEL_TARGETS += gallant.fnt
 TOP_LEVEL_TARGETS += gallant.pcf
+TOP_LEVEL_TARGETS += gallant.ttf
 TOP_LEVEL_TARGETS += images
 
 
@@ -37,10 +37,17 @@ gallant.hex: gallant.src
 	./srctohex < $^ > $@
 
 gallant.fnt: gallant.hex
-	  vtfontcvt -v -o $@ $^
+	vtfontcvt -v -o $@ $^
 
 gallant.pcf: gallant.bdf
 	bdftopcf -o $@ $^
+
+gallant.ttf: gallant.bdf
+	@printf '%s\n' \
+	'Open("$^")'            \
+	'Generate("$@", "ttf")' \
+	'Quit()' | \
+	fontforge -lang=ff -script -
 
 .PHONY: install
 install: gallant.bdf gallant.fnt
@@ -52,15 +59,57 @@ install: gallant.bdf gallant.fnt
 	  fi; \
 	fi
 
-.PHONY: images
-images:
-	./make-images.sh
+.PHONY: install-maintainer
+install-maintainer: gallant.fnt gallant.hex
+	sudo cp gallant.fnt /usr/share/vt/fonts/gallant.fnt
+	sudo cp gallant.hex /home/toor/FreeBSD/head/src/share/vt/fonts/gallant.hex
 
-# Find un-sorted codepoints in gallant.src.
-#
-.PHONY: check
-check:
-	@grep ^STARTCHAR gallant.src | sort -c
+.PHONY: images
+images: gallant.hex
+	printf '%s\n' \
+	'0020  0080 Basic-Latin' \
+	'00A0  0100 Latin-1-Supplement' \
+	'0100  0180 Latin-Extended-A' \
+	'0180  0250 Latin-Extended-B' \
+	'0250  02B0 IPA-Extensions' \
+	'02B0  0300 Spacing-Modifier-Letters' \
+	'0300  0370 Combining-Diacritical-Marks' \
+	'0370  0400 Greek-and-Coptic' \
+	'0400  0500 Cyrillic' \
+	'1E00  1F00 Latin-Extended-Additional' \
+	'1F00  2000 Greek-Extended' \
+	'2000  2070 General-Punctuation' \
+	'2070  20A0 Superscripts-and-Subscripts' \
+	'20A0  20D0 Currency-Symbols' \
+	'20D0  2100 Combining-Diacritical-Marks-for-Symbols' \
+	'2100  2150 Letterlike-Symbols' \
+	'2150  2190 Number-Forms' \
+	'2190  2200 Arrows' \
+	'2200  2300 Mathematical-Operators' \
+	'2300  2400 Miscellaneous-Technical' \
+	'2400  2440 Control-Pictures' \
+	'2440  2460 Optical-Character-Recognition' \
+	'2460  2500 Enclosed-Alphanumerics' \
+	'2500  2580 Box-Drawing' \
+	'2580  25A0 Block-Elements' \
+	'25A0  2600 Geometric-Shapes' \
+	'2600  2700 Miscellaneous-Symbols' \
+	'2700  27C0 Dingbats' \
+	'27C0  27F0 Miscellaneous-Mathematical-Symbols-A' \
+	'27F0  2800 Supplemental-Arrows-A' \
+	'2800  2900 Braille-Patterns' \
+	'2900  2980 Supplemental-Arrows-B' \
+	'2A00  2B00 Supplemental-Mathematical-Operators' \
+	'2B00  2C00 Miscellaneous-Symbols-and-Arrows' \
+	'30A0  3100 Katakana' \
+	'E0A0  E0F0 Private-Use-Area' \
+	'FB00  FB50 Alphabetic-Presentation-Forms' \
+	'FFF0 10000 Specials' | \
+	while read -r first last name; do \
+	  ./lscp "0x$$first" "0x$$last" > "$$name.txt"; \
+	  ./txttopng -f "$^" -t "$$name.txt" -p "Images/$$first-$$name.png"; \
+	  ./txttopng -f "$^" -t "$$name.txt" -p "Images/$$first-$$name-Inverted.png" -i; \
+	done
 
 README.html: README.md
 	comrak --gfm --syntax-highlighting base16-ocean.light $^ > $@
@@ -78,7 +127,7 @@ APP_WARNS  += -Wno-format-nonliteral
 APP_WARNS  += -Winline
 APP_WARNS  += -Wstrict-prototypes
 APP_WARNS  += -Wmissing-prototypes
-APP_WARNS  += -Wno-unused
+APP_WARNS  += -Wunused
 APP_WARNS  += -Wold-style-definition
 APP_WARNS  += -Wpedantic
 APP_WARNS  += -Wpointer-arith
@@ -94,6 +143,8 @@ APP_WARNS  += -Wmissing-field-initializers
 
 APP_SOURCE_INCDIRS = -I /usr/local/include
 APP_LIBDIRS = -L /usr/local/lib
+
+tools: $(TOOLS)
 
 lscp: lscp.o
 	$(CC) -o $@ $(APP_LIBDIRS) -luninameslist -lunistring $^
@@ -190,7 +241,7 @@ MAKEFLAGS += --no-builtin-rules
 
 .PHONY: clean
 clean:
-	git clean -fdx
+	rm -f *.i *.o hextobdf srctohex txttopng lscp
 
 #------------------------------------------------------------------------------#
 #                          Tags - Create tags for vi                           #

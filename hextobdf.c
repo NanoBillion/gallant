@@ -73,24 +73,24 @@ int main(int aArgc, char **aArgv) {
 //
 void output_bdf_preamble(void) {
     puts("STARTFONT 2.1");
-    puts("FONT -sun-gallant-medium-r-normal--22-220-75-75-c-120-iso10646-1");
+    puts("FONT -sun-gallant-medium-r-normal--22-220-75-75-C-120-ISO10646-1");
     puts("SIZE 22 75 75");
     puts("FONTBOUNDINGBOX 22 12 0 -5");
     puts("STARTPROPERTIES 18");
     puts("FONTNAME_REGISTRY \"\"");
-    puts("FOUNDRY \"sun\"");
-    puts("FAMILY_NAME \"gallant\"");
-    puts("WEIGHT_NAME \"medium\"");
-    puts("SLANT \"r\"");
-    puts("SETWIDTH_NAME \"normal\"");
+    puts("FOUNDRY \"Sun\"");
+    puts("FAMILY_NAME \"Gallant\"");
+    puts("WEIGHT_NAME \"Medium\"");
+    puts("SLANT \"R\"");
+    puts("SETWIDTH_NAME \"Normal\"");
     puts("ADD_STYLE_NAME \"\"");
     puts("PIXEL_SIZE 22");
     puts("POINT_SIZE 220");
     puts("RESOLUTION_X 75");
     puts("RESOLUTION_Y 75");
-    puts("SPACING \"c\"");
+    puts("SPACING \"C\"");
     puts("AVERAGE_WIDTH 120");
-    puts("CHARSET_REGISTRY \"iso10646\"");
+    puts("CHARSET_REGISTRY \"ISO10646\"");
     puts("CHARSET_ENCODING \"1\"");
     puts("FONT_ASCENT 17");
     puts("FONT_DESCENT 5");
