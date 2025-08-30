@@ -10,14 +10,15 @@ export LC_ALL = C.UTF-8
 .DEFAULT_GOAL = install
 
 TOOLS = lscp hextobdf srctohex txttopng
+TOOLS_C      = $(addsuffix .c,$(TOOLS))
+PREPROCESSED = $(addsuffix .i,$(TOOLS))
 
-TOP_LEVEL_TARGETS = $(TOOLS)
-TOP_LEVEL_TARGETS += gallant.bdf
+TOP_LEVEL_TARGETS = gallant.bdf
 TOP_LEVEL_TARGETS += gallant.fnt
 TOP_LEVEL_TARGETS += gallant.pcf
 TOP_LEVEL_TARGETS += gallant.ttf
 TOP_LEVEL_TARGETS += images
-
+TOP_LEVEL_TARGETS += README.html
 
 .PHONY: all
 all: $(TOP_LEVEL_TARGETS)
@@ -28,13 +29,13 @@ srctohex: srctohex.o
 
 hextobdf: hextobdf.o
 
-tsttopng: tsttopng.o
+txttopng: txttopng.o
 
-gallant.bdf: gallant.hex
-	./hextobdf < $^ > $@
+gallant.bdf: gallant.hex hextobdf
+	./hextobdf < $< > $@
 
-gallant.hex: gallant.src
-	./srctohex < $^ > $@
+gallant.hex: gallant.src srctohex
+	./srctohex < $< > $@
 
 gallant.fnt: gallant.hex
 	vtfontcvt -v -o $@ $^
@@ -65,7 +66,7 @@ install-maintainer: gallant.fnt gallant.hex
 	sudo cp gallant.hex /home/toor/FreeBSD/head/src/share/vt/fonts/gallant.hex
 
 .PHONY: images
-images: gallant.hex
+images: gallant.hex lscp txttopng
 	printf '%s\n' \
 	'0020  0080 Basic-Latin' \
 	'00A0  0100 Latin-1-Supplement' \
@@ -107,8 +108,8 @@ images: gallant.hex
 	'FFF0 10000 Specials' | \
 	while read -r first last name; do \
 	  ./lscp "0x$$first" "0x$$last" > "$$name.txt"; \
-	  ./txttopng -f "$^" -t "$$name.txt" -p "Images/$$first-$$name.png"; \
-	  ./txttopng -f "$^" -t "$$name.txt" -p "Images/$$first-$$name-Inverted.png" -i; \
+	  ./txttopng -f "$<" -t "$$name.txt" -p "Images/$$first-$$name.png"; \
+	  ./txttopng -f "$<" -t "$$name.txt" -p "Images/$$first-$$name-Inverted.png" -i; \
 	done
 
 README.html: README.md
@@ -158,7 +159,7 @@ srctohex: srctohex.o
 txttopng: txttopng.o
 	$(CC) -o $@ $(APP_LIBDIRS) -lpng $^
 
-lint: txttopng.c lscp.c hextobdf.c srctohex.c
+lint: $(TOOLS_C)
 	@for c in $^; do flexelint lint.lnt $$c; done
 
 # X11 in x.out:
@@ -179,51 +180,17 @@ MAKEFLAGS += --no-builtin-rules
 
 #   Clear the suffix list so no default rules are used.
 .SUFFIXES:
-.SUFFIXES: .asm .c .elf .i .o .p .s
+.SUFFIXES: .c .i .o
 
 #   How to compile a C source to an object file.
 #
 %.o: %.c
 	$(CC) -c $(APP_CFLAGS) $(APP_WARNS) $(APP_SOURCE_INCDIRS) $(APP_MACROS) -o $@ $<
 
-#   How to compile a C source to an assembler file.
-#
-%.s: %.c
-	$(CC) -S $(APP_CFLAGS) $(APP_WARNS) $(APP_SOURCE_INCDIRS) $(APP_MACROS) -o $@ $<
-
 #   How to pre-process a C source file with the compiler and save result in a *.i file.
 #
 %.i: %.c
 	$(CC) -E $(APP_CFLAGS) $(APP_WARNS) $(APP_SOURCE_INCDIRS) $(APP_MACROS) -o $@ $<
-
-#   How to pre-process a C source file with FlexeLint and save result in a *.p file.
-#
-%.p: %.c
-	$(FLINT) -p $(LNT) $(APP_INCDIRS) $(APP_MACROS) $< > $@
-
-#   How to preprocess with the compiler, without # linemarkers and indented.
-#
-%.pp: %.c
-	@mkdir -p $(@D)
-	$(CC) -E -P -DCOMPILING=1 $(APP_CFLAGS) $(APP_MACROS) $(APP_SOURCE_INCDIRS) $< | \
-	gindent -st - \
-	  --ignore-profile \
-	  -T  int8_t -T  int16_t -T  int32_t -T  int64_t -T float32_t \
-	  -T uint8_t -T uint16_t -T uint32_t -T uint64_t -T float64_t \
-	  --k-and-r-style \
-	  --ignore-newlines \
-	  --braces-on-func-def-line \
-	  --dont-line-up-parentheses \
-	  --continuation-indentation1 \
-	  --indent-level1 \
-	  --line-length9999 \
-	  --no-tabs \
-	  --tab-size1 > $@
-
-#   How to extract functions from *.pp file.
-#
-%.func: %.pp
-	awk '/^[[:alpha:]_].*) {$$/,/^}$$/' $< > $@
 
 ################################################################################
 #        _   _      _                   _____                    _             #
@@ -241,7 +208,8 @@ MAKEFLAGS += --no-builtin-rules
 
 .PHONY: clean
 clean:
-	rm -f *.i *.o hextobdf srctohex txttopng lscp
+	rm -f *.i *.o $(TOOLS)
+	rm -f gallant.bdf gallant.hex gallant.fnt gallant.pcf gallant.ttf
 
 #------------------------------------------------------------------------------#
 #                          Tags - Create tags for vi                           #
@@ -250,17 +218,13 @@ clean:
 # Create tags from the actual files compiled, and the actually included
 # headers. Examine the preprocessor output's '# LINE "FILE"' directives.
 
-#PREPROCESSED = $(APP_C_SOURCE:.c=.i)
-PREPROCESSED = lscp.i txttopng.i hextobdf.i srctohex.i
-
 # make tags: create vi tags file.
 #
 CTAGS = jexctags
 .PHONY: tags
 tags: $(PREPROCESSED)
 	@awk '/^# / {print $$3}' $^ | sort -u | grep -v \< | tr -d \" > list
-	@$(CTAGS) -L list -f $@ \
-	         --regex-c='/\<(REQ_[[:upper:]_]*([[:digit:]_]{7}))\>/\2/'
+	@$(CTAGS) -L list -f $@
 	@$(CTAGS) -L list -f $@.p --language-force=c --c-kinds=p
 	@rm -f list
 
@@ -278,25 +242,25 @@ APP_SYSTEM_INCDIRS = -I/usr/include -I/usr/local/include
 #
 .PHONY: tooltips tooltips.vim
 tooltips: tooltips.vim
-tooltips.vim: lscp.c txttopng.c
+tooltips.vim: $(TOOLS_C)
 	{ \
-	printf "function! MyBalloonExpr()\n"; \
-	printf "  let macros = {\n"; \
+	printf 'function! MyBalloonExpr()\n'; \
+	printf '  let macros = {\n'; \
 	$(CC) -E -dM $(APP_SOURCE_INCDIRS) $(APP_SYSTEM_INCDIRS) $(APP_MACROS) $^ | \
 	sort -uk 1,2 | \
 	sed -e 's,\\,\\\\,g; s,",\\",g' | \
 	while read -r define macro repl; do \
 	  case $$macro in \
-	  (HASH) printf "\\ 'HASH':\"HASH\\\\n0x12345678u\",\n";; \
-	  (*) printf "\\ '%s':\"%s\\\\n%s\",\n" "$${macro%%(*}" "$$macro" "$$repl"; \
+	  (HASH) printf '\\ \47HASH\47:\"HASH\\n0x12345678u\",\n';; \
+	  (*) printf '\\ \47%s\47:\"%s\\n%s\",\n' "$${macro%%(*}" "$$macro" "$$repl"; \
 	  esac; \
 	done; \
-	printf "\\ }\n"; \
-	printf "  return get(macros, v:beval_text, '')\n"; \
-	printf "endfunction\n"; \
-	printf "set balloonexpr=MyBalloonExpr()\n"; \
-	printf "set ballooneval\n"; \
-	printf "set balloonevalterm\n"; \
+	printf '\\ }\n'; \
+	printf '  return get(macros, v:beval_text, \47\47)\n'; \
+	printf 'endfunction\n'; \
+	printf 'set balloonexpr=MyBalloonExpr()\n'; \
+	printf 'set ballooneval\n'; \
+	printf 'set balloonevalterm\n'; \
 	} > $@
 
 # make types.vim: create syntax coloring info for types in the code.
