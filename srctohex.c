@@ -14,6 +14,13 @@
 #include <unistd.h>
 #include <wchar.h>
 
+#ifndef HASH
+#define HASH "(undefined)"
+#endif
+#ifndef VERSION
+#define VERSION "(undefined)"
+#endif
+
 #define PixelWidth 12
 #define PixelHeight 22
 #define LINE_MAX_WCHAR 1024
@@ -81,7 +88,7 @@ int main(int aArgc, char **aArgv) {
         }
     }
     if (expect != STARTCHAR)
-        errx("line %d, glyph U+%04x: incomplete glyph due to early end-of-file\n", gLineNr, gCodepoint);
+        errx("line %d, glyph U%04x: incomplete glyph due to early end-of-file\n", gLineNr, gCodepoint);
     fprintf(stderr, "found %zu glyphs\n", gGlyphs);
     return EXIT_SUCCESS;
 }
@@ -89,13 +96,13 @@ int main(int aArgc, char **aArgv) {
 // Parse a STARTCHAR directive.
 //
 int parse_startchar(const wchar_t *aLine) {
-    if (swscanf(aLine, L"STARTCHAR U+%x", &gCodepoint) == 1) {
+    if (swscanf(aLine, L"STARTCHAR U%x", &gCodepoint) == 1) {
         if (seen(gCodepoint))
-            errx("line %d: glyph U+%04x multiply defined\n", gLineNr, gCodepoint);
+            errx("line %d: glyph U%04x multiply defined\n", gLineNr, gCodepoint);
         printf("%04x:", gCodepoint);
         return wcwidth((wchar_t) gCodepoint);
     }
-    errx("line %d: expected 'STARTCHAR U+xxxx', got %ls", gLineNr, aLine);
+    errx("line %d: expected 'STARTCHAR Uxxxx', got %ls", gLineNr, aLine);
     return 0;
 }
 
@@ -107,7 +114,7 @@ bool seen(unsigned int aCodepoint) {
     if (lookup_codepoint(aCodepoint))
         return true;
     if (aCodepoint < gSeen[gGlyphs - 1])
-        errx("line %d: unsorted input: codepoint U+%04x follows U+%04x\n", gLineNr, aCodepoint, gSeen[gGlyphs - 1]);
+        errx("line %d: unsorted input: codepoint U%04x follows U%04x\n", gLineNr, aCodepoint, gSeen[gGlyphs - 1]);
     gSeen[gGlyphs] = aCodepoint;
     return false;
 }
@@ -140,12 +147,12 @@ void parse_bitmap(const wchar_t *aLine, int aWidth) {
     const int bits = (delim2 - delim1) - 1;
     if (aWidth == 2) {
         if (bits != (2 * gWidth))
-            errx("line %d, glyph U+%04x: expected %d pixels bewteen || delimiters for double width glyph, found %d\n", gLineNr,
+            errx("line %d, glyph U%04x: expected %d pixels bewteen || delimiters for double width glyph, found %d\n", gLineNr,
                  gCodepoint, 2 * gWidth, bits);
     }
     else {
         if (bits != gWidth)
-            errx("line %d, glyph U+%04x: expected %d pixels bewteen || delimiters for normal width glyph, found %d\n", gLineNr,
+            errx("line %d, glyph U%04x: expected %d pixels bewteen || delimiters for normal width glyph, found %d\n", gLineNr,
                  gCodepoint, gWidth, bits);
     }
 
@@ -157,7 +164,7 @@ void parse_bitmap(const wchar_t *aLine, int aWidth) {
             hex += (8 >> rem);
         else {
             if (aLine[i] != L' ')
-                errx("line %d, glyph U+%04x: pixels must be SPACE or FULL BLOCK U+2588 '%lc', found '%lc'\n", gLineNr, gCodepoint,
+                errx("line %d, glyph U%04x: pixels must be SPACE or FULL BLOCK U2588 '%lc', found '%lc'\n", gLineNr, gCodepoint,
                      FULL_BLOCK, aLine[i]);
         }
         if (rem == 3) {
@@ -179,15 +186,19 @@ void parse_bitmap(const wchar_t *aLine, int aWidth) {
 //
 void parse_endchar(const wchar_t *aLine) {
     if (wcscmp(aLine, L"ENDCHAR\n") != 0)
-        errx("line %d, glyph U+%04x: expected 'ENDCHAR', got %ls", gLineNr, gCodepoint, aLine);
+        errx("line %d, glyph U%04x: expected 'ENDCHAR', got %ls", gLineNr, gCodepoint, aLine);
 }
 
 // Parse the command line options.
 //
 void parse_options(int aArgc, char **aArgv) {
     int     ch;
-    while ((ch = getopt(aArgc, aArgv, "w:h:")) != -1) {
+    while ((ch = getopt(aArgc, aArgv, "Vw:h:")) != -1) {
         switch (ch) {
+        case 'V':
+            printf("%s version %s, hash %s\n", aArgv[0], VERSION, HASH);
+            exit (EXIT_SUCCESS);
+            break;
         case 'h':
             if (sscanf(optarg, "%d", &gHeight) != 1)
                 errx("can't convert '%s' to height integer\n", optarg);

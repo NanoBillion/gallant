@@ -1,16 +1,16 @@
 /*
  * NAME
- *     hextobdf - convert font from hex format to bdf
+ *     hextosrc - convert font from hex format to src
  *
  * EXAMPLE USAGE
- *     hextobdf < gallant.hex > gallant.bdf
+ *     hextosrc < gallant.hex > gallant.src
  *
  * LIMITATIONS
  *     Only for gallant font, due to hard-coded font/glyph properties.
- *     To adapt: modify PixelWidth and PixelHeight macros and
- *     output_bdf_preamble() and output_bdf_char() functions.
+ *     To adapt: modify PixelWidth and PixelHeight macros.
  */
 #include <stdio.h>
+#include <stdbool.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include <string.h>
@@ -18,6 +18,9 @@
 #include <locale.h>
 #include <wchar.h>
 #include <unistd.h>
+
+/* FreeBSD: devel/libunistring */
+#include <uniname.h>
 
 #ifndef HASH
 #define HASH "(undefined)"
@@ -30,6 +33,7 @@
 #define PixelHeight 22
 #define MAX_LINE 1024
 #define MAX_GLYPHS 131072
+#define FULL_BLOCK 0x2588
 
 struct glyph {
     wint_t  codepoint;
@@ -41,9 +45,9 @@ void    usage(int aStatus);
 void    errx(const char *aFormat, ...);
 void    parse_font_dimensions(FILE *aFile);
 void    parse_font_line(const char *aLine, struct glyph *aGlyph);
-void    output_bdf_preamble(void);
-void    output_bdf_char(int aChar);
+void    output_src_char(int aChar);
 void   *xmalloc(size_t aSize);
+uint8_t hex_value(char aXdigit);
 
 size_t  gWidth = PixelWidth;
 size_t  gHeight = PixelHeight;
@@ -51,13 +55,13 @@ size_t  gLineNr = 0;
 size_t  gBytes = 0;            // per one row of pixels in a regular glyph
 size_t  gDblBytes = 0;         // per one row of pixels in a dbl width glyph
 struct glyph *gGlyph = NULL;
-int     gGlyphs = 0;
 
 // start the ball rolling.
 //
 int main(int aArgc, char **aArgv) {
     if (!setlocale(LC_CTYPE, ""))
         errx("Can't set the locale. Check LANG, LC_CTYPE, LC_ALL.\n");
+    int     gGlyphs = 0;
     gGlyph = xmalloc(MAX_GLYPHS * sizeof *gGlyph);
     parse_options(aArgc, aArgv);
     parse_font_dimensions(stdin);
@@ -68,68 +72,45 @@ int main(int aArgc, char **aArgv) {
         ++gGlyphs;
     }
     fprintf(stderr, "found %d glyphs\n", gGlyphs);
-    output_bdf_preamble();
     for (int i = 0; i < gGlyphs; ++i) {
-        output_bdf_char(i);
+        output_src_char(i);
     }
-    puts("ENDFONT");
     return EXIT_SUCCESS;
-}
-
-// Output the gallant BDF preamble.
-//
-void output_bdf_preamble(void) {
-    puts("STARTFONT 2.1");
-    puts("FONT -sun-gallant-medium-r-normal--22-220-75-75-C-120-ISO10646-1");
-    puts("SIZE 22 75 75");
-    puts("FONTBOUNDINGBOX 22 12 0 -5");
-    puts("STARTPROPERTIES 18");
-    puts("FONTNAME_REGISTRY \"\"");
-    puts("FOUNDRY \"Sun\"");
-    puts("FAMILY_NAME \"Gallant\"");
-    puts("WEIGHT_NAME \"Medium\"");
-    puts("SLANT \"R\"");
-    puts("SETWIDTH_NAME \"Normal\"");
-    puts("ADD_STYLE_NAME \"\"");
-    puts("PIXEL_SIZE 22");
-    puts("POINT_SIZE 220");
-    puts("RESOLUTION_X 75");
-    puts("RESOLUTION_Y 75");
-    puts("SPACING \"C\"");
-    puts("AVERAGE_WIDTH 120");
-    puts("CHARSET_REGISTRY \"ISO10646\"");
-    puts("CHARSET_ENCODING \"1\"");
-    puts("FONT_ASCENT 17");
-    puts("FONT_DESCENT 5");
-    puts("DEFAULT_CHAR 65533");
-    puts("ENDPROPERTIES");
-    printf("CHARS %d\n", gGlyphs);
 }
 
 // Output data for a single STARTCHAR to stdout.
 //
-void output_bdf_char(int aChar) {
-    size_t  hexdigits;
-    printf("STARTCHAR U%04x\n", gGlyph[aChar].codepoint);
-    printf("ENCODING %d\n", gGlyph[aChar].codepoint);
-    if (wcwidth(gGlyph[aChar].codepoint) == 2) {
-        puts("SWIDTH 1000 0\nDWIDTH 24 0\nBBX 24 22 0 -5");
-        hexdigits = 2 * gDblBytes;
-    }
-    else {
-        puts("SWIDTH 500 0\nDWIDTH 12 0\nBBX 12 22 0 -5");
-        hexdigits = 2 * gBytes;
-    }
-    puts("BITMAP");
+void output_src_char(int aChar) {
+    char    name[UNINAME_MAX + 1];
+    const char *const u = unicode_character_name((ucs4_t) gGlyph[aChar].codepoint, name);
+    printf("STARTCHAR U%04x %s\n", gGlyph[aChar].codepoint, u ? u : "<no name>");
+
+    const bool is_double = wcwidth(gGlyph[aChar].codepoint) == 2;
+    const size_t pixels = is_double ? 2 * gWidth : gWidth;
     const char *p = gGlyph[aChar].bitmap;
-    for (size_t h = 0; h < gHeight; ++h) {
-        for (size_t i = 0; i < hexdigits; ++i) {
-            putchar(*p);
-            ++p;
+    for (size_t h = gHeight; h > 0; --h) {
+        printf("%02zu |", h);
+        for (size_t i = 0; i < pixels; ++i) {
+            uint8_t nybble = hex_value(p[i / 4]);
+            putwchar((nybble & (8u >> (i % 4))) ? FULL_BLOCK : L' ');
         }
-        putchar('\n');
+        p += is_double ? 2 * gDblBytes : 2 * gBytes;
+        puts("|");
     }
     puts("ENDCHAR");
+}
+
+// Compute value of aXdigit.
+//
+uint8_t hex_value(char aXdigit) {
+    uint8_t h = (uint8_t) aXdigit;
+    if ((h >= '0') && (h <= '9'))
+        return h - '0';
+    if ((h >= 'A') && (h <= 'F'))
+        return (h - 'A') + 10;
+    if ((h >= 'a') && (h <= 'f'))
+        return (h - 'a') + 10;
+    return 0xFFu;
 }
 
 // Parse one line of font hex data and store result in glyph.
@@ -204,12 +185,11 @@ void parse_font_dimensions(FILE *aFile) {
 // Output usage message and exit with status.
 //
 void usage(int aStatus) {
-    fprintf(stderr, "usage: hextobdf [options]\n");
+    fprintf(stderr, "usage: hextosrc [options]\n");
     fprintf(stderr, "Options [default]:\n");
-    fprintf(stderr, "  -V             output version/hash and exit\n");
     fprintf(stderr, "  -h height      height in pixels [%d]\n", PixelHeight);
     fprintf(stderr, "  -w width       width in pixels [%d]\n", PixelWidth);
-    fprintf(stderr, "\nReads hex font from stdin and writes bdf font to stdout\n");
+    fprintf(stderr, "\nReads hex font from stdin and writes src font to stdout\n");
     exit(aStatus);
 }
 

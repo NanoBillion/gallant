@@ -27,6 +27,13 @@
 #include <wchar.h>
 #include <errno.h>
 
+#ifndef HASH
+#define HASH "(undefined)"
+#endif
+#ifndef VERSION
+#define VERSION "(undefined)"
+#endif
+
 /* FreeBSD: devel/libunistring */
 #include <uniname.h>
 
@@ -36,9 +43,11 @@ int main(int aArgc, char **aArgv) {
         exit(EXIT_FAILURE);
     }
     if (aArgc != 3) {
+        fprintf(stderr, "%s version %s, hash %s\n", aArgv[0], VERSION, HASH);
         fprintf(stderr, "usage: %s start end\n", aArgv[0]);
         exit(EXIT_FAILURE);
     }
+
     errno = 0;
     unsigned long start = strtoul(aArgv[1], NULL, 0);
     unsigned long end = strtoul(aArgv[2], NULL, 0);
@@ -46,6 +55,7 @@ int main(int aArgc, char **aArgv) {
         fprintf(stderr, "could not convert arguments to integers\n");
         exit(EXIT_FAILURE);
     }
+
     for (unsigned long i = start; i < end; ++i) {
         char    name[UNINAME_MAX + 1];
         const char *const p = unicode_character_name((ucs4_t)i, name);

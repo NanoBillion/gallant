@@ -27,6 +27,13 @@
 /* From libpng; on FreeBSD: /usr/ports/graphics/png. */
 #include <png.h>
 
+#ifndef HASH
+#define HASH "(undefined)"
+#endif
+#ifndef VERSION
+#define VERSION "(undefined)"
+#endif
+
 /* Default option values. */
 #define TextFilename  "input.txt"
 #define FontFilename  "jsgallant.hex"
@@ -112,8 +119,12 @@ int main(int aArgc, char **aArgv) {
 //
 void parse_options(int aArgc, char **aArgv) {
     int     ch;
-    while ((ch = getopt(aArgc, aArgv, "f:hip:T:t:")) != -1) {
+    while ((ch = getopt(aArgc, aArgv, "f:hip:T:t:V")) != -1) {
         switch (ch) {
+        case 'V':
+            printf("%s version %s, hash %s\n", aArgv[0], VERSION, HASH);
+            exit (EXIT_SUCCESS);
+            break;
         case 'f':
             gFontFilename = optarg;
             break;

@@ -158,6 +158,32 @@ The glyphs in this gallant project would have to be severely reduced in
 number to fit. If someone wants to contribute a stripped down font in
 the appropriate format, I'm willing to add it to this project.
 
+### What about the TrueType gallant.ttf?
+
+Some systems no longer support BDF (or PCF) fonts. The days of raster
+fonts are numbered, it would seem. With high DPI displays these days,
+rendered anti-aliased fonts are the new norm.
+
+The `gallant.ttf` file is a conversion from BDF to TTF using
+[FontForge](https://fontforge.org/en-US/). (See the
+[GNUmakefile](GNUmakefile) for the scripted command sequence.) A TTF
+font can contain a raster font at its design size; sometimes this is
+called a *bit strike*. On systems supporting TrueType you may be able to
+use Gallant. The font family name is `Gallant12` to disambiguate it from
+`gallant` and to indicate that the design size is 12. Usage example with
+xterm:
+
+```
+xterm -fa Gallant12:size=12
+```
+
+You *can* use a larger `size` value, but that will only affect the line
+spacing, not the glyph size. Visually this is most apparent in the box
+drawing characters, where there will be vertical gaps. The same applies
+to all glyphs that connect to glyphs above and below, such as large
+parentheses, braces, brackets, integrals, etc.
+
+
 ## Who are you?
 
 I'm an ex-Sun Microsystems software engineer who had a stint in the
@@ -175,7 +201,7 @@ notice in [NetBSD's
 gallant12x22.h](https://ftp.netbsd.org/pub/NetBSD/NetBSD-current/src/sys/dev/wsfont/gallant12x22.h)
 which reads:
 
-```c
+```
 /*
  * Copyright (c) 1992, 1993
  *     The Regents of the University of California.  All rights reserved.

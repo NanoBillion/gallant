@@ -9,7 +9,7 @@ export LC_ALL = C.UTF-8
 
 .DEFAULT_GOAL = install
 
-TOOLS = lscp hextobdf srctohex txttopng
+TOOLS = lscp hextobdf hextosrc srctohex txttopng
 TOOLS_C      = $(addsuffix .c,$(TOOLS))
 PREPROCESSED = $(addsuffix .i,$(TOOLS))
 
@@ -43,17 +43,22 @@ gallant.fnt: gallant.hex
 gallant.pcf: gallant.bdf
 	bdftopcf -o $@ $^
 
+gallant.src: hextosrc
+	./hextosrc < gallant.hex > $@
+
 gallant.ttf: gallant.bdf
 	@printf '%s\n' \
-	'Open("$^")'            \
+	'Open("$^")' \
+	'SetFontNames("Gallant12", "Gallant12", "Gallant12")' \
 	'Generate("$@", "ttf")' \
 	'Quit()' | \
-	fontforge -lang=ff -script -
+	SOURCE_DATE_EPOCH=$(TIMESTAMP) fontforge -lang=ff -script -
+	fontlint $@
 
 .PHONY: install
-install: gallant.bdf gallant.fnt
-	cp gallant.bdf ~/.fonts
-	cd ~/.fonts && mkfontdir && xset fp rehash
+install: gallant.bdf gallant.fnt gallant.ttf
+	cp gallant.bdf gallant.ttf ~/.fonts
+	cd ~/.fonts && mkfontdir && xset fp rehash && fc-cache
 	if test $$(uname -s) = FreeBSD; then \
 	  if test -w /dev/ttyv7; then \
 	    vidcontrol -f gallant.fnt < /dev/ttyv7; \
@@ -115,6 +120,11 @@ images: gallant.hex lscp txttopng
 README.html: README.md
 	comrak --gfm --syntax-highlighting base16-ocean.light $^ > $@
 
+HASH := $(shell git rev-parse --short=8 HEAD)
+VERSION = 1.0
+# Deterministic time stamp. On FreeBSD: date -j 202508310000.01 '+%s'
+TIMESTAMP = 1756591201
+
 # FreeBSD: Libs and <uniname.h> are in devel/libunistring
 CC = cc -std=c99
 APP_WARNS  += -Werror
@@ -144,6 +154,8 @@ APP_WARNS  += -Wmissing-field-initializers
 
 APP_SOURCE_INCDIRS = -I /usr/local/include
 APP_LIBDIRS = -L /usr/local/lib
+APP_MACROS  = -DHASH='"$(HASH)"'
+APP_MACROS += -DVERSION='"$(VERSION)"'
 
 tools: $(TOOLS)
 
@@ -152,6 +164,9 @@ lscp: lscp.o
 
 hextobdf: hextobdf.o
 	$(CC) -o $@ $^
+
+hextosrc: hextosrc.o
+	$(CC) -o $@ $(APP_LIBDIRS) -luninameslist -lunistring $^
 
 srctohex: srctohex.o
 	$(CC) -o $@ $^
