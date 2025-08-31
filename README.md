@@ -1,12 +1,17 @@
 # Gallant Font
 
-This is the Gallant font, as used by the Sun Microsystems SPARCstation
-console, extended with glyphs for many Unicode blocks. It is a raster
-font with a 22x12 pixel character cell, descent 5 and ascent 17.
+This is the Gallant font, as used by the [Sun
+Microsystems](https://en.wikipedia.org/wiki/Sun_Microsystems)
+[SPARCstation](https://en.wikipedia.org/wiki/SPARCstation) console,
+extended with [glyphs](https://en.wikipedia.org/wiki/Glyph) for many
+[Unicode](https://en.wikipedia.org/wiki/Unicode) blocks. It is a
+[raster](https://en.wikipedia.org/wiki/Raster_graphics) font with a
+22x12 pixel character cell, descent 5 and ascent 17.
 
-The starting point was the `gallant.hex` file as found on FreeBSD 14,
-which contained 502 glyphs at the time. This project currently provides
-more than 4500 glyphs. Major additions:
+The starting point was the `gallant.hex` file as found on
+[FreeBSD](https://www.freebsd.org/) 14, which contained 502 glyphs at
+the time. This project currently provides more than 4500 glyphs. Major
+additions:
 
 * Greek
 * Cyrillic
@@ -94,7 +99,9 @@ none are present.
 
 Codepoints >= U+10000 can be part of a BDF file, but cannot be used by
 core X11 since it internally restricts glyph encoding numbers to 16 bit.
-(This limitation does not apply to **Xft** rendered fonts).
+The X server then says `BDF Error on line X: char 'U+10000' has encoding
+too large (65536)`. This limitation does not apply to **Xft** rendered
+fonts.
 
 The FreeBSD
 [vt(4)](https://man.freebsd.org/cgi/man.cgi?query=vt&apropos=0&sektion=4)
@@ -149,10 +156,13 @@ The Linux console uses
 [PSF](https://en.wikipedia.org/wiki/PC_Screen_Font) fonts. As of 2025
 this format can only contain 256 or 512 glyphs.
 
-The NetBSD console is also restricted to 512 glyphs. It does not handle
-double width or combining characters.
+The [NetBSD console
+(wscons)](https://www.netbsd.org/docs/guide/en/chap-cons.html) is also
+restricted to 512 glyphs. It does not handle double width or combining
+characters.
 
-OpenBSD inherited the `wscons` from NetBSD, so similar restrictions apply.
+[OpenBSD's wscons](https://man.openbsd.org/wscons) was inherited from
+NetBSD, so similar restrictions apply.
 
 The glyphs in this gallant project would have to be severely reduced in
 number to fit. If someone wants to contribute a stripped down font in
@@ -196,8 +206,8 @@ retina.
 
 ## History
 
-The oldest reference to the Gallant font I could find was in a Copyright
-notice in [NetBSD's
+The oldest reference to the Gallant font I could find at first was in a
+Copyright notice in [NetBSD's
 gallant12x22.h](https://ftp.netbsd.org/pub/NetBSD/NetBSD-current/src/sys/dev/wsfont/gallant12x22.h)
 which reads:
 
@@ -217,6 +227,32 @@ which reads:
 In private conversation with the author, Jef said he guessed that the
 gallant font was designed by someone at Sun Microsystems before it made
 its way to Berkeley.
+
+The Unix history site [v6sh.org](https://v6sh.org/) has a list of the
+[4.4BSD-Alpha src directory
+contents](https://tuhs.v6sh.org/UnixArchiveMirror/Distributions/UCB/4.4BSD-Alpha/src.lst)
+which contains an `rcons` directory with
+
+```
+rwxrwxr-x  3/9      0 Jul 25 07:58 1992 usr/src/sys/sparc/rcons/
+rwxrwxr-x  3/9      0 Jul 25 07:58 1992 usr/src/sys/sparc/rcons/tags symbolic link to /var/db/sys_tags
+r--r--r--  3/9  46247 Jul 22 09:49 1992 usr/src/sys/sparc/rcons/gallant19.h
+r--r--r--  3/9   9548 Jul 22 09:50 1992 usr/src/sys/sparc/rcons/raster.h
+r--r--r--  3/9  29785 Jul 22 09:50 1992 usr/src/sys/sparc/rcons/raster_op.c
+r--r--r--  3/9   6870 Jul 22 09:50 1992 usr/src/sys/sparc/rcons/raster_text.c
+r--r--r--  3/9   2840 Jul 22 09:50 1992 usr/src/sys/sparc/rcons/rcons_font.c
+r--r--r--  3/9   7756 Jul 22 09:50 1992 usr/src/sys/sparc/rcons/rcons_kern.c
+r--r--r--  3/9  15437 Jul 22 09:50 1992 usr/src/sys/sparc/rcons/rcons_subr.c
+```
+
+The relevant C language header file is in
+[History/rcons/gallant19.h](History/rcons/gallant19.h).
+
+The
+[4.3BSD](https://en.wikipedia.org/wiki/History_of_the_Berkeley_Software_Distribution#4.3BSD)
+`src` and `src/sys` tape archives do not contain `gallant19.h`, which
+makes it likely it was acquired between 4.3BSD and
+[4.4BSD](https://en.wikipedia.org/wiki/History_of_the_Berkeley_Software_Distribution#4.4BSD_and_descendants).
 
 ## Remarks
 

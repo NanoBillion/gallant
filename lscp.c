@@ -27,9 +27,6 @@
 #include <wchar.h>
 #include <errno.h>
 
-#ifndef HASH
-#define HASH "(undefined)"
-#endif
 #ifndef VERSION
 #define VERSION "(undefined)"
 #endif
@@ -43,7 +40,7 @@ int main(int aArgc, char **aArgv) {
         exit(EXIT_FAILURE);
     }
     if (aArgc != 3) {
-        fprintf(stderr, "%s version %s, hash %s\n", aArgv[0], VERSION, HASH);
+        fprintf(stderr, "%s version %s\n", aArgv[0], VERSION);
         fprintf(stderr, "usage: %s start end\n", aArgv[0]);
         exit(EXIT_FAILURE);
     }

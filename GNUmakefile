@@ -120,8 +120,7 @@ images: gallant.hex lscp txttopng
 README.html: README.md
 	comrak --gfm --syntax-highlighting base16-ocean.light $^ > $@
 
-HASH := $(shell git rev-parse --short=8 HEAD)
-VERSION = 1.0
+VERSION = 2025-08-31
 # Deterministic time stamp. On FreeBSD: date -j 202508310000.01 '+%s'
 TIMESTAMP = 1756591201
 
@@ -154,7 +153,6 @@ APP_WARNS  += -Wmissing-field-initializers
 
 APP_SOURCE_INCDIRS = -I /usr/local/include
 APP_LIBDIRS = -L /usr/local/lib
-APP_MACROS  = -DHASH='"$(HASH)"'
 APP_MACROS += -DVERSION='"$(VERSION)"'
 
 tools: $(TOOLS)
@@ -266,7 +264,6 @@ tooltips.vim: $(TOOLS_C)
 	sed -e 's,\\,\\\\,g; s,",\\",g' | \
 	while read -r define macro repl; do \
 	  case $$macro in \
-	  (HASH) printf '\\ \47HASH\47:\"HASH\\n0x12345678u\",\n';; \
 	  (*) printf '\\ \47%s\47:\"%s\\n%s\",\n' "$${macro%%(*}" "$$macro" "$$repl"; \
 	  esac; \
 	done; \

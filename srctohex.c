@@ -14,9 +14,6 @@
 #include <unistd.h>
 #include <wchar.h>
 
-#ifndef HASH
-#define HASH "(undefined)"
-#endif
 #ifndef VERSION
 #define VERSION "(undefined)"
 #endif
@@ -196,7 +193,7 @@ void parse_options(int aArgc, char **aArgv) {
     while ((ch = getopt(aArgc, aArgv, "Vw:h:")) != -1) {
         switch (ch) {
         case 'V':
-            printf("%s version %s, hash %s\n", aArgv[0], VERSION, HASH);
+            printf("%s version %s\n", aArgv[0], VERSION);
             exit (EXIT_SUCCESS);
             break;
         case 'h':
