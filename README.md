@@ -25,7 +25,7 @@ additions:
 * Currency symbols
 * More punctuation
 * Just enough Katakana to say コンニチハ
-* Powerline glyphs in the *Private Use Area* at U+e0a0
+* [Powerline](https://github.com/powerline/powerline) glyphs in the *Private Use Area* at U+e0a0
 
 I have tried hard to keep the look of the font for Greek and Cyrillic
 glyphs, but not for symbols like arrows and mathematical operators where
@@ -193,6 +193,15 @@ drawing characters, where there will be vertical gaps. The same applies
 to all glyphs that connect to glyphs above and below, such as large
 parentheses, braces, brackets, integrals, etc.
 
+Due to a Windows quirk, I have added six fake Hiraga glyphs that Windows
+tests the existence of (and would otherwise reject as a font). I'd be
+extremely delighted if someone contributed the full set of Hiragana
+glyphs.
+
+### Is there a gallant.fon for Windows?
+
+No. The `fon` file format, dated as it is, does not support Unicode and
+would only contain 256 glyphs.
 
 ## Who are you?
 
@@ -203,6 +212,51 @@ contact with SUN hardware was in the late 80's and early 90's at
 university with the 3/60 and the SPARCstations. It was then and there
 that the gallant font and the Trinitron CRT raster were burnt in my
 retina.
+
+## How did you edit the glyphs?
+
+With a text editor (vim). I wrote the [`hextosrc`](hextosrc.c) utility
+which turns `gallant.hex` into a human readable file with 1 character
+cell per pixel, a row count from 22 down to 1 so I know where the
+baseline (06) is and each pixel row between `|` characters (12 or 24,
+space for pixel not set, full block `█` for set). My
+[`srctohex`](srctohex.c) utility converts in the opposite direction.
+
+This is what the glyph for A looks like:
+
+```
+STARTCHAR U0041 LATIN CAPITAL LETTER A
+22 |            |
+21 |            |
+20 |            |
+19 |     ██     |
+18 |     ██     |
+17 |    █ ██    |
+16 |    █ ██    |
+15 |    █  █    |
+14 |   █   ██   |
+13 |   █   ██   |
+12 |   █    █   |
+11 |  ████████  |
+10 |  █     ██  |
+09 |  █      █  |
+08 | █       ██ |
+07 | █       ██ |
+06 |███     ████|
+05 |            |
+04 |            |
+03 |            |
+02 |            |
+01 |            |
+ENDCHAR
+```
+
+The row numbers and Unicode names are ignored by `srctohex`, and
+inserted/restored by `hextosrc`. This allows to freely add and delete
+pixel rows without tedious row renumbering or knowing the Unicode name.
+
+The utilites are complemented by [`hextobdf`](hextobdf.c) to generate
+`gallant.bdf`. From there, other tools can create additional font formats.
 
 ## History
 
@@ -228,10 +282,11 @@ In private conversation with the author, Jef said he guessed that the
 gallant font was designed by someone at Sun Microsystems before it made
 its way to Berkeley.
 
-The Unix history site [v6sh.org](https://v6sh.org/) has a list of the
-[4.4BSD-Alpha src directory
+Further research examining the Unix history site
+[v6sh.org](https://v6sh.org/) revealed a list of the [4.4BSD-Alpha src
+directory
 contents](https://tuhs.v6sh.org/UnixArchiveMirror/Distributions/UCB/4.4BSD-Alpha/src.lst)
-which contains an `rcons` directory with
+which contains an `rcons` directory with these files:
 
 ```
 rwxrwxr-x  3/9      0 Jul 25 07:58 1992 usr/src/sys/sparc/rcons/
@@ -245,7 +300,7 @@ r--r--r--  3/9   7756 Jul 22 09:50 1992 usr/src/sys/sparc/rcons/rcons_kern.c
 r--r--r--  3/9  15437 Jul 22 09:50 1992 usr/src/sys/sparc/rcons/rcons_subr.c
 ```
 
-The relevant C language header file is in
+Gallant's relevant C language header file is in
 [History/rcons/gallant19.h](History/rcons/gallant19.h).
 
 The
@@ -302,4 +357,3 @@ need to render them. This is the mapping:
 ## TODO
 
 * Describe how to contribute
-* Describe the helper programs
