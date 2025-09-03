@@ -7,29 +7,32 @@ unexport C_INCLUDE_PATH   # Remove from shell environment; confuses gcc.
 export LANG   = C.UTF-8
 export LC_ALL = C.UTF-8
 
-.DEFAULT_GOAL = install
+.DEFAULT_GOAL = all
 
+#   My helper binaries.
+#
 TOOLS = lscp hextobdf hextosrc srctohex txttopng
-TOOLS_C      = $(addsuffix .c,$(TOOLS))
+
+#   And their corresponding C language source files.
+#
+TOOLS_C = $(addsuffix .c,$(TOOLS))
+
+#   And the preprocessed source for tag generation, etc.
+#
 PREPROCESSED = $(addsuffix .i,$(TOOLS))
 
+#   What to build by default.
+#
 TOP_LEVEL_TARGETS = gallant.bdf
 TOP_LEVEL_TARGETS += gallant.fnt
-TOP_LEVEL_TARGETS += gallant.pcf
+TOP_LEVEL_TARGETS += gallant.pcf.gz
 TOP_LEVEL_TARGETS += gallant.ttf
+TOP_LEVEL_TARGETS += 12x22.fnt.gz
 TOP_LEVEL_TARGETS += images
 TOP_LEVEL_TARGETS += README.html
 
 .PHONY: all
 all: $(TOP_LEVEL_TARGETS)
-
-lscp: lscp.o
-
-srctohex: srctohex.o
-
-hextobdf: hextobdf.o
-
-txttopng: txttopng.o
 
 gallant.bdf: gallant.hex hextobdf
 	./hextobdf < $< > $@
@@ -43,6 +46,9 @@ gallant.fnt: gallant.hex
 gallant.pcf: gallant.bdf
 	bdftopcf -o $@ $^
 
+gallant.pcf.gz: gallant.pcf
+	gzip -cv9 $^ > $@
+
 gallant.src: hextosrc
 	./hextosrc < gallant.hex > $@
 
@@ -55,21 +61,26 @@ gallant.ttf: gallant.bdf
 	SOURCE_DATE_EPOCH=$(TIMESTAMP) fontforge -lang=ff -script -
 	fontlint $@
 
-.PHONY: install
-install: gallant.bdf gallant.fnt gallant.ttf
-	cp gallant.bdf gallant.ttf ~/.fonts
+# make 12x22.fnt.gz: build the font the FreeBSD loader can use.
+#
+12x22.fnt.gz: gallant.fnt
+	gzip -cv9 $^ > $@
+
+# make install-maintainer: install files on maintainer's system.
+#
+.PHONY: install-maintainer
+install-maintainer: gallant.pcf.gz gallant.ttf gallant.fnt gallant.hex 12x22.fnt.gz
+	cp gallant.pcf.gz gallant.ttf ~/.fonts
 	cd ~/.fonts && mkfontdir && xset fp rehash && fc-cache
 	if test $$(uname -s) = FreeBSD; then \
-	  if test -w /dev/ttyv7; then \
-	    vidcontrol -f gallant.fnt < /dev/ttyv7; \
-	  fi; \
+	  vidcontrol -f gallant.fnt < /dev/ttyv0; \
+	  sudo cp gallant.fnt /usr/share/vt/fonts/gallant.fnt; \
+	  sudo cp gallant.hex /home/toor/FreeBSD/head/src/share/vt/fonts/gallant.hex; \
+	  sudo cp 12x22.fnt.gz /boot/fonts/12x22.fnt.gz; \
 	fi
 
-.PHONY: install-maintainer
-install-maintainer: gallant.fnt gallant.hex
-	sudo cp gallant.fnt /usr/share/vt/fonts/gallant.fnt
-	sudo cp gallant.hex /home/toor/FreeBSD/head/src/share/vt/fonts/gallant.hex
-
+# make images: create the PNG files in Images/ for each block
+#
 .PHONY: images
 images: gallant.hex lscp txttopng
 	printf '%s\n' \
@@ -117,6 +128,8 @@ images: gallant.hex lscp txttopng
 	  ./txttopng -f "$<" -t "$$name.txt" -p "Images/$$first-$$name-Inverted.png" -i; \
 	done
 
+# make README.html: turn markdown into HTML.
+#
 README.html: README.md
 	comrak --gfm --syntax-highlighting base16-ocean.light $^ > $@
 
@@ -155,29 +168,6 @@ APP_SOURCE_INCDIRS = -I /usr/local/include
 APP_LIBDIRS = -L /usr/local/lib
 APP_MACROS += -DVERSION='"$(VERSION)"'
 
-tools: $(TOOLS)
-
-lscp: lscp.o
-	$(CC) -o $@ $(APP_LIBDIRS) -luninameslist -lunistring $^
-
-hextobdf: hextobdf.o
-	$(CC) -o $@ $^
-
-hextosrc: hextosrc.o
-	$(CC) -o $@ $(APP_LIBDIRS) -luninameslist -lunistring $^
-
-srctohex: srctohex.o
-	$(CC) -o $@ $^
-
-txttopng: txttopng.o
-	$(CC) -o $@ $(APP_LIBDIRS) -lpng $^
-
-lint: $(TOOLS_C)
-	@for c in $^; do flexelint lint.lnt $$c; done
-
-# X11 in x.out:
-# BDF Error on line 114938: char 'U+10000' has encoding too large (65536)
-
 ################################################################################
 #                           ____        _                                      #
 #                          |  _ \ _   _| | ___  ___                            #
@@ -205,6 +195,22 @@ MAKEFLAGS += --no-builtin-rules
 %.i: %.c
 	$(CC) -E $(APP_CFLAGS) $(APP_WARNS) $(APP_SOURCE_INCDIRS) $(APP_MACROS) -o $@ $<
 
+
+lscp: lscp.o
+	$(CC) -o $@ $(APP_LIBDIRS) -luninameslist -lunistring $^
+
+hextobdf: hextobdf.o
+	$(CC) -o $@ $^
+
+hextosrc: hextosrc.o
+	$(CC) -o $@ $(APP_LIBDIRS) -luninameslist -lunistring $^
+
+srctohex: srctohex.o
+	$(CC) -o $@ $^
+
+txttopng: txttopng.o
+	$(CC) -o $@ $(APP_LIBDIRS) -lpng $^
+
 ################################################################################
 #        _   _      _                   _____                    _             #
 #       | | | | ___| |_ __   ___ _ __  |_   _|_ _ _ __ __ _  ___| |_ ___       #
@@ -215,14 +221,31 @@ MAKEFLAGS += --no-builtin-rules
 #                                                                              #
 ################################################################################
 
+# make tools: just compile the TOOLS.
+#
+.PHONY: tools
+tools: $(TOOLS)
+
 #------------------------------------------------------------------------------#
 #                                    Clean                                     #
 #------------------------------------------------------------------------------#
 
+# make clean: remove what can be regenerated.
+#
 .PHONY: clean
 clean:
-	rm -f *.i *.o $(TOOLS)
-	rm -f gallant.bdf gallant.hex gallant.fnt gallant.pcf gallant.ttf
+	rm -f *.i *.o *.gz $(TOOLS)
+	rm -f gallant.bdf gallant.fnt gallant.hex gallant.pcf gallant.ttf
+
+#------------------------------------------------------------------------------#
+#                                     Lint                                     #
+#------------------------------------------------------------------------------#
+
+# make lint: run lint for each of the tool source files.
+#
+.PHONY: lint
+lint: $(TOOLS_C)
+	@for c in $^; do flexelint lint.lnt $$c; done
 
 #------------------------------------------------------------------------------#
 #                          Tags - Create tags for vi                           #

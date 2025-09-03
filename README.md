@@ -164,15 +164,11 @@ characters.
 [OpenBSD's wscons](https://man.openbsd.org/wscons) was inherited from
 NetBSD, so similar restrictions apply.
 
-The glyphs in this gallant project would have to be severely reduced in
+The glyphs in this Gallant project would have to be severely reduced in
 number to fit. If someone wants to contribute a stripped down font in
 the appropriate format, I'm willing to add it to this project.
 
-### What about the TrueType gallant.ttf?
-
-Some systems no longer support BDF (or PCF) fonts. The days of raster
-fonts are numbered, it would seem. With high DPI displays these days,
-rendered anti-aliased fonts are the new norm.
+### The TrueType gallant.ttf
 
 The `gallant.ttf` file is a conversion from BDF to TTF using
 [FontForge](https://fontforge.org/en-US/). (See the
@@ -193,10 +189,21 @@ drawing characters, where there will be vertical gaps. The same applies
 to all glyphs that connect to glyphs above and below, such as large
 parentheses, braces, brackets, integrals, etc.
 
-Due to a Windows quirk, I have added six fake Hiraga glyphs that Windows
-tests the existence of (and would otherwise reject as a font). I'd be
-extremely delighted if someone contributed the full set of Hiragana
-glyphs.
+### The TrueType gallant.ttf does not work on Windows. What's going on?
+
+The symptom is that Windows displays a popup along "gallant.ttf is not a
+valid font file" when you want to copy `gallant.ttf` to
+`C:\Windows\Fonts` or install it some other way.
+
+There seem to be at least two issues.
+
+1. I'm told Windows considers a font invalid if it does not contain
+   a certain set of six Hiragana glyphs. I have added them to the BDF
+   but this is not enough to solve the "gallant.ttf is not a valid
+   font file" popup.
+2. Windows wants a scalable outline font. A bitmap-only TrueType font
+   file is invalid. I have yet to find an automated way, preferably
+   with `fontforge` script commands, to add an outline font.
 
 ### Is there a gallant.fon for Windows?
 
@@ -207,10 +214,10 @@ would only contain 256 glyphs.
 
 I'm an ex-Sun Microsystems software engineer who had a stint in the
 company shortly before Oracle took over (2008/2009). I was nowhere near
-the OpenBoot PROM files which contained the gallant font. My first
+the OpenBoot PROM files which contained the Gallant font. My first
 contact with SUN hardware was in the late 80's and early 90's at
 university with the 3/60 and the SPARCstations. It was then and there
-that the gallant font and the Trinitron CRT raster were burnt in my
+that the Gallant font and the Trinitron CRT raster were burnt in my
 retina.
 
 ## How did you edit the glyphs?
@@ -279,7 +286,7 @@ which reads:
 ```
 
 In private conversation with the author, Jef said he guessed that the
-gallant font was designed by someone at Sun Microsystems before it made
+Gallant font was designed by someone at Sun Microsystems before it made
 its way to Berkeley.
 
 Further research examining the Unix history site
@@ -356,4 +363,5 @@ need to render them. This is the mapping:
 
 ## TODO
 
-* Describe how to contribute
+* Describe how to contribute.
+* Build a FreeBSD Port `x11-fonts/gallant` with `gallant.pcf.gz` for X11.

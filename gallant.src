@@ -24893,14 +24893,14 @@ STARTCHAR U0437 CYRILLIC SMALL LETTER ZE
 19 |            |
 18 |            |
 17 |            |
-16 | █  █████   |
-15 | █████████  |
-14 | ██      ██ |
-13 |         ██ |
-12 |     █████  |
-11 |    ██████  |
-10 |         ██ |
-09 | █       ██ |
+16 |            |
+15 |    █████   |
+14 |  ████████  |
+13 | ██      ██ |
+12 |         ██ |
+11 |    █████   |
+10 |        ██  |
+09 |         ██ |
 08 | ██      █  |
 07 |  ███████   |
 06 |   █████    |
@@ -108550,7 +108550,7 @@ STARTCHAR U2bff HELLSCHREIBER PAUSE SYMBOL
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U3044
+STARTCHAR U3044 HIRAGANA LETTER I
 22 |                        |
 21 |                        |
 20 |                        |
@@ -108574,7 +108574,7 @@ STARTCHAR U3044
 02 |                        |
 01 |                        |
 ENDCHAR
-STARTCHAR U3046
+STARTCHAR U3046 HIRAGANA LETTER U
 22 |                        |
 21 |                        |
 20 |                        |
@@ -108598,7 +108598,7 @@ STARTCHAR U3046
 02 |                        |
 01 |                        |
 ENDCHAR
-STARTCHAR U304b
+STARTCHAR U304b HIRAGANA LETTER KA
 22 |                        |
 21 |                        |
 20 |                        |
@@ -108622,7 +108622,7 @@ STARTCHAR U304b
 02 |                        |
 01 |                        |
 ENDCHAR
-STARTCHAR U3057
+STARTCHAR U3057 HIRAGANA LETTER SI
 22 |                        |
 21 |                        |
 20 |                        |
@@ -108646,7 +108646,7 @@ STARTCHAR U3057
 02 |                        |
 01 |                        |
 ENDCHAR
-STARTCHAR U306e
+STARTCHAR U306e HIRAGANA LETTER NO
 22 |                        |
 21 |                        |
 20 |                        |
@@ -108670,7 +108670,7 @@ STARTCHAR U306e
 02 |                        |
 01 |                        |
 ENDCHAR
-STARTCHAR U3093
+STARTCHAR U3093 HIRAGANA LETTER N
 22 |                        |
 21 |                        |
 20 |                        |
