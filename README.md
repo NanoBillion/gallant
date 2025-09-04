@@ -116,14 +116,27 @@ blocks and [Markus Kuhn's](https://www.cl.cam.ac.uk/~mgk25/)
 licensed [CC BY](https://creativecommons.org/licenses/by/4.0/); no changes
 were made to the text before rendering it in Gallant.
 
+## How do I use this GNUmakefile?
+
+If you just want to use one of the `gallant.*` font files, you don't
+need to build anything. See "How do I load/use this font?" below.
+
+If you want to modify or add glyphs, edit `gallant.src` and then `make`.
+
+You will obviously need GNU make (FreeBSD: `devel/gmake`). To build the
+TrueType `gallant.ttf` you will need FontForge (`print/fontforge`). To
+build images with `txttopng` the PNG library is required
+(`graphics/png`).
+
 ## How do I load/use this font?
 
 ### As an X11 Raster Font, e.g. for Xterm(1)
 
-Install the BDF file `gallant.bdf` where X11 looks for fonts. You can
-query the current font path with `xset q | sed -n '/^Font/,/^ /p'`. If
-you do not have write permission to any of the font directories, you may
-create your own under, say, `$HOME/.fonts`.
+Install the BDF file `gallant.bdf` or the PCF file `gallant.pcf.gz`
+where X11 looks for fonts. You can query the current font path with
+`xset q | sed -n '/^Font/,/^ /p'`. If you do not have write permission
+to any of the font directories, you may create your own under, say,
+`$HOME/.fonts`.
 
 The following example uses `$HOME/.fonts` as the font directory and adds
 it to the font path. To make the font path addition permanent, you
@@ -149,6 +162,20 @@ vidcontrol -f /path/to/gallant.fnt
 You may also drop the font files into directory `/usr/share/vt/fonts` and
 add `allscreens_flags="-f gallant"` to your `/etc/rc.conf`. This way all
 console terminals use the font after boot.
+
+### FreeBSD Loader
+
+For the full Gallant boot experience, make the loader use `12x22.fnt.gz`
+early. Add `screen.font="12x22"` (without `.fnt.gz`) to `/boot/loader.conf`.
+
+Make sure that `/boot/fonts/INDEX.fonts` contains these lines,
+preferably after the `11x22.fnt:` entries.
+
+```
+12x22.fnt:en:Gallant BSD Console, size 22
+12x22.fnt:da:Gallant BSD-konsol, størrelse 22
+12x22.fnt:de:Gallant BSD Console, Größe 22
+```
 
 ### Linux, NetBSD, OpenBSD Console
 
@@ -203,7 +230,8 @@ There seem to be at least two issues.
    font file" popup.
 2. Windows wants a scalable outline font. A bitmap-only TrueType font
    file is invalid. I have yet to find an automated way, preferably
-   with `fontforge` script commands, to add an outline font.
+   with `fontforge` script commands, to add an outline font with
+   a square pixel for each pixel.
 
 ### Is there a gallant.fon for Windows?
 
@@ -215,21 +243,20 @@ would only contain 256 glyphs.
 I'm an ex-Sun Microsystems software engineer who had a stint in the
 company shortly before Oracle took over (2008/2009). I was nowhere near
 the OpenBoot PROM files which contained the Gallant font. My first
-contact with SUN hardware was in the late 80's and early 90's at
-university with the 3/60 and the SPARCstations. It was then and there
-that the Gallant font and the Trinitron CRT raster were burnt in my
-retina.
+contact with SUN hardware was in the early 90's at university with the
+3/60 and the SPARCstations. It was then and there that the Gallant font
+and the Trinitron CRT raster were burnt in my retina.
 
 ## How did you edit the glyphs?
 
 With a text editor (vim). I wrote the [`hextosrc`](hextosrc.c) utility
-which turns `gallant.hex` into a human readable file with 1 character
-cell per pixel, a row count from 22 down to 1 so I know where the
-baseline (06) is and each pixel row between `|` characters (12 or 24,
-space for pixel not set, full block `█` for set). My
-[`srctohex`](srctohex.c) utility converts in the opposite direction.
+which turns `gallant.hex` into a human readable file named `gallant.src`
+with one character cell per pixel, a row count from 22 down to 1 so I
+know where the baseline (06) is and each pixel row between `|`
+characters (12 or 24, space for pixel not set, full block `█` for set).
+My [`srctohex`](srctohex.c) utility converts in the opposite direction.
 
-This is what the glyph for A looks like:
+This is what the glyph for A looks like in `gallant.src`:
 
 ```
 STARTCHAR U0041 LATIN CAPITAL LETTER A

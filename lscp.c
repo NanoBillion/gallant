@@ -20,6 +20,15 @@
  *    U+2a0d  1 a ⨍ b FINITE PART INTEGRAL
  *    U+2a0e  1 a ⨎ b INTEGRAL WITH DOUBLE STROKE
  *    U+2a0f  1 a ⨏ b INTEGRAL AVERAGE WITH SLASH
+ *
+ * PREREQUISITES
+ *    The <uniname.h> header file
+ *    FreeBSD:
+ *    Install the devel/libunistring port.
+ *
+ * COMPILATION
+ *    FreeBSD:
+ *    cc -o lscp -I /usr/local/include -L /usr/local/lib -luninameslist -lunistring lscp.c
  */
 #include <stdio.h>
 #include <stdlib.h>
