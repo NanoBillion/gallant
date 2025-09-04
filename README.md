@@ -166,16 +166,22 @@ console terminals use the font after boot.
 ### FreeBSD Loader
 
 For the full Gallant boot experience, make the loader use `12x22.fnt.gz`
-early. Add `screen.font="12x22"` (without `.fnt.gz`) to `/boot/loader.conf`.
-
-Make sure that `/boot/fonts/INDEX.fonts` contains these lines,
-preferably after the `11x22.fnt:` entries.
-
-```
-12x22.fnt:en:Gallant BSD Console, size 22
-12x22.fnt:da:Gallant BSD-konsol, størrelse 22
-12x22.fnt:de:Gallant BSD Console, Größe 22
-```
+early:
+* Copy it to `/boot/fonts/12x22.fnt.gz`.
+* Add `screen.font="12x22"` (without `.fnt.gz`) to `/boot/loader.conf`.
+* Make sure that `/boot/fonts/INDEX.fonts` contains these lines,
+  preferably after the `11x22.fnt:` entries.
+  ```
+  12x22.fnt:en:Gallant BSD Console, size 22
+  12x22.fnt:da:Gallant BSD-konsol, størrelse 22
+  12x22.fnt:de:Gallant BSD Console, Größe 22
+  ```
+* For even more Sun Microsystems reminiscence, switch to black on white.
+  In `/boot/loader.conf` set `teken.fg_color="0"` and `teken.bg_color="7"`.
+* To use the FreeBSD logo with inverted colors, edit `/boot/lua/drawer.lua`.
+  Look for the assignment
+  `image = "/boot/images/freebsd-brand-rev.png"` and replace it with
+  `image = "/boot/images/freebsd-brand.png"`.
 
 ### Linux, NetBSD, OpenBSD Console
 
@@ -391,4 +397,5 @@ need to render them. This is the mapping:
 ## TODO
 
 * Describe how to contribute.
-* Build a FreeBSD Port `x11-fonts/gallant` with `gallant.pcf.gz` for X11.
+* Commit 12x22 for loader use to FreeBSD once code slush is over.
+* Create a FreeBSD Port `x11-fonts/gallant` with `gallant.pcf.gz` for X11.
