@@ -29710,7 +29710,7 @@ STARTCHAR U04ff CYRILLIC SMALL LETTER HA WITH STROKE
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0500
+STARTCHAR U0500 CYRILLIC CAPITAL LETTER KOMI DE
 22 |            |
 21 |            |
 20 |            |
@@ -29734,7 +29734,7 @@ STARTCHAR U0500
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0501
+STARTCHAR U0501 CYRILLIC SMALL LETTER KOMI DE
 22 |            |
 21 |            |
 20 |         ██ |
@@ -29758,7 +29758,7 @@ STARTCHAR U0501
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0502
+STARTCHAR U0502 CYRILLIC CAPITAL LETTER KOMI DJE
 22 |            |
 21 |            |
 20 |            |
@@ -29782,7 +29782,7 @@ STARTCHAR U0502
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0503
+STARTCHAR U0503 CYRILLIC SMALL LETTER KOMI DJE
 22 |            |
 21 |            |
 20 |      ██    |
@@ -29806,7 +29806,7 @@ STARTCHAR U0503
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0504
+STARTCHAR U0504 CYRILLIC CAPITAL LETTER KOMI ZJE
 22 |            |
 21 |            |
 20 |            |
@@ -29830,21 +29830,21 @@ STARTCHAR U0504
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0505
-22 |            |
-22 |            |
-22 |            |
-22 |            |
+STARTCHAR U0505 CYRILLIC SMALL LETTER KOMI ZJE
 22 |            |
 21 |            |
 20 |            |
-19 | █████      |
-18 | █    █     |
-17 |      ██    |
-14 |     ██     |
-13 |  ████   ███|
-12 |     ██   █ |
-11 |      ██  █ |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 | █████      |
+14 | █    █     |
+13 |      ██    |
+12 |     ██     |
+11 |  ████   ███|
+10 |     ██   █ |
+09 |      ██  █ |
 08 |      ██  █ |
 07 |       ███  |
 06 |            |
@@ -29854,7 +29854,7 @@ STARTCHAR U0505
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0506
+STARTCHAR U0506 CYRILLIC CAPITAL LETTER KOMI DZJE
 22 |            |
 21 |            |
 20 |            |
@@ -29878,21 +29878,21 @@ STARTCHAR U0506
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0507
+STARTCHAR U0507 CYRILLIC SMALL LETTER KOMI DZJE
 22 |            |
 21 |            |
-21 |            |
-21 |            |
-21 |            |
-21 |            |
 20 |            |
-19 | █████      |
-18 | █    █     |
-17 |      ██    |
-14 |     ██     |
-13 |  ████      |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 | █████      |
+14 | █    █     |
+13 |      ██    |
 12 |     ██     |
-11 |      ██    |
+11 |  ████      |
+10 |     ██     |
+09 |      ██    |
 08 |      ██    |
 07 |      █████ |
 06 |          █ |
@@ -29902,7 +29902,7 @@ STARTCHAR U0507
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0508
+STARTCHAR U0508 CYRILLIC CAPITAL LETTER KOMI LJE
 22 |            |
 21 |            |
 20 |            |
@@ -29926,19 +29926,19 @@ STARTCHAR U0508
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0509
+STARTCHAR U0509 CYRILLIC SMALL LETTER KOMI LJE
 22 |            |
 21 |            |
-21 |            |
-21 |            |
-21 |            |
-21 |            |
 20 |            |
-19 |██████████  |
-16 |  █   ██    |
-15 |  █   ██    |
-14 |  █   ██  ██|
-13 |  █   ██   █|
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 |██████████  |
+14 |  █   ██    |
+13 |  █   ██    |
+12 |  █   ██  ██|
+11 |  █   ██   █|
 10 |  █   ██   █|
 09 |  █   ██   █|
 08 |█ █   ██   █|
@@ -29950,7 +29950,7 @@ STARTCHAR U0509
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U050a
+STARTCHAR U050a CYRILLIC CAPITAL LETTER KOMI NJE
 22 |            |
 21 |            |
 20 |            |
@@ -29974,21 +29974,21 @@ STARTCHAR U050a
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U050b
+STARTCHAR U050b CYRILLIC SMALL LETTER KOMI NJE
 22 |            |
 21 |            |
-21 |            |
-21 |            |
-21 |            |
-21 |            |
 20 |            |
-19 |████ ████   |
-18 | ██   ██    |
-15 | ██   ██    |
-14 | ██   ██  ██|
-13 | ███████   █|
-12 | ██   ██   █|
-11 | ██   ██   █|
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 |████ ████   |
+14 | ██   ██    |
+13 | ██   ██    |
+12 | ██   ██  ██|
+11 | ███████   █|
+10 | ██   ██   █|
+09 | ██   ██   █|
 08 | ██   ██   █|
 07 | ██    █   █|
 06 |████    ███ |
@@ -29998,7 +29998,7 @@ STARTCHAR U050b
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U050c
+STARTCHAR U050c CYRILLIC CAPITAL LETTER KOMI SJE
 22 |            |
 21 |            |
 20 |            |
@@ -30022,7 +30022,7 @@ STARTCHAR U050c
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U050d
+STARTCHAR U050d CYRILLIC SMALL LETTER KOMI SJE
 22 |            |
 21 |            |
 20 |            |
@@ -30046,7 +30046,7 @@ STARTCHAR U050d
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U050e
+STARTCHAR U050e CYRILLIC CAPITAL LETTER KOMI TJE
 22 |            |
 21 |            |
 20 |            |
@@ -30070,7 +30070,7 @@ STARTCHAR U050e
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U050f
+STARTCHAR U050f CYRILLIC SMALL LETTER KOMI TJE
 22 |            |
 21 |            |
 20 |            |
@@ -30079,10 +30079,10 @@ STARTCHAR U050f
 17 |            |
 16 |            |
 15 | ████████   |
-18 | █  ██  █   |
-17 |    ██      |
-17 |    ██      |
-14 |    ██  ███ |
+14 | █  ██  █   |
+13 |    ██      |
+12 |    ██      |
+11 |    ██  ███ |
 10 |    ██   █  |
 09 |    ██   █  |
 08 |    ██   █  |
@@ -30094,7 +30094,7 @@ STARTCHAR U050f
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0510
+STARTCHAR U0510 CYRILLIC CAPITAL LETTER REVERSED ZE
 22 |            |
 21 |            |
 20 |   █████  █ |
@@ -30118,7 +30118,7 @@ STARTCHAR U0510
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0511
+STARTCHAR U0511 CYRILLIC SMALL LETTER REVERSED ZE
 22 |            |
 21 |            |
 20 |            |
@@ -30142,7 +30142,7 @@ STARTCHAR U0511
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0512
+STARTCHAR U0512 CYRILLIC CAPITAL LETTER EL WITH HOOK
 22 |            |
 21 |            |
 20 |            |
@@ -30166,20 +30166,20 @@ STARTCHAR U0512
 02 |     ██     |
 01 |            |
 ENDCHAR
-STARTCHAR U0513
+STARTCHAR U0513 CYRILLIC SMALL LETTER EL WITH HOOK
 22 |            |
 21 |            |
-21 |            |
-21 |            |
-21 |            |
-21 |            |
 20 |            |
-19 |  █████████ |
-18 |   █    ██  |
-17 |   █    ██  |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 |  █████████ |
 14 |   █    ██  |
-13 |  █     ██  |
-12 |  █     ██  |
+13 |   █    ██  |
+12 |   █    ██  |
+11 |  █     ██  |
+10 |  █     ██  |
 09 |█ █     ██  |
 08 |███     ██  |
 07 |███     ██  |
@@ -30188,9 +30188,9 @@ STARTCHAR U0513
 04 |    █  ███  |
 03 |    █████   |
 02 |     ██     |
-21 |            |
+01 |            |
 ENDCHAR
-STARTCHAR U0514
+STARTCHAR U0514 CYRILLIC CAPITAL LETTER LHA
 22 |            |
 21 |            |
 20 |            |
@@ -30214,23 +30214,23 @@ STARTCHAR U0514
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0515
+STARTCHAR U0515 CYRILLIC SMALL LETTER LHA
 22 |            |
 21 |            |
-21 |            |
-21 |            |
-21 |            |
-21 |            |
 20 |            |
-19 |█████    ███|
-18 | ███      █ |
-17 | █ ██     █ |
-16 | █  ██   █  |
-14 | █   ██ █   |
-12 | █    ██    |
-11 | █    ███   |
-09 | █   █  ██  |
-08 |██  █    ██ |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 |█████    ███|
+14 | ███      █ |
+13 | █ ██     █ |
+12 | █  ██   █  |
+11 | █   ██ █   |
+10 | █    ██    |
+09 | █    ███   |
+08 | █   █  ██  |
+07 |██  █    ██ |
 06 |██ ██    ███|
 05 |            |
 04 |            |
@@ -30238,7 +30238,7 @@ STARTCHAR U0515
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0516
+STARTCHAR U0516 CYRILLIC CAPITAL LETTER RHA
 22 |            |
 21 |            |
 20 |            |
@@ -30262,7 +30262,7 @@ STARTCHAR U0516
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0517
+STARTCHAR U0517 CYRILLIC SMALL LETTER RHA
 22 |            |
 21 |            |
 20 |            |
@@ -30286,7 +30286,7 @@ STARTCHAR U0517
 02 |██          |
 01 |███         |
 ENDCHAR
-STARTCHAR U0518
+STARTCHAR U0518 CYRILLIC CAPITAL LETTER YAE
 22 |            |
 21 |            |
 20 |            |
@@ -30310,23 +30310,23 @@ STARTCHAR U0518
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0519
+STARTCHAR U0519 CYRILLIC SMALL LETTER YAE
 22 |            |
 21 |            |
-21 |            |
-21 |            |
-21 |            |
-21 |            |
 20 |            |
-19 | ██████ ███ |
-18 |██   ███   █|
-15 |█    ██    █|
-14 |█    ██    █|
-13 | ███████████|
-12 |   ████     |
-11 |  ██ ██     |
-10 | ██  ██    █|
-09 |██    ██   █|
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 | ██████ ███ |
+14 |██   ███   █|
+13 |█    ██    █|
+12 |█    ██    █|
+11 | ███████████|
+10 |   ████     |
+09 |  ██ ██     |
+08 | ██  ██    █|
+07 |██    ██   █|
 06 |█      ████ |
 05 |            |
 04 |            |
@@ -30334,7 +30334,7 @@ STARTCHAR U0519
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U051a
+STARTCHAR U051a CYRILLIC CAPITAL LETTER QA
 22 |            |
 21 |            |
 20 |            |
@@ -30358,7 +30358,7 @@ STARTCHAR U051a
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U051b
+STARTCHAR U051b CYRILLIC SMALL LETTER QA
 22 |            |
 21 |            |
 20 |            |
@@ -30382,7 +30382,7 @@ STARTCHAR U051b
 02 |         ██ |
 01 |        ████|
 ENDCHAR
-STARTCHAR U051c
+STARTCHAR U051c CYRILLIC CAPITAL LETTER WE
 22 |            |
 21 |            |
 20 |            |
@@ -30406,7 +30406,7 @@ STARTCHAR U051c
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U051d
+STARTCHAR U051d CYRILLIC SMALL LETTER WE
 22 |            |
 21 |            |
 20 |            |
@@ -30430,7 +30430,7 @@ STARTCHAR U051d
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U051e
+STARTCHAR U051e CYRILLIC CAPITAL LETTER ALEUT KA
 22 |            |
 21 |            |
 20 |            |
@@ -30454,22 +30454,22 @@ STARTCHAR U051e
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U051f
+STARTCHAR U051f CYRILLIC SMALL LETTER ALEUT KA
 22 |            |
 21 |            |
-21 |            |
-21 |            |
-21 |            |
-21 |            |
 20 |            |
-19 |███ █   ███ |
-18 | ██  █ ██   |
-16 | ██  ██     |
-15 | ██ ██ █    |
-14 | ████   █   |
-12 | ██ ██      |
-10 | ██  ██     |
-09 | ██   ██    |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 |███ █   ███ |
+14 | ██  █ ██   |
+13 | ██  ██     |
+12 | ██ ██ █    |
+11 | ████   █   |
+10 | ██ ██      |
+09 | ██  ██     |
+08 | ██   ██    |
 07 | ██    ██   |
 06 |████    ███ |
 05 |            |
@@ -30478,7 +30478,7 @@ STARTCHAR U051f
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0520
+STARTCHAR U0520 CYRILLIC CAPITAL LETTER EL WITH MIDDLE HOOK
 22 |            |
 21 |            |
 20 |            |
@@ -30502,22 +30502,22 @@ STARTCHAR U0520
 02 |       ████ |
 01 |        ██  |
 ENDCHAR
-STARTCHAR U0521
+STARTCHAR U0521 CYRILLIC SMALL LETTER EL WITH MIDDLE HOOK
 22 |            |
 21 |            |
 20 |            |
-20 |            |
-20 |            |
-20 |            |
-20 |            |
-19 | ████████   |
-18 |  █   ██    |
-17 |  █   ██    |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 | ████████   |
 14 |  █   ██    |
-13 |  █   ██ ██ |
-12 |  █   ███ ██|
-11 |  █   ██  ██|
-09 |█ █   ██  ██|
+13 |  █   ██    |
+12 |  █   ██    |
+11 |  █   ██ ██ |
+10 |  █   ███ ██|
+09 |  █   ██  ██|
+08 |█ █   ██  ██|
 07 |███   ██  ██|
 06 |██   ████ ██|
 05 |          ██|
@@ -30526,7 +30526,7 @@ STARTCHAR U0521
 02 |       ████ |
 01 |        ██  |
 ENDCHAR
-STARTCHAR U0522
+STARTCHAR U0522 CYRILLIC CAPITAL LETTER EN WITH MIDDLE HOOK
 22 |            |
 21 |            |
 20 |            |
@@ -30550,22 +30550,22 @@ STARTCHAR U0522
 02 |       ████ |
 01 |        ██  |
 ENDCHAR
-STARTCHAR U0523
+STARTCHAR U0523 CYRILLIC SMALL LETTER EN WITH MIDDLE HOOK
 22 |            |
 21 |            |
-21 |            |
-21 |            |
-21 |            |
-21 |            |
 20 |            |
-19 |████ ████   |
-18 | ██   ██    |
-15 | ██   ██    |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 |████ ████   |
 14 | ██   ██    |
-13 | ███████ ██ |
-12 | ██   ███ ██|
-11 | ██   ██  ██|
-10 | ██   ██  ██|
+13 | ██   ██    |
+12 | ██   ██    |
+11 | ███████ ██ |
+10 | ██   ███ ██|
+09 | ██   ██  ██|
+08 | ██   ██  ██|
 07 | ██   ██  ██|
 06 |████ ████ ██|
 05 |          ██|
@@ -30574,7 +30574,7 @@ STARTCHAR U0523
 02 |       ████ |
 01 |        ██  |
 ENDCHAR
-STARTCHAR U0524
+STARTCHAR U0524 CYRILLIC CAPITAL LETTER PE WITH DESCENDER
 22 |            |
 21 |            |
 20 |            |
@@ -30598,7 +30598,7 @@ STARTCHAR U0524
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0525
+STARTCHAR U0525 CYRILLIC SMALL LETTER PE WITH DESCENDER
 22 |            |
 21 |            |
 20 |            |
@@ -30622,7 +30622,7 @@ STARTCHAR U0525
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0526
+STARTCHAR U0526 CYRILLIC CAPITAL LETTER SHHA WITH DESCENDER
 22 |            |
 21 |            |
 20 |            |
@@ -30646,7 +30646,7 @@ STARTCHAR U0526
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0527
+STARTCHAR U0527 CYRILLIC SMALL LETTER SHHA WITH DESCENDER
 22 |            |
 21 |            |
 20 |            |
@@ -30670,7 +30670,7 @@ STARTCHAR U0527
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U0528
+STARTCHAR U0528 CYRILLIC CAPITAL LETTER EN WITH LEFT HOOK
 22 |            |
 21 |            |
 20 |            |
@@ -30690,25 +30690,25 @@ STARTCHAR U0528
 06 |   ██   ████|
 05 |   ██       |
 04 |█  ██       |
-04 |█  ██       |
-03 |████        |
-02 | ██         |
+03 |█  ██       |
+02 |████        |
+01 | ██         |
 ENDCHAR
-STARTCHAR U0529
-22 |            |
-22 |            |
-22 |            |
-22 |            |
+STARTCHAR U0529 CYRILLIC SMALL LETTER EN WITH LEFT HOOK
 22 |            |
 21 |            |
 20 |            |
-19 |  ████  ████|
-18 |   ██    ██ |
-15 |   ██    ██ |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 |  ████  ████|
 14 |   ██    ██ |
-13 |   ████████ |
+13 |   ██    ██ |
 12 |   ██    ██ |
-11 |   ██    ██ |
+11 |   ████████ |
+10 |   ██    ██ |
+09 |   ██    ██ |
 08 |   ██    ██ |
 07 |   ██    ██ |
 06 |   ██   ████|
@@ -30718,7 +30718,7 @@ STARTCHAR U0529
 02 | ██         |
 01 |            |
 ENDCHAR
-STARTCHAR U052a
+STARTCHAR U052a CYRILLIC CAPITAL LETTER DZZHE
 22 |            |
 21 |            |
 20 |            |
@@ -30742,22 +30742,22 @@ STARTCHAR U052a
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U052b
+STARTCHAR U052b CYRILLIC SMALL LETTER DZZHE
 22 |            |
 21 |            |
-21 |            |
-21 |            |
-21 |            |
-21 |            |
 20 |            |
-19 |█████ ███ ██|
-18 | █  █  █   █|
-16 | █  █  █  █ |
-15 | █  █  █ █  |
-14 | █  █  ███  |
-13 | █  █████   |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 |█████ ███ ██|
+14 | █  █  █   █|
+13 | █  █  █  █ |
 12 | █  █  █ █  |
-10 | █  █  █  █ |
+11 | █  █  ███  |
+10 | █  █████   |
+09 | █  █  █ █  |
+08 | █  █  █  █ |
 07 | █  █  █   █|
 06 |█████ ███ ██|
 05 |█   █       |
@@ -30766,7 +30766,7 @@ STARTCHAR U052b
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U052c
+STARTCHAR U052c CYRILLIC CAPITAL LETTER DCHE
 22 |            |
 21 |            |
 20 |            |
@@ -30790,21 +30790,21 @@ STARTCHAR U052c
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U052d
-22 |            |
-22 |            |
-22 |            |
-22 |            |
+STARTCHAR U052d CYRILLIC SMALL LETTER DCHE
 22 |            |
 21 |            |
 20 |            |
-19 | ████  ████ |
-18 |  ██   ███  |
-16 |  ██  █ ██  |
-14 |  ██ █  ██  |
-12 |  ██ █ ███  |
-11 |   ████ ██  |
-10 |   █    ██  |
+19 |            |
+18 |            |
+17 |            |
+16 |            |
+15 | ████  ████ |
+14 |  ██   ███  |
+13 |  ██  █ ██  |
+12 |  ██ █  ██  |
+11 |  ██ █ ███  |
+10 |   ████ ██  |
+09 |   █    ██  |
 08 |   █    ██  |
 07 |  █     ██  |
 06 | ██████████ |
@@ -30814,7 +30814,7 @@ STARTCHAR U052d
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U052e
+STARTCHAR U052e CYRILLIC CAPITAL LETTER EL WITH DESCENDER
 22 |            |
 21 |            |
 20 |            |
@@ -30838,7 +30838,7 @@ STARTCHAR U052e
 02 |            |
 01 |            |
 ENDCHAR
-STARTCHAR U052f
+STARTCHAR U052f CYRILLIC SMALL LETTER EL WITH DESCENDER
 22 |            |
 21 |            |
 20 |            |
