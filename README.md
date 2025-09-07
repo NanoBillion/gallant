@@ -10,7 +10,7 @@ extended with [glyphs](https://en.wikipedia.org/wiki/Glyph) for many
 
 The starting point was the `gallant.hex` file as found on
 [FreeBSD](https://www.freebsd.org/) 14, which contained 502 glyphs at
-the time. This project currently provides more than 4500 glyphs. Major
+the time. This project currently provides more than 4600 glyphs. Major
 additions:
 
 * Greek
@@ -52,7 +52,7 @@ none are present.
 |U+0300 - U+036F|[Combining Diacritical Marks](https://www.unicode.org/charts/PDF/U0300.pdf)            |Complete |
 |U+0370 - U+03FF|[Greek and Coptic](https://www.unicode.org/charts/PDF/U0370.pdf)                       |Complete |
 |U+0400 - U+04FF|[Cyrillic](https://www.unicode.org/charts/PDF/U0400.pdf)                               |Complete |
-|U+0500 - U+052F|[Cyrillic Supplement](https://www.unicode.org/charts/PDF/U0500.pdf)                    |TODO     |
+|U+0500 - U+052F|[Cyrillic Supplement](https://www.unicode.org/charts/PDF/U0500.pdf)                    |Complete |
 |U+0530 - U+1CFF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/U0530.pdf)           |TODO     |
 |U+1D00 - U+1D7F|[Phonetic Extensions](https://www.unicode.org/charts/PDF/U1D00.pdf)                    |TODO     |
 |U+1D80 - U+1DBF|[Phonetic Extensions Supplement](https://www.unicode.org/charts/PDF/U1D80.pdf)         |TODO     |

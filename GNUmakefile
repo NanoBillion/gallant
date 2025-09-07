@@ -47,7 +47,7 @@ gallant.pcf: gallant.bdf
 	bdftopcf -o $@ $^
 
 gallant.pcf.gz: gallant.pcf
-	gzip -cv9 $^ > $@
+	gzip -cnv9 $^ > $@
 
 gallant.src: hextosrc
 	./hextosrc < gallant.hex > $@
@@ -64,7 +64,7 @@ gallant.ttf: gallant.bdf
 # make 12x22.fnt.gz: build the font the FreeBSD loader can use.
 #
 12x22.fnt.gz: gallant.fnt
-	gzip -cv9 $^ > $@
+	gzip -cnv9 $^ > $@
 
 # make install-maintainer: install files on maintainer's system.
 #
@@ -93,6 +93,7 @@ images: gallant.hex lscp txttopng
 	'0300  0370 Combining-Diacritical-Marks' \
 	'0370  0400 Greek-and-Coptic' \
 	'0400  0500 Cyrillic' \
+	'0500  0530 Cyrillic Supplement' \
 	'1E00  1F00 Latin-Extended-Additional' \
 	'1F00  2000 Greek-Extended' \
 	'2000  2070 General-Punctuation' \
