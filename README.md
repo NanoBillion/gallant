@@ -398,4 +398,3 @@ need to render them. This is the mapping:
 
 * Describe how to contribute.
 * Commit 12x22 for loader use to FreeBSD once code slush is over.
-* Create a FreeBSD Port `x11-fonts/gallant` with `gallant.pcf.gz` for X11.
