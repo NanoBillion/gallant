@@ -349,6 +349,18 @@ The
 makes it likely it was acquired between 4.3BSD and
 [4.4BSD](https://en.wikipedia.org/wiki/History_of_the_Berkeley_Software_Distribution#4.4BSD_and_descendants).
 
+After asking in the usenet newsgroup comp.sys.sun.hardware&emdash;16
+years after Sun was acquired by Oracle people *do* lurk
+there&emdash;some helpful soul reached out to me with links to [the
+openboot gallant
+font](https://github.com/openbios/openboot/blob/master/obp/pkg/termemu/gallant.fth)
+and a PDF titled [From the Valley of Heart's Delight to the Silicon
+Valley: A Study of Stanford University's Role in the
+Transformation](http://i.stanford.edu/pub/cstr/reports/cs/tr/97/1579/CS-TR-97-1579.pdf)
+by Carolyn Tajnai which in Appendix A reveals as the designer of the
+Gallant font no one less than Stanford professor Vaughan Pratt, who also
+designed the iconic Sun logo.
+
 ## Remarks
 
 Codepoints 0 through 31 contain glyphs of the VT100 line-drawing
