@@ -361,6 +361,17 @@ by Carolyn Tajnai which in Appendix A reveals as the designer of the
 Gallant font no one less than Stanford professor Vaughan Pratt, who also
 designed the iconic Sun logo.
 
+In an [article in comp.sys.sun.hardware (Oct 11
+1995)](https://groups.google.com/g/comp.sys.sun.hardware/c/DgC4DFa4uro/m/NOZNtIyy9XIJ)
+Vaughan Pratt provides this anecdote how Gallant came to be:
+
+> [...] That big font in the PROM monitor, I did that in April 1982 too,
+> started out doing it by hand on graph paper until I realized I'd finish
+> a lot sooner if I wrote a font editor first (pretty trivial editor,
+> involved about three hours work but it saved several days of messing
+> with graph paper). I called the font Gallant because it sounded like a
+> font name.
+
 ## Remarks
 
 Codepoints 0 through 31 contain glyphs of the VT100 line-drawing
