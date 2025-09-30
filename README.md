@@ -361,6 +361,8 @@ by Carolyn Tajnai which in Appendix A reveals as the designer of the
 Gallant font no one less than Stanford professor Vaughan Pratt, who also
 designed the iconic Sun logo.
 
+![Sun Microsystems Logo](Images/logo.svg)
+
 In an [article in comp.sys.sun.hardware (Oct 11
 1995)](https://groups.google.com/g/comp.sys.sun.hardware/c/DgC4DFa4uro/m/NOZNtIyy9XIJ)
 Vaughan Pratt provides this anecdote how Gallant came to be:

@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<svg id='logo' width='112' height='112' viewBox='-56 -56 112 112' xmlns="http://www.w3.org/2000/svg">
+<defs>
+<path id='U' d='M10 1 A9 9 0 0 0 10 19 L39 19 L39 11 L10 11 L10 9 L39 9 L39 1 Z'/>
+<g id='S'><use href='#U'/><use href='#U' transform='matrix(-1 0 0 -1 40 40)'/></g>
+</defs>
+<g fill='#6688aa'>
+<use href='#S' transform='rotate(135)'  />
+<use href='#S' transform='rotate(45)'   />
+<use href='#S' transform='rotate(-45)'  />
+<use href='#S' transform='rotate(-135)' />
+</g>
+</svg>
