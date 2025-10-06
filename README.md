@@ -295,7 +295,7 @@ The row numbers and Unicode names are ignored by `srctohex`, and
 inserted/restored by `hextosrc`. This allows to freely add and delete
 pixel rows without tedious row renumbering or knowing the Unicode name.
 
-The utilites are complemented by [`hextobdf`](hextobdf.c) to generate
+The utilities are complemented by [`hextobdf`](hextobdf.c) to generate
 `gallant.bdf`. From there, other tools can create additional font formats.
 
 ## History
@@ -349,10 +349,10 @@ The
 makes it likely it was acquired between 4.3BSD and
 [4.4BSD](https://en.wikipedia.org/wiki/History_of_the_Berkeley_Software_Distribution#4.4BSD_and_descendants).
 
-After asking in the usenet newsgroup comp.sys.sun.hardware&mdash;16
+After asking in the Usenet newsgroup comp.sys.sun.hardware&mdash;16
 years after Sun was acquired by Oracle people *do* lurk
 there&mdash;some helpful soul reached out to me with links to [the
-openboot gallant
+OpenBoot gallant
 font](https://github.com/openbios/openboot/blob/master/obp/pkg/termemu/gallant.fth)
 and a PDF titled [From the Valley of Heart's Delight to the Silicon
 Valley: A Study of Stanford University's Role in the
@@ -376,13 +376,14 @@ Vaughan Pratt provides this anecdote how Gallant came to be:
 
 ## Remarks
 
-Codepoints 0 through 31 contain glyphs of the VT100 line-drawing
-character set othwise known as the [DEC Special Character and Line
-Drawing Set](https://en.wikipedia.org/wiki/DEC_Special_Graphics). They
-were left unmodified to not change their intended use by applications
-that expect them there. Each of the special characters also has an
-"official" Unicode codepoint. Contemporary applications should never
-need to render them. This is the mapping:
+Codepoints 0 through 31 contain glyphs of the
+[VT100](https://en.wikipedia.org/wiki/VT100) line-drawing character set
+otherwise known as the [DEC Special Character and Line Drawing
+Set](https://en.wikipedia.org/wiki/DEC_Special_Graphics). They were left
+unmodified to not change their intended use by applications that expect
+them there. Each of the special characters also has an "official"
+Unicode codepoint. Contemporary applications should never need to render
+them. This is the mapping:
 
 |Special |Official |Name |
 |--------|---------|---------|
