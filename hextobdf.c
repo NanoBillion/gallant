@@ -79,7 +79,7 @@ void output_bdf_preamble(void) {
     puts("STARTFONT 2.1");
     puts("FONT -sun-gallant-medium-r-normal--22-220-75-75-C-120-ISO10646-1");
     puts("SIZE 22 75 75");
-    puts("FONTBOUNDINGBOX 22 12 0 -5");
+    puts("FONTBOUNDINGBOX 12 22 0 -5");
     puts("STARTPROPERTIES 18");
     puts("FONTNAME_REGISTRY \"\"");
     puts("FOUNDRY \"Sun\"");
