@@ -128,6 +128,7 @@ images: gallant.hex lscp txttopng
 	  ./txttopng -f "$<" -t "$$name.txt" -p "Images/$$first-$$name.png"; \
 	  ./txttopng -f "$<" -t "$$name.txt" -p "Images/$$first-$$name-Inverted.png" -i; \
 	done
+	./txttopng -f "$<" -t sample.txt -p Images/sample.png -i
 
 # make README.html: turn markdown into HTML.
 #

@@ -1,5 +1,7 @@
 # Gallant Font
 
+![Gallant Sample Text](Images/sample.png)
+
 This is the Gallant font, as used by the [Sun
 Microsystems](https://en.wikipedia.org/wiki/Sun_Microsystems)
 [SPARCstation](https://en.wikipedia.org/wiki/SPARCstation) console,
