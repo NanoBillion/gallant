@@ -126,9 +126,7 @@ need to build anything. See "How do I load/use this font?" below.
 If you want to modify or add glyphs, edit `gallant.src` and then `make`.
 
 You will obviously need GNU make (FreeBSD: `devel/gmake`). To build the
-TrueType `gallant.ttf` you will need FontForge (`print/fontforge`). To
-build images with `txttopng` the PNG library is required
-(`graphics/png`).
+TrueType `gallant.ttf` and web formats (`gallant.woff`, `gallant.woff2`), you will need Python 3 and the `fonttools` library (along with `brotli` for WOFF2 format compression). To build images with `txttopng` the PNG library is required (`graphics/png`).
 
 ## How do I load/use this font?
 
@@ -227,22 +225,16 @@ drawing characters, where there will be vertical gaps. The same applies
 to all glyphs that connect to glyphs above and below, such as large
 parentheses, braces, brackets, integrals, etc.
 
-### The TrueType gallant.ttf does not work on Windows. What's going on?
+### How does the TrueType gallant.ttf work on Windows?
 
-The symptom is that Windows displays a popup along "gallant.ttf is not a
-valid font file" when you want to copy `gallant.ttf` to
-`C:\Windows\Fonts` or install it some other way.
+Historically, Windows GDI rejected the generated `gallant.ttf` as an "invalid font file." This was due to several strict validation rules enforced by the Windows font subsystem:
+1. Windows requires a scalable outline font; bitmap-only TrueType/OpenType containers are rejected.
+2. The `cmap` (character map) table must not map the reserved Unicode non-characters `U+FFFE` or `U+FFFF`.
+3. Standard GID 1 (`.null`) and GID 2 (`nonmarkingreturn`) must be empty control glyphs (0 contours).
+4. The `OS/2` table must define non-zero values for subscript, superscript, and strikeout metrics.
+5. The `OS/2` `fsSelection` field must have the `REGULAR` bit set (value `64`) to match the style names.
 
-There seem to be at least two issues.
-
-1. I'm told Windows considers a font invalid if it does not contain
-   a certain set of six Hiragana glyphs. I have added them to the BDF
-   but this is not enough to solve the "gallant.ttf is not a valid
-   font file" popup.
-2. Windows wants a scalable outline font. A bitmap-only TrueType font
-   file is invalid. I have yet to find an automated way, preferably
-   with `fontforge` script commands, to add an outline font with
-   a square pixel for each pixel.
+This project now uses a Python script [`build_font.py`](build_font.py) to compile the font. It parses the raw ASCII source [`gallant.src`](gallant.src) directly, traces each set pixel as a vector block (with horizontal run-length optimization to minimize contours), and applies the necessary TrueType tables and metrics so the font installs and loads natively on Windows, macOS, Linux, and the web (generating `gallant.ttf`, `gallant.woff`, and `gallant.woff2`).
 
 ### Is there a gallant.fon for Windows?
 

@@ -27,6 +27,8 @@ TOP_LEVEL_TARGETS = gallant.bdf
 TOP_LEVEL_TARGETS += gallant.fnt
 TOP_LEVEL_TARGETS += gallant.pcf.gz
 TOP_LEVEL_TARGETS += gallant.ttf
+TOP_LEVEL_TARGETS += gallant.woff
+TOP_LEVEL_TARGETS += gallant.woff2
 TOP_LEVEL_TARGETS += 12x22.fnt.gz
 TOP_LEVEL_TARGETS += images
 TOP_LEVEL_TARGETS += README.html
@@ -52,14 +54,8 @@ gallant.pcf.gz: gallant.pcf
 gallant.src: hextosrc
 	./hextosrc < gallant.hex > $@
 
-gallant.ttf: gallant.bdf
-	@printf '%s\n' \
-	'Open("$^")' \
-	'SetFontNames("Gallant12", "Gallant12", "Gallant12")' \
-	'Generate("$@", "ttf")' \
-	'Quit()' | \
-	SOURCE_DATE_EPOCH=$(TIMESTAMP) fontforge -lang=ff -script -
-	fontlint $@
+gallant.ttf gallant.woff gallant.woff2: gallant.hex build_font.py
+	python build_font.py
 
 # make 12x22.fnt.gz: build the font the FreeBSD loader can use.
 #
@@ -237,7 +233,7 @@ tools: $(TOOLS)
 .PHONY: clean
 clean:
 	rm -f *.i *.o *.gz $(TOOLS)
-	rm -f gallant.bdf gallant.fnt gallant.hex gallant.pcf gallant.ttf
+	rm -f gallant.bdf gallant.fnt gallant.hex gallant.pcf gallant.ttf gallant.woff gallant.woff2
 
 #------------------------------------------------------------------------------#
 #                                     Lint                                     #
