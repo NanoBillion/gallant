@@ -26,6 +26,10 @@
  *    FreeBSD:
  *    Install the devel/libunistring port.
  *
+ *    The uninameslist and unistring libraries
+ *    FreeBSD:
+ *    Install the textproc/libuninameslist port.
+ *
  * COMPILATION
  *    FreeBSD:
  *    cc -o lscp -I /usr/local/include -L /usr/local/lib -luninameslist -lunistring lscp.c
