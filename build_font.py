@@ -85,56 +85,118 @@ def main():
     glyphs = {}
     metrics = {}
 
-    # Define .notdef glyph: a simple hollow rectangle
-    pen = TTGlyphPen(None)
-    # Outer box (clockwise)
-    pen.moveTo((0, -320))
-    pen.lineTo((0, 1088))
-    pen.lineTo((768, 1088))
-    pen.lineTo((768, -320))
-    pen.closePath()
-    # Inner box (counter-clockwise to carve it out)
-    pen.moveTo((64, -256))
-    pen.lineTo((704, -256))
-    pen.lineTo((704, 1024))
-    pen.lineTo((64, 1024))
-    pen.closePath()
-    glyphs[".notdef"] = pen.glyph()
-    metrics[".notdef"] = (768, 0)
-
-    # Helper function to render pixel lines into TTF outlines
+    # Helper function to render pixel lines into TTF outlines using boundary-tracing
     def draw_glyph_outline(rows, width_px):
+        active_pixels = set()
+        for r in range(cell_height_px):
+            row_str = rows[r]
+            for c in range(width_px):
+                if row_str[c] == "█":
+                    active_pixels.add((r, c))
+
+        # Collect directed boundary edges (clockwise for active pixel blocks)
+        edges = []
+        for r, c in active_pixels:
+            y_c = r - descent_px
+            # Bottom edge: (c, y_c) -> (c + 1, y_c)
+            if (r - 1, c) not in active_pixels:
+                edges.append(((c, y_c), (c + 1, y_c)))
+            # Right edge: (c + 1, y_c) -> (c + 1, y_c + 1)
+            if (r, c + 1) not in active_pixels:
+                edges.append(((c + 1, y_c), (c + 1, y_c + 1)))
+            # Top edge: (c + 1, y_c + 1) -> (c, y_c + 1)
+            if (r + 1, c) not in active_pixels:
+                edges.append(((c + 1, y_c + 1), (c, y_c + 1)))
+            # Left edge: (c, y_c + 1) -> (c, y_c)
+            if (r, c - 1) not in active_pixels:
+                edges.append(((c, y_c + 1), (c, y_c)))
+
+        # Chain edges into loops
+        adj = {}
+        for start, end in edges:
+            adj.setdefault(start, []).append(end)
+
+        loops = []
+        while adj:
+            start_v = next(iter(adj.keys()))
+            curr_v = start_v
+            loop = [curr_v]
+            while True:
+                if curr_v not in adj:
+                    break
+                next_options = adj[curr_v]
+                next_v = next_options.pop()
+                if not next_options:
+                    del adj[curr_v]
+                if next_v == start_v:
+                    break
+                loop.append(next_v)
+                curr_v = next_v
+            loops.append(loop)
+
+        # Simplify loops and scale coordinates
         pen = TTGlyphPen(None)
-        for pixel_row in range(cell_height_px):
-            row_str = rows[pixel_row]
-            runs = []
-            in_run = False
-            start_col = 0
-            for col in range(width_px):
-                is_set = (row_str[col] == "█")
-                if is_set:
-                    if not in_run:
-                        in_run = True
-                        start_col = col
-                else:
-                    if in_run:
-                        runs.append((start_col, col - 1))
-                        in_run = False
-            if in_run:
-                runs.append((start_col, width_px - 1))
-                
-            for c_start, c_end in runs:
-                x_min = c_start * pixel_size
-                x_max = (c_end + 1) * pixel_size
-                y_min = (pixel_row - descent_px) * pixel_size
-                y_max = (pixel_row - descent_px + 1) * pixel_size
-                
-                pen.moveTo((x_min, y_min))
-                pen.lineTo((x_min, y_max))
-                pen.lineTo((x_max, y_max))
-                pen.lineTo((x_max, y_min))
-                pen.closePath()
+        for loop in loops:
+            # Simplify collinear points
+            simplified = []
+            n = len(loop)
+            if n >= 3:
+                for i in range(n):
+                    prev_v = loop[i - 1]
+                    curr_v = loop[i]
+                    next_v = loop[(i + 1) % n]
+                    # Check if collinear on grid axes
+                    if (prev_v[0] == curr_v[0] == next_v[0]) or (prev_v[1] == curr_v[1] == next_v[1]):
+                        continue
+                    simplified.append(curr_v)
+            else:
+                simplified = loop
+
+            if not simplified:
+                continue
+
+            # Scale to font units and draw
+            start_pt = (simplified[0][0] * pixel_size, simplified[0][1] * pixel_size)
+            pen.moveTo(start_pt)
+            for pt in simplified[1:]:
+                scaled_pt = (pt[0] * pixel_size, pt[1] * pixel_size)
+                pen.lineTo(scaled_pt)
+            pen.closePath()
+
         return pen.glyph()
+
+    # Define .notdef glyph using U+FFFD outline if available, otherwise fallback to hollow box
+    if 0xFFFD in glyphs_pixels:
+        glyphs[".notdef"] = draw_glyph_outline(glyphs_pixels[0xFFFD], len(glyphs_pixels[0xFFFD][0]))
+        # Find left side bearing for .notdef
+        rows = glyphs_pixels[0xFFFD]
+        width_px = len(rows[0])
+        left_side_bearing = width_px
+        for r in rows:
+            lsb = width_px - len(r.lstrip(' '))
+            if lsb < left_side_bearing:
+                left_side_bearing = lsb
+        if left_side_bearing == width_px:
+            left_side_bearing = 0
+        metrics[".notdef"] = (width_px * pixel_size, left_side_bearing * pixel_size)
+    else:
+        # Define .notdef glyph: a simple hollow rectangle
+        pen = TTGlyphPen(None)
+        # Outer box (clockwise)
+        pen.moveTo((0, -320))
+        pen.lineTo((0, 1088))
+        pen.lineTo((768, 1088))
+        pen.lineTo((768, -320))
+        pen.closePath()
+        # Inner box (counter-clockwise to carve it out)
+        pen.moveTo((64, -256))
+        pen.lineTo((704, -256))
+        pen.lineTo((704, 1024))
+        pen.lineTo((64, 1024))
+        pen.closePath()
+        glyphs[".notdef"] = pen.glyph()
+        metrics[".notdef"] = (768, 0)
+
 
     # Draw the special first 4 glyphs (forcing .null and nonmarkingreturn to be empty)
     # .null (U+0000) - must be empty
@@ -156,8 +218,16 @@ def main():
         name = cmap[cp]
         width_px = len(rows[0])
         advance_width = width_px * pixel_size
-        metrics[name] = (advance_width, 0)
+        left_side_bearing = width_px
+        for r in rows:
+            lsb = width_px - len(r.lstrip(' '))
+            if lsb < left_side_bearing:
+                left_side_bearing = lsb
+        if left_side_bearing == width_px:
+            left_side_bearing = 0
+        metrics[name] = (advance_width, left_side_bearing * pixel_size)
         glyphs[name] = draw_glyph_outline(rows, width_px)
+    
 
     print("Setting up glyf table...")
     fb.setupGlyf(glyphs)
