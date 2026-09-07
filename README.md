@@ -124,9 +124,24 @@ If you just want to use one of the `gallant.*` font files, you don't
 need to build anything. See "How do I load/use this font?" below.
 
 If you want to modify or add glyphs, edit `gallant.src` and then `make`.
+The GNUmakefile and C programs need a number of programs, headers and
+libraries which you may need to install first. These are
 
-You will obviously need GNU make (FreeBSD: `devel/gmake`). To build the
-TrueType `gallant.ttf` and web formats (`gallant.woff`, `gallant.woff2`), you will need Python 3 and the `fonttools` library (along with `brotli` for WOFF2 format compression). To build images with `txttopng` the PNG library is required (`graphics/png`).
+|What                     |FreeBSD port/pkg   |Debian/Ubuntu Package    |
+|------------------------ |-------------      |------------------------ |
+|GNU make                 |devel/gmake        |make                     |
+|Python 3                 |lang/python3       |python3-minimal          |
+|Python FontTools         |print/py-fonttools |python3-fonttools        |
+|Header `<uniname.h>`     |devel/libunistring |libunistring-dev         |
+|Library `unistring`      |devel/libunistring |libunistring-dev         |
+|Library `uninameslist`   |textproc/libuninameslist |libuninameslist-dev  |
+|Header `<png.h>`         |graphics/png       |libpng-dev               |
+|Library `png`            |graphics/png       |libpng-dev               |
+
+To build the TrueType `gallant.ttf` and web formats (`gallant.woff`,
+`gallant.woff2`), you will need Python 3 and the `fonttools` library
+(along with `brotli` for WOFF2 format compression). To build images with
+`txttopng` the PNG library is required (`graphics/png`).
 
 ## How do I load/use this font?
 
@@ -206,40 +221,38 @@ the appropriate format, I'm willing to add it to this project.
 
 ### The TrueType gallant.ttf
 
-The `gallant.ttf` file is a conversion from BDF to TTF using
-[FontForge](https://fontforge.org/en-US/). (See the
-[GNUmakefile](GNUmakefile) for the scripted command sequence.) A TTF
-font can contain a raster font at its design size; sometimes this is
-called a *bit strike*. On systems supporting TrueType you may be able to
-use Gallant. The font family name is `Gallant12` to disambiguate it from
-`gallant` and to indicate that the design size is 12. Usage example with
-xterm:
+Windows GDI rejected the generated `gallant.ttf` prior to this version as an
+"invalid font file." This was due to several strict validation rules enforced
+by the Windows font subsystem:
+1. Windows requires a scalable outline font;
+   bitmap-only TrueType/OpenType containers are rejected.
+2. The `cmap` (character map) table must not map the reserved
+   Unicode non-characters `U+FFFE` or `U+FFFF`.
+3. Standard GID 1 (`.null`) and GID 2 (`nonmarkingreturn`) must be
+   empty control glyphs (0 contours).
+4. The `OS/2` table must define non-zero values for subscript,
+   superscript, and strikeout metrics.
+5. The `OS/2` `fsSelection` field must have the `REGULAR` bit set
+   (value `64`) to match the style names.
 
+This project now uses a Python script [`srctottf.py`](srctottf.py) to
+create the font. It parses the [`gallant.src`](gallant.src) directly,
+traces each pixel as a vector block (with collinear run-length
+optimization to minimize contours), and applies the necessary TrueType
+tables and metrics so the font installs and loads natively on Windows,
+macOS, Linux, and the web (generating `gallant.ttf`, `gallant.woff`, and
+`gallant.woff2`).
+
+The font family name is *Gallant Raster Term*, to
+1. disambiguate it from the artsy *Galant Regular* font,
+2. emphasize it is a raster font that shows blocky pixels at large sizes,
+3. is monospaced and perfect to use in terminals.
+
+Once installed, you can use the TrueType version of Gallant under X11
+with, e.g.
 ```
-xterm -fa Gallant12:size=12
+xterm -fa "Gallant Raster Term:size=15"
 ```
-
-You *can* use a larger `size` value, but that will only affect the line
-spacing, not the glyph size. Visually this is most apparent in the box
-drawing characters, where there will be vertical gaps. The same applies
-to all glyphs that connect to glyphs above and below, such as large
-parentheses, braces, brackets, integrals, etc.
-
-### How does the TrueType gallant.ttf work on Windows?
-
-Historically, Windows GDI rejected the generated `gallant.ttf` as an "invalid font file." This was due to several strict validation rules enforced by the Windows font subsystem:
-1. Windows requires a scalable outline font; bitmap-only TrueType/OpenType containers are rejected.
-2. The `cmap` (character map) table must not map the reserved Unicode non-characters `U+FFFE` or `U+FFFF`.
-3. Standard GID 1 (`.null`) and GID 2 (`nonmarkingreturn`) must be empty control glyphs (0 contours).
-4. The `OS/2` table must define non-zero values for subscript, superscript, and strikeout metrics.
-5. The `OS/2` `fsSelection` field must have the `REGULAR` bit set (value `64`) to match the style names.
-
-This project now uses a Python script [`build_font.py`](build_font.py) to compile the font. It parses the raw ASCII source [`gallant.src`](gallant.src) directly, traces each set pixel as a vector block (with horizontal run-length optimization to minimize contours), and applies the necessary TrueType tables and metrics so the font installs and loads natively on Windows, macOS, Linux, and the web (generating `gallant.ttf`, `gallant.woff`, and `gallant.woff2`).
-
-### Is there a gallant.fon for Windows?
-
-No. The `fon` file format, dated as it is, does not support Unicode and
-would only contain 256 glyphs.
 
 ## Who are you?
 

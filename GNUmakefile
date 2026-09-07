@@ -54,8 +54,8 @@ gallant.pcf.gz: gallant.pcf
 gallant.src: hextosrc
 	./hextosrc < gallant.hex > $@
 
-gallant.ttf gallant.woff gallant.woff2: gallant.src build_font.py
-	python build_font.py
+gallant.ttf gallant.woff gallant.woff2: gallant.src srctottf.py
+	python srctottf.py
 
 # make 12x22.fnt.gz: build the font the FreeBSD loader can use.
 #
