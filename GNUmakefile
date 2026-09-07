@@ -54,7 +54,7 @@ gallant.pcf.gz: gallant.pcf
 gallant.src: hextosrc
 	./hextosrc < gallant.hex > $@
 
-gallant.ttf gallant.woff gallant.woff2: gallant.hex build_font.py
+gallant.ttf gallant.woff gallant.woff2: gallant.src build_font.py
 	python build_font.py
 
 # make 12x22.fnt.gz: build the font the FreeBSD loader can use.
@@ -233,7 +233,8 @@ tools: $(TOOLS)
 .PHONY: clean
 clean:
 	rm -f *.i *.o *.gz $(TOOLS)
-	rm -f gallant.bdf gallant.fnt gallant.hex gallant.pcf gallant.ttf gallant.woff gallant.woff2
+	rm -f gallant.bdf gallant.fnt gallant.hex gallant.pcf
+	rm -f gallant.ttf gallant.woff gallant.woff2
 
 #------------------------------------------------------------------------------#
 #                                     Lint                                     #
