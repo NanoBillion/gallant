@@ -254,6 +254,11 @@ with, e.g.
 xterm -fa "Gallant Raster Term:size=15"
 ```
 
+## How can I use the gallant.woff and gallant.woff2 web fonts?
+
+Have a look at [`gallant.html`](gallant.html) to see a SPARCstation
+boot. Examine the style element, it is pretty straightforward.
+
 ## Who are you?
 
 I'm an ex-Sun Microsystems software engineer who had a stint in the

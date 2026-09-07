@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallant Font Demo</title>
+
+  <style>
+    @font-face {
+      font-family: "Gallant Raster Term";
+      src:
+        url("gallant.woff2") format("woff2"),
+        url("gallant.woff")  format("woff");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body {
+      margin: 0;
+      padding: 3px;
+      font-family: "Gallant Raster Term", monospace;
+      font-size: 1em;
+    }
+
+    code, pre {
+      font-family: "Gallant Raster Term", monospace;
+    }
+
+    #sunlogo {
+      position: absolute;
+      top:  15px;
+      padding: 3px;
+    }
+
+  </style>
+</head>
+<body>
+<img src="sunlogo.svg" alt="SUN Logo" id="sunlogo" width="40px"/>
+<div>
+<pre>            SPARCstation 5, Keyboard Present
+            ROM Rev. 2.15, 256 MB memory installed, Serial #12345678
+            Ethernet address 8:0:20:11:22:33, Host ID: abcd1234
+
+
+Boot device: /sbus/esp@0,800000/sd@4,0   File and args:
+Boot: vmunix
+Size: 868352+2319136+75288 bytes
+SunOS Release 4.1.4 (GENERIC) #0 Fri Oct 14 12:23:34 MET 1994
+Copyright (c) 1983-1993, Sun Microsystems, Inc.
+cpu = SUNW,SPARCstation-5
+mod0 = FMI,MB86723 (mid = 0)
+mem = 261836K (0xffb3000)
+avail mem = 253947904
+entering uniprocessor mode
+Ethernet address = 8:0:20:11:22:33
+espdma0 at  SBus slot 5 0x8400000
+esp0 at  SBus slot 5 0x8800000 pri 4 (onboard)
+sd3:    non-CCS device found at target 0 lun 0 on esp0
+sd3 at esp0 target 0 lun 0
+sd3: &lt;SUN2.1G cyl 2733 alt 2 hd 19 sec 80&gt;
+Warning! System Clock freq out of range!
+ledma0 at  SBus slot 5 0x8400010
+le0 at  SBus slot 5 0x8c00000 pri 6 (onboard)
+SUNW,CS42310 at  SBus slot 4 0xc000000 pri 9 (sbus level 5)
+SUNW,tcx0 at SBus slot 3 0x800000
+and SBus slot 3 0x2000000
+and SBus slot 3 0x4000000
+and SBus slot 3 0x6000000
+and SBus slot 3 0xa000000
+and SBus slot 3 0xc000000
+and SBus slot 3 0xe000000
+and SBus slot 3 0x701000
+and SBus slot 3 0x200000
+and SBus slot 3 0x300000
+and SBus slot 3 0x0
+and SBus slot 3 0x240000
+and SBus slot 3 0x280000 pri 9 (sbus level 5)
+tcx0: revision 0, screen 1024x768
+zs0 at  SBus slot 5 0x1100000 pri 12 (onboard)
+zs1 at  SBus slot 5 0x1000000 pri 12 (onboard)
+SUNW,fdtwo0 at  SBus slot 5 0x1400000 pri 11 (onboard)
+fdintr: nobody sleeping
+root on sd3a fstype 4.2
+swap on sd3b fstype spec size 98800K
+dump on sd3b fstype spec size 98788K
+le0: AUI Ethernet
+
+hal9000 login:
+</pre>
+</div>
+</body>
+</html>
