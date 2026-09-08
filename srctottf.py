@@ -1,10 +1,20 @@
 #!/usr/bin/env python
 """
-Convert gallant.src to gallant.ttf (a TrueType font)
+NAME
+    srctottf.py - convert gallant.src to gallant.ttf plus .woff and .woff2.
+SYNOPSIS
+    python srctottf.py
+DESCRIPTION
+    Reads gallant.src and writes gallant.ttf, gallant.woff and gallant.woff2.
+    Also creates an SVG drawing of each glyph's contours in svg/Uxxxx.svg
+    (which is helpful for debugging the contour tracing algorithm.)
 """
 
+import os
 import sys
 import random
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from fontTools.fontBuilder import FontBuilder
 from fontTools.pens.ttGlyphPen import TTGlyphPen
 from fontTools.ttLib.tables._g_a_s_p import table__g_a_s_p
@@ -183,10 +193,15 @@ def colored_contours(contour, scale):
 
 def create_true_type():
     """
-    Create TrueType Font.  Save result in gallant.ttf.
-    @param   cpaths      List of oriented closed paths.
+    Create TrueType Font. Save result in gallant.{ttf,woff,woff2}.
     """
     fb = FontBuilder(unitsPerEm=2048, isTTF=True)
+    fb.font.recalcTimestamp = False
+    # Birth of Sun Microsystems :-)
+    date = datetime(1982, 2, 24, tzinfo=ZoneInfo("America/Los_Angeles"))
+    date = int(date.timestamp()) + 2082844800
+    fb.font["head"].created  = date
+    fb.font["head"].modified = date
 
     # Glyph Order. See "Recommendations for OpenType Fonts"
     # https://learn.microsoft.com/en-us/typography/opentype/otspec160/recom
@@ -236,12 +251,10 @@ def create_true_type():
     fb.setupCharacterMap(cmap)
     fb.setupHorizontalMetrics(metrics)
     fb.setupHorizontalHeader(ascent=TT_ASCENT, descent=TT_DESCENT)
+    fb.setupPost(keepGlyphNames=False, isFixedPitch=1)
     setup_names(fb)
     setup_os2(fb)
-    fb.font["gasp"] = gasp_table()
-    fb.setupPost(keepGlyphNames=False)
-    #fb.setupDummyDSIG()
-    fb.font["post"].isFixedPitch = 1
+    setup_gasp(fb)
     save_fonts(fb)
 
 def setup_hollow(glyphs, metrics, namelist):
@@ -321,10 +334,11 @@ def setup_os2(fb):
     @note    https://learn.microsoft.com/en-us/typography/opentype/otspec182/os2
     """
     fb.setupOS2(
-        sTypoAscender  =  TT_ASCENT,
-        sTypoDescender =  TT_DESCENT,
-        usWinAscent    =  TT_ASCENT,
-        usWinDescent   = -TT_DESCENT,
+        achVendID      = "SUNW",
+        sTypoAscender  = TT_ASCENT,
+        sTypoDescender = TT_DESCENT,
+        usWinAscent    = TT_ASCENT,
+        usWinDescent   = TT_DESCENT * -1,
         sCapHeight     = TT_PIXEL_SIZE * 14,  # Height of "H".
         sxHeight       = TT_PIXEL_SIZE * 10,  # Height of "x".
         # Magic numbers. Can these be computed?
@@ -349,12 +363,12 @@ def setup_os2(fb):
     fb.font["OS/2"].recalcUnicodeRanges(fb.font)
     fb.font["OS/2"].updateFirstAndLastCharIndex(fb.font)
     # Remove Katakana bit.
-    # This makes the Windows font icon show "Abg" instead of Asian glyphs.
+    # This makes the Windows font file icon show "Abg" instead of Asian glyphs.
     fb.font["OS/2"].ulUnicodeRange2 &= ~(1 << 18)
 
-def gasp_table():
+def setup_gasp(fb):
     """
-    @return  The gasp table.
+    Setup the gasp table.
     """
     gasp = table__g_a_s_p()
     gasp.version = 1
@@ -363,12 +377,13 @@ def gasp_table():
         16:    0x000A, # Up to 16 ppem: grid-fit and symmetric smoothing.
         65535: 0x000F  # Above 16 ppem: all flags enabled.
     }
-    return gasp
+    fb.font["gasp"] = gasp
 
 def create_svg_files():
     """
     Create the svg/Uxxxx.svg files.
     """
+    os.makedirs("svg", exist_ok=True)
     for codepoint, glyph in GLYPH.items():
         with open(f"svg/U{codepoint:04x}.svg", "w", encoding="utf-8") as file:
             file.write(create_svg(glyph["contour"], codepoint, scale=16))
