@@ -9,6 +9,10 @@ export LC_ALL = C.UTF-8
 
 .DEFAULT_GOAL = all
 
+#   Operating system name: FreeBSD, Linux, ...
+#
+UNAME_S := $(shell uname -s)
+
 #   My helper binaries.
 #
 TOOLS = lscp hextobdf hextosrc srctohex txttopng
@@ -24,14 +28,16 @@ PREPROCESSED = $(addsuffix .i,$(TOOLS))
 #   What to build by default.
 #
 TOP_LEVEL_TARGETS = gallant.bdf
-TOP_LEVEL_TARGETS += gallant.fnt
 TOP_LEVEL_TARGETS += gallant.pcf.gz
 TOP_LEVEL_TARGETS += gallant.ttf
 TOP_LEVEL_TARGETS += gallant.woff
 TOP_LEVEL_TARGETS += gallant.woff2
-TOP_LEVEL_TARGETS += 12x22.fnt.gz
 TOP_LEVEL_TARGETS += images
+ifeq (${UNAME_S},FreeBSD)
+TOP_LEVEL_TARGETS += gallant.fnt
+TOP_LEVEL_TARGETS += 12x22.fnt.gz
 TOP_LEVEL_TARGETS += README.html
+endif
 
 .PHONY: all
 all: $(TOP_LEVEL_TARGETS)
@@ -54,7 +60,7 @@ gallant.pcf.gz: gallant.pcf
 gallant.src: hextosrc
 	./hextosrc < gallant.hex > $@
 
-gallant.ttf gallant.woff gallant.woff2: gallant.src srctottf.py
+gallant.ttf gallant.woff gallant.woff2 &: gallant.src srctottf.py
 	python srctottf.py
 
 # make 12x22.fnt.gz: build the font the FreeBSD loader can use.
@@ -132,8 +138,6 @@ README.html: README.md
 	comrak --gfm --syntax-highlighting base16-ocean.light $^ > $@
 
 VERSION = 2025-08-31
-# Deterministic time stamp. On FreeBSD: date -j 202508310000.01 '+%s'
-TIMESTAMP = 1756591201
 
 # FreeBSD: Libs and <uniname.h> are in devel/libunistring
 CC = cc -std=c99
@@ -154,7 +158,9 @@ APP_WARNS  += -Wpedantic
 APP_WARNS  += -Wpointer-arith
 APP_WARNS  += -Wredundant-decls
 APP_WARNS  += -Wshadow
+ifeq (${UNAME_S},FreeBSD)
 APP_WARNS  += -Wsign-conversion
+endif
 APP_WARNS  += -Wswitch-enum
 APP_WARNS  += -Wuninitialized
 APP_WARNS  += -Wvla
@@ -195,19 +201,19 @@ MAKEFLAGS += --no-builtin-rules
 
 
 lscp: lscp.o
-	$(CC) -o $@ $(APP_LIBDIRS) -luninameslist -lunistring $^
+	$(CC) -o $@ $^ $(APP_LIBDIRS) -luninameslist -lunistring
 
 hextobdf: hextobdf.o
 	$(CC) -o $@ $^
 
 hextosrc: hextosrc.o
-	$(CC) -o $@ $(APP_LIBDIRS) -luninameslist -lunistring $^
+	$(CC) -o $@ $^ $(APP_LIBDIRS) -luninameslist -lunistring
 
 srctohex: srctohex.o
 	$(CC) -o $@ $^
 
 txttopng: txttopng.o
-	$(CC) -o $@ $(APP_LIBDIRS) -lpng $^
+	$(CC) -o $@ $^ $(APP_LIBDIRS) -lpng
 
 ################################################################################
 #        _   _      _                   _____                    _             #
@@ -253,9 +259,13 @@ lint: $(TOOLS_C)
 # Create tags from the actual files compiled, and the actually included
 # headers. Examine the preprocessor output's '# LINE "FILE"' directives.
 
-# make tags: create vi tags file.
+# make tags: create vi tags file. Expects any variant of exuberant ctags.
 #
-CTAGS = jexctags
+ifeq (${UNAME_S},FreeBSD)
+CTAGS = exctags
+else
+CTAGS = ctags
+endif
 .PHONY: tags
 tags: $(PREPROCESSED)
 	@awk '/^# / {print $$3}' $^ | sort -u | grep -v \< | tr -d \" > list
@@ -286,7 +296,7 @@ tooltips.vim: $(TOOLS_C)
 	sed -e 's,\\,\\\\,g; s,",\\",g' | \
 	while read -r define macro repl; do \
 	  case $$macro in \
-	  (*) printf '\\ \47%s\47:\"%s\\n%s\",\n' "$${macro%%(*}" "$$macro" "$$repl"; \
+	  (*) printf '\\ \47%s\47:\42%s\\n%s\42,\n' "$${macro%%(*}" "$$macro" "$$repl"; \
 	  esac; \
 	done; \
 	printf '\\ }\n'; \
