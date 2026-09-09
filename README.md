@@ -127,21 +127,21 @@ If you want to modify or add glyphs, edit `gallant.src` and then `make`.
 The GNUmakefile and C programs need a number of programs, headers and
 libraries which you may need to install first. These are
 
-|What                     |FreeBSD port/pkg   |Debian/Ubuntu Package    |
-|------------------------ |-------------      |------------------------ |
-|GNU make                 |devel/gmake        |make                     |
-|Python 3                 |lang/python3       |python3-minimal          |
-|Python FontTools         |print/py-fonttools |python3-fonttools        |
-|Header `<uniname.h>`     |devel/libunistring |libunistring-dev         |
-|Library `unistring`      |devel/libunistring |libunistring-dev         |
-|Library `uninameslist`   |textproc/libuninameslist |libuninameslist-dev  |
-|Header `<png.h>`         |graphics/png       |libpng-dev               |
-|Library `png`            |graphics/png       |libpng-dev               |
+|What                     |FreeBSD port/pkg         |Debian/Ubuntu Package    |
+|------------------------ |-------------            |------------------------ |
+|GNU make                 |devel/gmake              |make                     |
+|Python 3                 |lang/python3             |python3-minimal          |
+|Python FontTools         |print/py-fonttools       |python3-fonttools        |
+|Header `<uniname.h>`     |devel/libunistring       |libunistring-dev         |
+|Library `unistring`      |devel/libunistring       |libunistring-dev         |
+|Library `uninameslist`   |textproc/libuninameslist |libuninameslist-dev      |
+|Header `<png.h>`         |graphics/png             |libpng-dev               |
+|Library `png`            |graphics/png             |libpng-dev               |
 
 To build the TrueType `gallant.ttf` and web formats (`gallant.woff`,
 `gallant.woff2`), you will need Python 3 and the `fonttools` library
-(along with `brotli` for WOFF2 format compression). To build images with
-`txttopng` the PNG library is required (`graphics/png`).
+version >= 4.41.0. To build images with `txttopng` the PNG library is
+required (`graphics/png`).
 
 ## How do I load/use this font?
 
