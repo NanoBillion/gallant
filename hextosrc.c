@@ -141,7 +141,7 @@ void parse_options(int aArgc, char **aArgv) {
         switch (ch) {
         case 'V':
             printf("%s version %s\n", aArgv[0], VERSION);
-            exit (EXIT_SUCCESS);
+            exit(EXIT_SUCCESS);
             break;
         case 'h':
             if (sscanf(optarg, "%zu", &gHeight) != 1)

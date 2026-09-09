@@ -68,8 +68,8 @@ int main(int aArgc, char **aArgv) {
 
     for (unsigned long i = start; i < end; ++i) {
         char    name[UNINAME_MAX + 1];
-        const char *const p = unicode_character_name((ucs4_t)i, name);
-        printf("U+%04lx %2d a %lc b %s\n", i, wcwidth((wchar_t)i), (wint_t)i, p ? p : "<no name>");
+        const char *const p = unicode_character_name((ucs4_t) i, name);
+        printf("U+%04lx %2d a %lc b %s\n", i, wcwidth((wchar_t) i), (wint_t) i, p ? p : "<no name>");
     }
     return EXIT_SUCCESS;
 }
