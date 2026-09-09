@@ -130,7 +130,7 @@ int compare_codepoints(const void *aFirst, const void *aSecond) {
     return *first - *second;
 }
 
-// Parse a |BITMAP| directive.
+// Parse a |BITMAP| directive (one line).
 //
 void parse_bitmap(const wchar_t *aLine, int aWidth) {
     const wchar_t *delim1 = wcschr(aLine, L'|');
@@ -141,16 +141,26 @@ void parse_bitmap(const wchar_t *aLine, int aWidth) {
     if (delim2 == NULL)
         errx("line %d: final delimiter '|' not found in %ls", gLineNr, aLine);
 
-    const int bits = (delim2 - delim1) - 1;
+    int     bits = (delim2 - delim1) - 1;
     if (aWidth == 2) {
-        if (bits != (2 * gWidth))
-            errx("line %d, glyph U%04x: expected %d pixels bewteen || delimiters for double width glyph, found %d\n", gLineNr,
-                 gCodepoint, 2 * gWidth, bits);
+        if (bits != (2 * gWidth)) {
+            fprintf(stderr, "line %d, glyph U%04x: expected %d pixels bewteen || delimiters for double width glyph, found %d, ",
+                    gLineNr, gCodepoint, 2 * gWidth, bits);
+            fprintf(stderr, "using row of unset pixels instead.\n");
+            aLine = L"|                        |";
+            delim1 = &aLine[0];
+            bits = 2 * gWidth;
+        }
     }
     else {
-        if (bits != gWidth)
-            errx("line %d, glyph U%04x: expected %d pixels bewteen || delimiters for normal width glyph, found %d\n", gLineNr,
-                 gCodepoint, gWidth, bits);
+        if (bits != gWidth) {
+            fprintf(stderr, "line %d, glyph U%04x: expected %d pixels bewteen || delimiters for normal width glyph, found %d, ",
+                    gLineNr, gCodepoint, gWidth, bits);
+            fprintf(stderr, "using row of unset pixels instead.\n");
+            aLine = L"|            |";
+            delim1 = &aLine[0];
+            bits = gWidth;
+        }
     }
 
     int     hex = 0;
@@ -194,7 +204,7 @@ void parse_options(int aArgc, char **aArgv) {
         switch (ch) {
         case 'V':
             printf("%s version %s\n", aArgv[0], VERSION);
-            exit (EXIT_SUCCESS);
+            exit(EXIT_SUCCESS);
             break;
         case 'h':
             if (sscanf(optarg, "%d", &gHeight) != 1)
