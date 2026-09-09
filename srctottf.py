@@ -15,12 +15,16 @@ import sys
 import random
 from datetime import datetime
 from zoneinfo import ZoneInfo
+from fontTools import version
 from fontTools.fontBuilder import FontBuilder
 from fontTools.pens.ttGlyphPen import TTGlyphPen
 from fontTools.ttLib.tables._g_a_s_p import table__g_a_s_p
 
 if sys.version_info[0] < 3:
-    sys.stderr.write("Error: This script requires Python 3.\n")
+    sys.stderr.write(f"Error: {sys.argv[0]} requires Python 3.\n")
+    sys.exit(1)
+if version < "4.41.0":
+    sys.stderr.write(f"Error: {sys.argv[0]} requires fontTools 4.41.0 or newer.\n")
     sys.exit(1)
 
 def read_src_file(filename):
