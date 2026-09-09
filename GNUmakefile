@@ -171,6 +171,7 @@ APP_WARNS  += -Wmissing-field-initializers
 APP_SOURCE_INCDIRS = -I /usr/local/include
 APP_LIBDIRS = -L /usr/local/lib
 APP_MACROS += -DVERSION='"$(VERSION)"'
+APP_MACROS += -D_XOPEN_SOURCE
 
 ################################################################################
 #                           ____        _                                      #
