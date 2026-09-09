@@ -30,7 +30,7 @@
 #define PixelHeight 22
 #define MAX_LINE 1024
 #define MAX_GLYPHS 131072
-#define FULL_BLOCK 0x2588
+#define FULL_BLOCK L'\u2588'
 
 struct glyph {
     wint_t  codepoint;
@@ -56,7 +56,7 @@ struct glyph *gGlyph = NULL;
 // start the ball rolling.
 //
 int main(int aArgc, char **aArgv) {
-    if (!setlocale(LC_CTYPE, ""))
+    if (!setlocale(LC_CTYPE, "C.UTF-8"))
         errx("Can't set the locale. Check LANG, LC_CTYPE, LC_ALL.\n");
     int     gGlyphs = 0;
     gGlyph = xmalloc(MAX_GLYPHS * sizeof *gGlyph);
@@ -80,21 +80,21 @@ int main(int aArgc, char **aArgv) {
 void output_src_char(int aChar) {
     char    name[UNINAME_MAX + 1];
     const char *const u = unicode_character_name((ucs4_t) gGlyph[aChar].codepoint, name);
-    printf("STARTCHAR U%04x %s\n", gGlyph[aChar].codepoint, u ? u : "<no name>");
+    wprintf(L"STARTCHAR U%04x %s\n", gGlyph[aChar].codepoint, u ? u : "<no name>");
 
     const bool is_double = wcwidth(gGlyph[aChar].codepoint) == 2;
     const size_t pixels = is_double ? 2 * gWidth : gWidth;
     const char *p = gGlyph[aChar].bitmap;
     for (size_t h = gHeight; h > 0; --h) {
-        printf("%02zu |", h);
+        wprintf(L"%02zu |", h);
         for (size_t i = 0; i < pixels; ++i) {
             uint8_t nybble = hex_value(p[i / 4]);
             putwchar((nybble & (8u >> (i % 4))) ? FULL_BLOCK : L' ');
         }
         p += is_double ? 2 * gDblBytes : 2 * gBytes;
-        puts("|");
+        fputws(L"|\n", stdout);
     }
-    puts("ENDCHAR");
+    fputws(L"ENDCHAR\n", stdout);
 }
 
 // Compute value of aXdigit.
