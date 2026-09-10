@@ -119,15 +119,29 @@ void parse_font_line(const char *aLine, struct glyph *aGlyph) {
         const size_t hexlen = strlen(colon + 1) - 1;    // Minus newline.
 
         if (wcwidth(aGlyph->codepoint) == 2) {
-            if (hexlen != gHeight * gDblBytes * 2)
-                errx("line %d: expected %zu hexdigits for double width glyph, got %zu\n", gLineNr, gHeight * gDblBytes * 2, hexlen);
+            if (hexlen == gHeight * gDblBytes * 2) {
+                aGlyph->bitmap = xmalloc(hexlen);
+                memcpy(aGlyph->bitmap, colon + 1, hexlen);
+            }
+            else {
+                fprintf(stderr, "line %zu: expected %zu hexdigits for double width glyph U%04x, got %zu, ", gLineNr,
+                        gHeight * gDblBytes * 2, aGlyph->codepoint, hexlen);
+                fprintf(stderr, "substituting with empty glyph\n");
+                aGlyph->bitmap = xmalloc(gHeight * gDblBytes * 2);
+                memset(aGlyph->bitmap, '0', gHeight * gDblBytes * 2);
+            }
+        }
+        else if (hexlen == gHeight * gBytes * 2) {
+            aGlyph->bitmap = xmalloc(hexlen);
+            memcpy(aGlyph->bitmap, colon + 1, hexlen);
         }
         else {
-            if (hexlen != gHeight * gBytes * 2)
-                errx("line %d: expected %zu hexdigits for normal width glyph, got %zu\n", gLineNr, gHeight * gBytes * 2, hexlen);
+            fprintf(stderr, "line %zu: expected %zu hexdigits for normal width glyph U%04x, got %zu, ", gLineNr,
+                    gHeight * gBytes * 2, aGlyph->codepoint, hexlen);
+            fprintf(stderr, "substituting with empty glyph\n");
+            aGlyph->bitmap = xmalloc(gHeight * gBytes * 2);
+            memset(aGlyph->bitmap, '0', gHeight * gBytes * 2);
         }
-        aGlyph->bitmap = xmalloc(hexlen);
-        memcpy(aGlyph->bitmap, colon + 1, hexlen);
     }
     else
         errx("expected codepoint:hexdata in line %d\n", gLineNr);
