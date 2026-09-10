@@ -124,10 +124,10 @@ If you just want to use one of the `gallant.*` font files, you don't
 need to build anything. See "How do I load/use this font?" below.
 
 If you want to modify or add glyphs, edit `gallant.src` and then `make`.
-The GNUmakefile and C programs need a number of programs, headers and
+The GNUmakefile and C programs need a number of utilities, headers and
 libraries which you may need to install first. These are
 
-|What                     |FreeBSD port/pkg         |Debian/Ubuntu Package    |
+|Item                     |FreeBSD Port             |Debian Package           |
 |------------------------ |-------------            |------------------------ |
 |GNU make                 |devel/gmake              |make                     |
 |Python 3                 |lang/python3             |python3-minimal          |
@@ -137,6 +137,7 @@ libraries which you may need to install first. These are
 |Library `uninameslist`   |textproc/libuninameslist |libuninameslist-dev      |
 |Header `<png.h>`         |graphics/png             |libpng-dev               |
 |Library `png`            |graphics/png             |libpng-dev               |
+|`bdftopcf`               |x11-fonts/bdftopcf       |xfonts-utils             |
 
 To build the TrueType `gallant.ttf` and web formats (`gallant.woff`,
 `gallant.woff2`), you will need Python 3 and the `fonttools` library
