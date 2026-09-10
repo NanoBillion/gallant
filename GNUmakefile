@@ -43,10 +43,10 @@ endif
 all: $(TOP_LEVEL_TARGETS)
 
 gallant.bdf: gallant.hex hextobdf
-	./hextobdf < $< > $@
+	./hextobdf < $< > $@.tmp && mv $@.tmp $@
 
 gallant.hex: gallant.src srctohex
-	./srctohex < $< > $@
+	./srctohex < $< > $@.tmp && mv $@.tmp $@
 
 gallant.fnt: gallant.hex
 	vtfontcvt -v -o $@ $^
@@ -58,7 +58,7 @@ gallant.pcf.gz: gallant.pcf
 	gzip -cnv9 $^ > $@
 
 gallant.src: hextosrc
-	./hextosrc < gallant.hex > $@
+	./hextosrc < gallant.hex > $@.tmp && mv $@.tmp $@
 
 gallant.ttf gallant.woff gallant.woff2 &: gallant.src srctottf.py
 	python srctottf.py
