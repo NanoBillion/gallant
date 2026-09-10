@@ -200,7 +200,7 @@ def create_true_type():
     """
     Create TrueType Font. Save result in gallant.{ttf,woff,woff2}.
     """
-    fb = FontBuilder(unitsPerEm=2048, isTTF=True)
+    fb = FontBuilder(unitsPerEm=(ASCENT+DESCENT)*TT_PIXEL_SIZE, isTTF=True)
     fb.font.recalcTimestamp = False
     # Birth of Sun Microsystems :-)
     date = datetime(1982, 2, 24, tzinfo=ZoneInfo("America/Los_Angeles"))
@@ -347,19 +347,19 @@ def setup_os2(fb):
         usWinDescent   = TT_DESCENT * -1,
         sCapHeight     = TT_PIXEL_SIZE * 14,  # Height of "H".
         sxHeight       = TT_PIXEL_SIZE * 10,  # Height of "x".
+        fsType         = 0,
+        fsSelection    = 0x0040, # REGULAR style.
         # Magic numbers. Can these be computed?
-        fsType              = 0,
-        ySubscriptXSize     = 1434,
-        ySubscriptYSize     = 1331,
+        ySubscriptXSize     = TT_PIXEL_SIZE * 12,
+        ySubscriptYSize     = TT_PIXEL_SIZE * 11,
         ySubscriptXOffset   = 0,
-        ySubscriptYOffset   = 287,
-        ySuperscriptXSize   = 1434,
-        ySuperscriptYSize   = 1331,
+        ySubscriptYOffset   = TT_PIXEL_SIZE * 2,
+        ySuperscriptXSize   = TT_PIXEL_SIZE * 12,
+        ySuperscriptYSize   = TT_PIXEL_SIZE * 11,
         ySuperscriptXOffset = 0,
-        ySuperscriptYOffset = 977,
-        yStrikeoutSize      = 102,   # Suggested for 2048 unitsPerEm.
-        yStrikeoutPosition  = 460,   # Suggested for 2048 unitsPerEm.
-        fsSelection         = 0x0040 # REGULAR style.
+        ySuperscriptYOffset = TT_PIXEL_SIZE * 10,
+        yStrikeoutSize      = TT_PIXEL_SIZE,
+        yStrikeoutPosition  = TT_PIXEL_SIZE * 8
         )
     fb.font["OS/2"].panose.bFamilyType = 2     # Latin Text
     fb.font["OS/2"].panose.bSerifStyle = 4     # Square Cove
