@@ -24,7 +24,8 @@ if sys.version_info[0] < 3:
     sys.stderr.write(f"Error: {sys.argv[0]} requires Python 3.\n")
     sys.exit(1)
 if version < "4.41.0":
-    sys.stderr.write(f"Error: {sys.argv[0]} requires fontTools 4.41.0 or newer.\n")
+    sys.stderr.write(f"Error: {sys.argv[0]} requires fontTools 4.41.0")
+    sys.stderr.write(f" or newer, found {version}\n")
     sys.exit(1)
 
 def read_src_file(filename):
@@ -341,6 +342,7 @@ def setup_os2(fb):
         achVendID      = "SUNW",
         sTypoAscender  = TT_ASCENT,
         sTypoDescender = TT_DESCENT,
+        sTypoLineGap   = 0,
         usWinAscent    = TT_ASCENT,
         usWinDescent   = TT_DESCENT * -1,
         sCapHeight     = TT_PIXEL_SIZE * 14,  # Height of "H".
