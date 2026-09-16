@@ -83,7 +83,7 @@ none are present.
 |U+2800 - U+28FF|[Braille Patterns](https://www.unicode.org/charts/PDF/U2800.pdf)                       |Complete |
 |U+2900 - U+297F|[Supplemental Arrows-B](https://www.unicode.org/charts/PDF/U2900.pdf)                  |Complete |
 |U+2980 - U+29FF|[Miscellaneous Mathematical Symbols-A](https://www.unicode.org/charts/PDF/U2980.pdf)   |Complete |
-|U+2A00 - U+2AFF|[Supplemental Mathematical Operators](https://www.unicode.org/charts/PDF/U2A00.pdf)    |TODO     |
+|U+2A00 - U+2AFF|[Supplemental Mathematical Operators](https://www.unicode.org/charts/PDF/U2A00.pdf)    |Complete |
 |U+2B00 - U+2BFF|[Miscellaneous Symbols and Arrows](https://www.unicode.org/charts/PDF/U2B00.pdf)       |Partial  |
 |U+2C00 - U+2C5F|[Glagolitic](https://www.unicode.org/charts/PDF/U2C00.pdf)                             |TODO     |
 |U+2C60 - U+2C7F|[Latin Extended-C](https://www.unicode.org/charts/PDF/U2C60.pdf)                       |Complete |
