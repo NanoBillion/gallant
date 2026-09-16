@@ -37,6 +37,7 @@ ifeq (${UNAME_S},FreeBSD)
 TOP_LEVEL_TARGETS += gallant.fnt
 TOP_LEVEL_TARGETS += 12x22.fnt.gz
 TOP_LEVEL_TARGETS += README.html
+TOP_LEVEL_TARGETS += FONTLOG.html
 endif
 
 .PHONY: all
@@ -121,6 +122,7 @@ images: gallant.hex lscp txttopng
 	'2900  2980 Supplemental-Arrows-B' \
 	'2A00  2B00 Supplemental-Mathematical-Operators' \
 	'2B00  2C00 Miscellaneous-Symbols-and-Arrows' \
+	'2C60  2C80 Latin-Extended-C' \
 	'30A0  3100 Katakana' \
 	'E0A0  E0F0 Private-Use-Area' \
 	'FB00  FB50 Alphabetic-Presentation-Forms' \
@@ -135,6 +137,8 @@ images: gallant.hex lscp txttopng
 # make README.html: turn markdown into HTML.
 #
 README.html: README.md
+	comrak --gfm --syntax-highlighting base16-ocean.light $^ > $@
+FONTLOG.html: FONTLOG.md
 	comrak --gfm --syntax-highlighting base16-ocean.light $^ > $@
 
 VERSION = 2025-08-31
@@ -315,5 +319,9 @@ types.vim: $(PREPROCESSED)
 	  awk 'BEGIN {print "autocmd Syntax * syntax keyword Type"} \
 	             {print "\\ " $$1}' | uniq > $@
 
+.PHONY: renumber
+renumber:
+	./srctohex < gallant.src > gallant.hex
+	./hextosrc < gallant.hex > gallant.src
 
 # vim: set syntax=make noexpandtab tabstop=8 sw=2:

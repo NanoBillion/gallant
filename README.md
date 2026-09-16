@@ -86,7 +86,7 @@ none are present.
 |U+2A00 - U+2AFF|[Supplemental Mathematical Operators](https://www.unicode.org/charts/PDF/U2A00.pdf)    |TODO     |
 |U+2B00 - U+2BFF|[Miscellaneous Symbols and Arrows](https://www.unicode.org/charts/PDF/U2B00.pdf)       |Partial  |
 |U+2C00 - U+2C5F|[Glagolitic](https://www.unicode.org/charts/PDF/U2C00.pdf)                             |TODO     |
-|U+2C60 - U+2C7F|[Latin Extended-C](https://www.unicode.org/charts/PDF/U2C60.pdf)                       |TODO     |
+|U+2C60 - U+2C7F|[Latin Extended-C](https://www.unicode.org/charts/PDF/U2C60.pdf)                       |Complete |
 |U+2C80 - U+30BF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/U2C80.pdf)           |TODO     |
 |U+30A0 - U+30FF|[Katakana](https://www.unicode.org/charts/PDF/U30A0.pdf)                               |Partial  |
 |U+3100 - U+A6FF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/U2C80.pdf)           |TODO     |
