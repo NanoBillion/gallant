@@ -84,7 +84,7 @@ none are present.
 |U+2900 - U+297F|[Supplemental Arrows-B](https://www.unicode.org/charts/PDF/U2900.pdf)                  |Complete |
 |U+2980 - U+29FF|[Miscellaneous Mathematical Symbols-A](https://www.unicode.org/charts/PDF/U2980.pdf)   |Complete |
 |U+2A00 - U+2AFF|[Supplemental Mathematical Operators](https://www.unicode.org/charts/PDF/U2A00.pdf)    |Complete |
-|U+2B00 - U+2BFF|[Miscellaneous Symbols and Arrows](https://www.unicode.org/charts/PDF/U2B00.pdf)       |Partial  |
+|U+2B00 - U+2BFF|[Miscellaneous Symbols and Arrows](https://www.unicode.org/charts/PDF/U2B00.pdf)       |Complete |
 |U+2C00 - U+2C5F|[Glagolitic](https://www.unicode.org/charts/PDF/U2C00.pdf)                             |TODO     |
 |U+2C60 - U+2C7F|[Latin Extended-C](https://www.unicode.org/charts/PDF/U2C60.pdf)                       |Complete |
 |U+2C80 - U+30BF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/U2C80.pdf)           |TODO     |
@@ -121,7 +121,8 @@ were made to the text before rendering it in Gallant.
 ## How do I use this GNUmakefile?
 
 If you just want to use one of the `gallant.*` font files, you don't
-need to build anything. See "How do I load/use this font?" below.
+need to build anything. See [How do I load or use this
+font?](#how-do-i-load-or-use-this-font)
 
 If you want to modify or add glyphs, edit `gallant.src` and then `make`.
 The GNUmakefile and C programs need a number of utilities, headers and
@@ -142,9 +143,9 @@ libraries which you may need to install first. These are
 To build the TrueType `gallant.ttf` and web formats (`gallant.woff`,
 `gallant.woff2`), you will need Python 3 and the `fonttools` library
 version >= 4.41.0. To build images with `txttopng` the PNG library is
-required (`graphics/png`).
+required.
 
-## How do I load/use this font?
+## How do I load or use this font?
 
 ### As an X11 Raster Font, e.g. for Xterm(1)
 
