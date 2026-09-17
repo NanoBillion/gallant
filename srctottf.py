@@ -339,17 +339,16 @@ def setup_os2(fb):
     @note    https://learn.microsoft.com/en-us/typography/opentype/otspec182/os2
     """
     fb.setupOS2(
-        achVendID      = "SUNW",
-        sTypoAscender  = TT_ASCENT,
-        sTypoDescender = TT_DESCENT,
-        sTypoLineGap   = 0,
-        usWinAscent    = TT_ASCENT,
-        usWinDescent   = TT_DESCENT * -1,
-        sCapHeight     = TT_PIXEL_SIZE * 14,  # Height of "H".
-        sxHeight       = TT_PIXEL_SIZE * 10,  # Height of "x".
-        fsType         = 0,
-        fsSelection    = 0x0040, # REGULAR style.
-        # Magic numbers. Can these be computed?
+        achVendID           = "SUNW",
+        sTypoAscender       = TT_ASCENT,
+        sTypoDescender      = TT_DESCENT,
+        sTypoLineGap        = 0,
+        usWinAscent         = TT_ASCENT,
+        usWinDescent        = TT_DESCENT * -1,
+        sCapHeight          = TT_PIXEL_SIZE * 14,  # Height of "H".
+        sxHeight            = TT_PIXEL_SIZE * 10,  # Height of "x".
+        fsType              = 0,
+        fsSelection         = 0x0040, # REGULAR style.
         ySubscriptXSize     = TT_PIXEL_SIZE * 12,
         ySubscriptYSize     = TT_PIXEL_SIZE * 11,
         ySubscriptXOffset   = 0,
@@ -361,10 +360,10 @@ def setup_os2(fb):
         yStrikeoutSize      = TT_PIXEL_SIZE,
         yStrikeoutPosition  = TT_PIXEL_SIZE * 8
         )
-    fb.font["OS/2"].panose.bFamilyType = 2     # Latin Text
-    fb.font["OS/2"].panose.bSerifStyle = 4     # Square Cove
-    fb.font["OS/2"].panose.bWeight     = 5     # Book
-    fb.font["OS/2"].panose.bProportion = 9     # Monospaced
+    fb.font["OS/2"].panose.bFamilyType = 2     # Latin Text.
+    fb.font["OS/2"].panose.bSerifStyle = 4     # Square Cove.
+    fb.font["OS/2"].panose.bWeight     = 5     # Book.
+    fb.font["OS/2"].panose.bProportion = 9     # Monospaced.
     fb.font["OS/2"].recalcCodePageRanges(fb.font)
     fb.font["OS/2"].recalcUnicodeRanges(fb.font)
     fb.font["OS/2"].updateFirstAndLastCharIndex(fb.font)
