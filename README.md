@@ -12,7 +12,7 @@ extended with [glyphs](https://en.wikipedia.org/wiki/Glyph) for many
 
 The starting point was the `gallant.hex` file as found on
 [FreeBSD](https://www.freebsd.org/) 14, which contained 502 glyphs at
-the time. This project currently provides more than 4600 glyphs. Major
+the time. This project currently provides more than 4800 glyphs. Major
 additions:
 
 * Greek
@@ -76,7 +76,7 @@ none are present.
 |U+2500 - U+257F|[Box Drawing](https://www.unicode.org/charts/PDF/U2500.pdf)                            |Complete |
 |U+2580 - U+259F|[Block Elements](https://www.unicode.org/charts/PDF/U2580.pdf)                         |Complete |
 |U+25A0 - U+25FF|[Geometric Shapes](https://www.unicode.org/charts/PDF/U25A0.pdf)                       |Complete |
-|U+2600 - U+26FF|[Miscellaneous Symbols](https://www.unicode.org/charts/PDF/U2600.pdf)                  |Partial  |
+|U+2600 - U+26FF|[Miscellaneous Symbols](https://www.unicode.org/charts/PDF/U2600.pdf)                  |Complete |
 |U+2700 - U+27BF|[Dingbats](https://www.unicode.org/charts/PDF/U2700.pdf)                               |Complete |
 |U+27C0 - U+27EF|[Miscellaneous Mathematical Symbols-A](https://www.unicode.org/charts/PDF/U27C0.pdf)   |Complete |
 |U+27F0 - U+27FF|[Supplemental Arrows-A](https://www.unicode.org/charts/PDF/U27F0.pdf)                  |Complete |
