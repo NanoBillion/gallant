@@ -440,4 +440,3 @@ them. This is the mapping:
 ## TODO
 
 * Describe how to contribute.
-* Commit 12x22 for loader use to FreeBSD once code slush is over.
