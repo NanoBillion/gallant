@@ -12,7 +12,7 @@ extended with [glyphs](https://en.wikipedia.org/wiki/Glyph) for many
 
 The starting point was the `gallant.hex` file as found on
 [FreeBSD](https://www.freebsd.org/) 14, which contained 502 glyphs at
-the time. This project currently provides more than 4800 glyphs. Major
+the time. This project currently provides more than 5000 glyphs. Major
 additions:
 
 * Greek
@@ -34,7 +34,7 @@ glyphs, but not for symbols like arrows and mathematical operators where
 it makes no sense. Please let me know where I messed up (I can only
 barely read and write Greek, and hardly any Cyrillic and no Japanese
 at all). I used the
-documents of *The Unicode Standard, Version 16.0* as guidance.
+documents of *The Unicode Standard, Version 18.0* as guidance.
 See [Unicode.org](https://home.unicode.org/) for more on Unicode.
 
 ## Unicode Support
