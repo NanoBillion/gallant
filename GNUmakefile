@@ -97,6 +97,8 @@ images: gallant.hex lscp txttopng
 	'0370  0400 Greek-and-Coptic' \
 	'0400  0500 Cyrillic' \
 	'0500  0530 Cyrillic-Supplement' \
+	'1D00  1D80 Phonetic-Extensions' \
+	'1D80  1DC0 Phonetic-Extensions-Supplement' \
 	'1E00  1F00 Latin-Extended-Additional' \
 	'1F00  2000 Greek-Extended' \
 	'2000  2070 General-Punctuation' \

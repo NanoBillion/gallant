@@ -15,6 +15,7 @@ STARTCHAR gallant.src`
 
 |Version |Glyphs | Change                                         |   Date     |
 |--------|-------|------------------------------------------------|------------|
+|1.004   |5054   | Add Phonetic Extensions and Supplement.        | 2026-XX-YY |
 |1.003   |4862   | Complete Miscellaneous Symbols.                | 2026-09-25 |
 |1.002   |4702   | Complete Miscellaneous Symbols and Arrows.     | 2026-09-17 |
 |1.001   |4671   | Complete Latin Extended-C.                     | 2026-09-16 |
