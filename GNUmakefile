@@ -122,6 +122,7 @@ images: gallant.hex lscp txttopng
 	'27F0  2800 Supplemental-Arrows-A' \
 	'2800  2900 Braille-Patterns' \
 	'2900  2980 Supplemental-Arrows-B' \
+	'2980  2A00 Miscellaneous-Mathematical-Symbols-B' \
 	'2A00  2B00 Supplemental-Mathematical-Operators' \
 	'2B00  2C00 Miscellaneous-Symbols-and-Arrows' \
 	'2C60  2C80 Latin-Extended-C' \
