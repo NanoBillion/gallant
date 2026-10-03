@@ -127,6 +127,7 @@ images: gallant.hex lscp txttopng
 	'2B00  2C00 Miscellaneous-Symbols-and-Arrows' \
 	'2C60  2C80 Latin-Extended-C' \
 	'30A0  3100 Katakana' \
+	'AB30  AB70 Latin-Extended-E' \
 	'E0A0  E0F0 Private-Use-Area' \
 	'FB00  FB50 Alphabetic-Presentation-Forms' \
 	'FFF0 10000 Specials' | \

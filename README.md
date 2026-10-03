@@ -93,7 +93,7 @@ none are present.
 |U+A700 - U+A71F|[Modifier Tone Letters](https://www.unicode.org/charts/PDF/UA700.pdf)                  |TODO     |
 |U+A720 - U+A7FF|[Latin Extended-D](https://www.unicode.org/charts/PDF/UA720.pdf)                       |TODO     |
 |U+A800 - U+AB2F|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/UA800.pdf)           |TODO     |
-|U+AB30 - U+AB6F|[Latin Extended-E](https://www.unicode.org/charts/PDF/UAB30.pdf)                       |TODO     |
+|U+AB30 - U+AB6F|[Latin Extended-E](https://www.unicode.org/charts/PDF/UAB30.pdf)                       |Complete |
 |U+AB70 - U+FAFF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/UAB70.pdf)           |TODO     |
 |U+FB00 - U+FB4F|[Alphabetic Presentation Forms](https://www.unicode.org/charts/PDF/UFB00.pdf)          |Partial  |
 |U+FB50 - U+FFEF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/UFB50.pdf)           |TODO     |

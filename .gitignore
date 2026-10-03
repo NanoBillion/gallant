@@ -5,6 +5,7 @@
 [A-TV-Z]*.txt
 
 .indent.pro
+FONTLOG.html
 README.html
 hextobdf
 hextosrc
