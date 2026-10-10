@@ -91,7 +91,7 @@ none are present.
 |U+30A0 - U+30FF|[Katakana](https://www.unicode.org/charts/PDF/U30A0.pdf)                               |Partial  |
 |U+3100 - U+A6FF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/U2C80.pdf)           |TODO     |
 |U+A700 - U+A71F|[Modifier Tone Letters](https://www.unicode.org/charts/PDF/UA700.pdf)                  |TODO     |
-|U+A720 - U+A7FF|[Latin Extended-D](https://www.unicode.org/charts/PDF/UA720.pdf)                       |TODO     |
+|U+A720 - U+A7FF|[Latin Extended-D](https://www.unicode.org/charts/PDF/UA720.pdf)                       |Complete |
 |U+A800 - U+AB2F|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/UA800.pdf)           |TODO     |
 |U+AB30 - U+AB6F|[Latin Extended-E](https://www.unicode.org/charts/PDF/UAB30.pdf)                       |Complete |
 |U+AB70 - U+FAFF|[...Many foreign alphabets...](https://www.unicode.org/charts/PDF/UAB70.pdf)           |TODO     |

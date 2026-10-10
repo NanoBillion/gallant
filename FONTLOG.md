@@ -9,12 +9,13 @@ table members `version` with a value of `Version 1.000` and
 `uniqueFontIdentifier` with a value of `Gallant Raster Term Regular;
 1.000`. The table is sorted by version, latest first.
 
-The `Glyphs` column is the number of glyphs as determined with `grep -c
-STARTCHAR gallant.src`
+The `Glyphs` column is the number of glyphs as determined with
+`grep -c STARTCHAR gallant.src`
 
 
 |Version |Glyphs | Change                                         |   Date     |
 |--------|-------|------------------------------------------------|------------|
+|1.007   |5320   | Add Latin-Extended-D as of Unicode 17.0.       | 2026-10-10 |
 |1.006   |5114   | Add Latin-Extended-E as of Unicode 17.0.       | 2026-10-03 |
 |1.005   |5054   | Fix two missing pixels in U+29d1.              | 2026-10-01 |
 |1.004   |5054   | Add Phonetic Extensions and Supplement.        | 2026-09-30 |

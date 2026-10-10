@@ -404,7 +404,7 @@ def main():
 
 FONT          = "Gallant Raster Term"
 STYLE         = "Regular"
-VERSION       = "1.006"
+VERSION       = "1.007"
 ASCENT        = 17
 DESCENT       = 5
 WIDTH         = 12
